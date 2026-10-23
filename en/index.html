@@ -382,6 +382,56 @@ footer .palms{padding-bottom:30px}
 .sub-a small{display:block;font:500 14px var(--body);color:var(--muted);margin-top:4px}
 @media (max-width:860px){.sub{grid-template-columns:1fr;gap:12px;padding:22px 20px}.sub-a{text-align:left}}
 .gal-foot{margin-top:10px;max-width:68ch;color:var(--muted)}
+
+.bhero{background:var(--navy-deep) url(../img/texture-nuit.webp) center/cover;color:var(--on-dark)}
+.bhero .wrap{padding-block:56px 60px;display:flex;flex-direction:column;gap:18px;max-width:900px}
+.crumbs{display:flex;flex-wrap:wrap;gap:8px;font:500 14px/1.3 var(--body);color:var(--on-dark-muted);list-style:none;margin:0;padding:0}
+.crumbs li+li::before{content:"/";margin-right:8px;opacity:.6}
+.crumbs a{text-decoration:none}.crumbs a:hover{color:var(--ochre)}
+.bhero h1{color:var(--on-dark);font-size:clamp(38px,5vw,62px)}
+.bhero .lead{font-size:19px;color:#E4EAF0;max-width:60ch}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--on-dark-muted)}
+.meta .palm{--w:16px;--c:var(--ochre);vertical-align:-2px;margin-right:6px}
+.post{padding-block:56px 40px}
+.post .wrap{max-width:780px}
+.post figure{margin:0 0 40px}
+.post figure .paper{border-radius:3px;overflow:hidden;box-shadow:0 14px 34px rgba(44,42,39,.16);aspect-ratio:1400/990}
+.post figure img{width:100%;height:100%;object-fit:cover}
+.post figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.prose{font-size:18px;line-height:1.75;display:flex;flex-direction:column;gap:18px}
+.prose h2{font-size:clamp(28px,3vw,36px);margin-top:22px}
+.prose a{color:var(--terra-ink);text-decoration-thickness:1px;text-underline-offset:3px}
+.prose ul,.prose ol{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.prose ul li{display:flex;gap:12px}.prose ul li::before{content:"▸";color:var(--terra);flex:none}
+.prose ol{counter-reset:o}.prose ol li{counter-increment:o;display:grid;grid-template-columns:40px 1fr;gap:8px}
+.prose ol li::before{content:counter(o);font:italic 500 28px/1 var(--display);color:var(--terra)}
+.tip{background:linear-gradient(rgba(224,232,226,.88),rgba(224,232,226,.88)),url(../img/sauge.webp) center/cover;border:1px solid #C3CFC6;border-radius:16px;padding:18px 20px;display:flex;gap:14px;font-size:16.5px;line-height:1.6}
+.tip .palm{--w:22px;--c:var(--terra);flex:none;margin-top:2px}
+.mid{border:1px solid var(--line);background:#fff;border-radius:18px;padding:20px 22px;display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center}
+.mid img{border-radius:3px;box-shadow:0 6px 16px rgba(44,42,39,.15)}
+.mid b{display:block;font:500 22px/1.2 var(--display);color:var(--navy)}
+.mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
+.mid a{font:700 14px var(--body);color:var(--terra-ink)}
+@media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
+.endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
+.endcta .btns{display:flex;flex-direction:column;gap:10px}
+@media (max-width:760px){.endcta{grid-template-columns:1fr;padding:26px 22px}.endcta .btns{flex-direction:row;flex-wrap:wrap}}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;list-style:none;margin:0;padding:0}
+.cards li{display:flex}
+.card{display:flex;flex-direction:column;gap:12px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 14px 20px;width:100%;transition:transform .15s}
+.card:hover{transform:translateY(-2px)}
+.card .paper{border-radius:3px;overflow:hidden;aspect-ratio:1400/990}
+.card img{width:100%;height:100%;object-fit:cover}
+.card b{font:500 23px/1.2 var(--display);color:var(--navy);padding-inline:4px;text-wrap:balance}
+.card span{font-size:15px;color:var(--muted);padding-inline:4px}
+.card i{margin-top:auto;padding-inline:4px;font:700 13px/1 var(--body);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--terra-ink)}
+@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+.related{padding-block:64px}
+.related h2{margin-bottom:28px}
+.homeblog .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:32px}
 </style>
 </head>
 <body>
@@ -392,6 +442,7 @@ footer .palms{padding-bottom:30px}
       <a href="#livret">The book</a>
       <a href="#telephone">Phone version</a>
       <a href="#prix">Pricing</a>
+      <a href="../en/blog/">Guides</a>
       <a href="#questions">Questions</a>
       <span class="langs" role="navigation" aria-label="Language"><a class="l" href="../" hreflang="fr" lang="fr" title="Français">FR</a><a class="l" href="../en/" hreflang="en" lang="en" aria-current="page" title="English">EN</a><a class="l" href="../it/" hreflang="it" lang="it" title="Italiano">IT</a></span>
       <a class="btn btn-gold" href="#contact">Get in touch</a>
@@ -520,7 +571,15 @@ footer .palms{padding-bottom:30px}
   </div>
 </section>
 
-<section class="sand" id="questions" aria-labelledby="h-q">
+<div class="scallop" aria-hidden="true" style="background-color:var(--cream)"></div>
+<div class="sand"><section class="homeblog" id="conseils" aria-labelledby="h-blog">
+  <div class="wrap">
+    <div class="head"><div class="text"><h2 id="h-blog">Guides for hosts</h2><p class="muted">Practical guides to get ready for your guests.</p></div>
+    <a class="btn btn-navy" href="../en/blog/">All guides</a></div>
+    <ul class="cards"><li><a class="card" href="../en/blog/what-to-include-in-a-welcome-book/"><div class="paper"><img src="../img/livret-sommaire.webp" width="1400" height="990" alt="" loading=lazy></div><b>What to include in a welcome book</b><span>What to put in the welcome book of your holiday rental or Airbnb: the ten essential sections, in the right order, with examples.</span><i>7 min read</i></a></li><li><a class="card" href="../en/blog/printed-vs-digital-welcome-book/"><div class="paper"><img src="../img/livret-couverture.webp" width="1400" height="990" alt="" loading=lazy></div><b>Printed or digital welcome book?</b><span>Paper welcome book or online phone version? Pros, limits, and the option that combines both for holiday rentals and Airbnb.</span><i>6 min read</i></a></li><li><a class="card" href="../en/blog/how-to-write-house-rules-holiday-rental/"><div class="paper"><img src="../img/livret-nature.webp" width="1400" height="990" alt="" loading=lazy></div><b>House rules guests actually follow</b><span>How to write house rules for a holiday rental or Airbnb that guests read and follow: tone, structure and examples.</span><i>6 min read</i></a></li><li><a class="card" href="../en/blog/recommend-local-places-to-guests/"><div class="paper"><img src="../img/livret-ortigia.webp" width="1400" height="990" alt="" loading=lazy></div><b>Recommending local places to guests</b><span>How to choose and present restaurants, beaches and sights in your rental&#x27;s welcome book: fewer places, better described, actually useful.</span><i>6 min read</i></a></li><li><a class="card" href="../en/blog/multilingual-welcome-book-international-guests/"><div class="paper"><img src="../img/livret-sports-nautiques.webp" width="1400" height="990" alt="" loading=lazy></div><b>A welcome book for international guests</b><span>Should you translate your rental&#x27;s welcome book? Which languages to choose and how to handle several languages in print and on phone.</span><i>5 min read</i></a></li><li><a class="card" href="../en/blog/how-to-print-a-welcome-book-paper-size-binding/"><div class="paper"><img src="../img/livret-que-faire.webp" width="1400" height="990" alt="" loading=lazy></div><b>Printing your welcome book</b><span>Which size, paper and binding to choose when printing your holiday rental&#x27;s welcome book so it lasts the whole season.</span><i>6 min read</i></a></li></ul>
+  </div>
+</section></div>
+<section id="questions" aria-labelledby="h-q">
   <div class="wrap">
     <h2 id="h-q">Your questions</h2>
     <div class="faq"><details open><summary>Do you print the book?</summary><p>I send you a high-resolution PDF, ready for the printer, in A4 or A5. Print it wherever you like, at a local copy shop or an online printer. I can recommend the right paper and binding.</p></details><details><summary>Which languages?</summary><p>The printed book is written in your guests&#x27; language: English, French, Italian, German, Spanish… The one shown here is in English. The phone version can hold several languages.</p></details><details><summary>Do you only work in Sicily?</summary><p>No. Everything happens remotely: a video call, photos, your addresses. I work with properties in France, Italy and anywhere else.</p></details><details><summary>What do you need from me?</summary><p>A few photos of the place, the practical info (Wi‑Fi, access, rules) and your favourite addresses. We go through the rest together on the call.</p></details><details><summary>How long does it take?</summary><p>Usually one to two weeks, depending on the number of pages and languages.</p></details><details><summary>What if something changes?</summary><p>That&#x27;s what the €30 yearly update is for: every year I refresh your book, both the printable version and the phone version.</p></details></div>

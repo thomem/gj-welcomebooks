@@ -382,6 +382,56 @@ footer .palms{padding-bottom:30px}
 .sub-a small{display:block;font:500 14px var(--body);color:var(--muted);margin-top:4px}
 @media (max-width:860px){.sub{grid-template-columns:1fr;gap:12px;padding:22px 20px}.sub-a{text-align:left}}
 .gal-foot{margin-top:10px;max-width:68ch;color:var(--muted)}
+
+.bhero{background:var(--navy-deep) url(img/texture-nuit.webp) center/cover;color:var(--on-dark)}
+.bhero .wrap{padding-block:56px 60px;display:flex;flex-direction:column;gap:18px;max-width:900px}
+.crumbs{display:flex;flex-wrap:wrap;gap:8px;font:500 14px/1.3 var(--body);color:var(--on-dark-muted);list-style:none;margin:0;padding:0}
+.crumbs li+li::before{content:"/";margin-right:8px;opacity:.6}
+.crumbs a{text-decoration:none}.crumbs a:hover{color:var(--ochre)}
+.bhero h1{color:var(--on-dark);font-size:clamp(38px,5vw,62px)}
+.bhero .lead{font-size:19px;color:#E4EAF0;max-width:60ch}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--on-dark-muted)}
+.meta .palm{--w:16px;--c:var(--ochre);vertical-align:-2px;margin-right:6px}
+.post{padding-block:56px 40px}
+.post .wrap{max-width:780px}
+.post figure{margin:0 0 40px}
+.post figure .paper{border-radius:3px;overflow:hidden;box-shadow:0 14px 34px rgba(44,42,39,.16);aspect-ratio:1400/990}
+.post figure img{width:100%;height:100%;object-fit:cover}
+.post figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.prose{font-size:18px;line-height:1.75;display:flex;flex-direction:column;gap:18px}
+.prose h2{font-size:clamp(28px,3vw,36px);margin-top:22px}
+.prose a{color:var(--terra-ink);text-decoration-thickness:1px;text-underline-offset:3px}
+.prose ul,.prose ol{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.prose ul li{display:flex;gap:12px}.prose ul li::before{content:"▸";color:var(--terra);flex:none}
+.prose ol{counter-reset:o}.prose ol li{counter-increment:o;display:grid;grid-template-columns:40px 1fr;gap:8px}
+.prose ol li::before{content:counter(o);font:italic 500 28px/1 var(--display);color:var(--terra)}
+.tip{background:linear-gradient(rgba(224,232,226,.88),rgba(224,232,226,.88)),url(img/sauge.webp) center/cover;border:1px solid #C3CFC6;border-radius:16px;padding:18px 20px;display:flex;gap:14px;font-size:16.5px;line-height:1.6}
+.tip .palm{--w:22px;--c:var(--terra);flex:none;margin-top:2px}
+.mid{border:1px solid var(--line);background:#fff;border-radius:18px;padding:20px 22px;display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center}
+.mid img{border-radius:3px;box-shadow:0 6px 16px rgba(44,42,39,.15)}
+.mid b{display:block;font:500 22px/1.2 var(--display);color:var(--navy)}
+.mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
+.mid a{font:700 14px var(--body);color:var(--terra-ink)}
+@media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
+.endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
+.endcta .btns{display:flex;flex-direction:column;gap:10px}
+@media (max-width:760px){.endcta{grid-template-columns:1fr;padding:26px 22px}.endcta .btns{flex-direction:row;flex-wrap:wrap}}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;list-style:none;margin:0;padding:0}
+.cards li{display:flex}
+.card{display:flex;flex-direction:column;gap:12px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 14px 20px;width:100%;transition:transform .15s}
+.card:hover{transform:translateY(-2px)}
+.card .paper{border-radius:3px;overflow:hidden;aspect-ratio:1400/990}
+.card img{width:100%;height:100%;object-fit:cover}
+.card b{font:500 23px/1.2 var(--display);color:var(--navy);padding-inline:4px;text-wrap:balance}
+.card span{font-size:15px;color:var(--muted);padding-inline:4px}
+.card i{margin-top:auto;padding-inline:4px;font:700 13px/1 var(--body);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--terra-ink)}
+@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+.related{padding-block:64px}
+.related h2{margin-bottom:28px}
+.homeblog .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:32px}
 </style>
 </head>
 <body>
@@ -392,6 +442,7 @@ footer .palms{padding-bottom:30px}
       <a href="#livret">Le livret</a>
       <a href="#telephone">Version téléphone</a>
       <a href="#prix">Prix</a>
+      <a href="blog/">Conseils</a>
       <a href="#questions">Questions</a>
       <span class="langs" role="navigation" aria-label="Langue"><a class="l" href="./" hreflang="fr" lang="fr" aria-current="page" title="Français">FR</a><a class="l" href="en/" hreflang="en" lang="en" title="English">EN</a><a class="l" href="it/" hreflang="it" lang="it" title="Italiano">IT</a></span>
       <a class="btn btn-gold" href="#contact">M&#x27;écrire</a>
@@ -520,7 +571,15 @@ footer .palms{padding-bottom:30px}
   </div>
 </section>
 
-<section class="sand" id="questions" aria-labelledby="h-q">
+<div class="scallop" aria-hidden="true" style="background-color:var(--cream)"></div>
+<div class="sand"><section class="homeblog" id="conseils" aria-labelledby="h-blog">
+  <div class="wrap">
+    <div class="head"><div class="text"><h2 id="h-blog">Conseils pour les hôtes</h2><p class="muted">Des guides pratiques pour préparer l&#x27;arrivée de vos voyageurs.</p></div>
+    <a class="btn btn-navy" href="blog/">Tous les conseils</a></div>
+    <ul class="cards"><li><a class="card" href="blog/que-mettre-dans-un-livret-d-accueil/"><div class="paper"><img src="img/livret-sommaire.webp" width="1400" height="990" alt="" loading=lazy></div><b>Que mettre dans un livret d&#x27;accueil ?</b><span>Ce qu&#x27;il faut mettre dans le livret d&#x27;accueil d&#x27;une location saisonnière ou d&#x27;un Airbnb : les dix rubriques essentielles, dans le bon ordre, avec des exemples.</span><i>7 min de lecture</i></a></li><li><a class="card" href="blog/livret-d-accueil-imprime-ou-digital/"><div class="paper"><img src="img/livret-couverture.webp" width="1400" height="990" alt="" loading=lazy></div><b>Livret d&#x27;accueil imprimé ou digital : lequel choisir ?</b><span>Livret d&#x27;accueil papier ou version en ligne sur téléphone ? Avantages, limites et la solution qui combine les deux pour les locations saisonnières et Airbnb.</span><i>6 min de lecture</i></a></li><li><a class="card" href="blog/rediger-reglement-interieur-location-saisonniere/"><div class="paper"><img src="img/livret-nature.webp" width="1400" height="990" alt="" loading=lazy></div><b>Rédiger un règlement intérieur que vos voyageurs respectent</b><span>Comment écrire les règles de la maison d&#x27;une location saisonnière ou d&#x27;un Airbnb pour qu&#x27;elles soient lues et respectées : ton, structure et exemples.</span><i>6 min de lecture</i></a></li><li><a class="card" href="blog/recommander-bonnes-adresses-voyageurs/"><div class="paper"><img src="img/livret-ortigia.webp" width="1400" height="990" alt="" loading=lazy></div><b>Recommander des adresses à vos voyageurs</b><span>Comment choisir et présenter restaurants, plages et visites dans le livret d&#x27;accueil de votre location : moins d&#x27;adresses, mieux décrites, vraiment utiles.</span><i>6 min de lecture</i></a></li><li><a class="card" href="blog/livret-accueil-multilingue-voyageurs-etrangers/"><div class="paper"><img src="img/livret-sports-nautiques.webp" width="1400" height="990" alt="" loading=lazy></div><b>Un livret d&#x27;accueil pour les voyageurs étrangers</b><span>Faut-il traduire le livret d&#x27;accueil de votre location ? Quelles langues choisir, comment gérer plusieurs langues en version imprimée et digitale.</span><i>5 min de lecture</i></a></li><li><a class="card" href="blog/imprimer-livret-accueil-papier-format-reliure/"><div class="paper"><img src="img/livret-que-faire.webp" width="1400" height="990" alt="" loading=lazy></div><b>Imprimer son livret d&#x27;accueil</b><span>Quel format, quel papier et quelle reliure choisir pour imprimer le livret d&#x27;accueil de votre location saisonnière, pour qu&#x27;il tienne toute la saison.</span><i>6 min de lecture</i></a></li></ul>
+  </div>
+</section></div>
+<section id="questions" aria-labelledby="h-q">
   <div class="wrap">
     <h2 id="h-q">Vos questions</h2>
     <div class="faq"><details open><summary>Est-ce que vous imprimez le livret ?</summary><p>Je vous envoie un PDF haute définition prêt pour l&#x27;imprimeur, en A4 ou A5. Vous le faites imprimer où vous voulez, en copisterie ou chez un imprimeur en ligne. Je peux vous indiquer le papier et la reliure qui vont bien.</p></details><details><summary>Dans quelles langues ?</summary><p>Le livret imprimé est écrit dans la langue de vos voyageurs : français, anglais, italien, allemand, espagnol… Celui présenté ici est en anglais. La version téléphone peut réunir plusieurs langues.</p></details><details><summary>Vous travaillez seulement en Sicile ?</summary><p>Non. Tout se fait à distance : un appel en visio, des photos, vos adresses. Je travaille pour des logements en France, en Italie et ailleurs.</p></details><details><summary>De quoi avez-vous besoin de ma part ?</summary><p>Quelques photos du logement, les infos pratiques (Wi‑Fi, accès, règles) et vos adresses préférées. On fait le reste ensemble pendant l&#x27;appel.</p></details><details><summary>Combien de temps ça prend ?</summary><p>En général une à deux semaines, selon le nombre de pages et de langues.</p></details><details><summary>Et si une info change ?</summary><p>C&#x27;est le rôle du suivi annuel à 30 € : chaque année, je mets votre livret à jour, la version à imprimer comme la version téléphone.</p></details></div>
