@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://thomem.github.io/gj-welcomebooks/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomem.github.io/gj-welcomebooks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomem.github.io/gj-welcomebooks/en/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thomem.github.io/gj-welcomebooks/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thomem.github.io/gj-welcomebooks/en/"/>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-sommaire.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-que-faire.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-ortigia.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://thomem.github.io/gj-welcomebooks/en/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomem.github.io/gj-welcomebooks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomem.github.io/gj-welcomebooks/en/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thomem.github.io/gj-welcomebooks/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thomem.github.io/gj-welcomebooks/en/"/>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-sommaire.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-que-faire.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-ortigia.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://thomem.github.io/gj-welcomebooks/it/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomem.github.io/gj-welcomebooks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomem.github.io/gj-welcomebooks/en/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thomem.github.io/gj-welcomebooks/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thomem.github.io/gj-welcomebooks/en/"/>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-sommaire.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-que-faire.webp</image:loc></image:image>
+    <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-ortigia.webp</image:loc></image:image>
+  </url>
+</urlset>
