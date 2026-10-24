@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Équipement bébé, sécurité, activités pour enfants, médecins : ce qu'un livret d'accueil doit contenir pour les familles qui louent votre logement.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/v-familles-fr.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/livret-d-accueil-voyageurs-avec-enfants/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/livret-d-accueil-voyageurs-avec-enfants/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Faut-il fournir du matériel pour bébé ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ce n'est pas obligatoire. Si vous le faites, vérifiez qu'il est en bon état et conforme, et indiquez où il se trouve."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment parler de la sécurité sans faire peur ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Restez factuel : où sont les escaliers, la piscine, les produits ménagers, et ce qui a été prévu pour les enfants."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Peut-on faire une page à part pour les enfants ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, certains hôtes ajoutent une page illustrée pour les enfants avec les animaux à voir et les glaces à goûter. Les familles adorent."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Un livret d&#x27;accueil pour les familles</h1>
     <p class="lead">Une famille arrive avec plus de bagages et plus de questions. Quelques pages en plus dans le livret leur font gagner beaucoup de temps.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/v-familles-fr.webp" width="1400" height="990" alt="Illustration des informations utiles aux familles dans un livret d&#x27;accueil" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>L&#x27;équipement disponible</h2><p>Lit parapluie, chaise haute, baignoire bébé, barrière d&#x27;escalier : dites ce qui est fourni et où le trouver. Si vous ne fournissez rien, dites où en louer près de chez vous.</p><h2>La sécurité dans la maison</h2><ul><li><span>Escaliers, balcons, fenêtres en hauteur.</span></li><li><span>Produits ménagers rangés hors de portée.</span></li><li><span>Piscine ou accès direct à la mer. Voir <a href="../../blog/livret-d-accueil-villa-avec-piscine/">la page piscine</a>.</span></li><li><span>Prises électriques et appareils de cuisine.</span></li></ul><h2>La santé</h2><p>Pédiatre ou médecin le plus proche, pharmacie de garde, hôpital avec urgences pédiatriques. Ce sont des informations qu&#x27;on espère ne pas utiliser, mais qu&#x27;il faut trouver vite. Voir <a href="../../blog/numeros-urgence-securite-livret-d-accueil/">les informations d&#x27;urgence</a>.</p><h2>Les activités</h2><p>Plages peu profondes, aires de jeux, glaciers, activités par temps de pluie, sorties de moins d&#x27;une heure. Classez-les « avec des enfants » dans vos <a href="../../blog/recommander-bonnes-adresses-voyageurs/">adresses</a>.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Indiquez les restaurants qui accueillent bien les enfants, avec ou sans menu dédié. C&#x27;est une question qui revient à chaque séjour en famille.</p></aside><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Le ton</h2><p>Un livret pour les familles n&#x27;a pas besoin d&#x27;être enfantin. Il doit surtout être rassurant et facile à parcourir en cinq minutes, entre deux valises.</p><p>Votre clientèle est surtout familiale ? <a href="../../#contact">Je l&#x27;intègre dès le départ</a>.</p>
+      <h2>L&#x27;équipement disponible</h2><p>Lit parapluie, chaise haute, baignoire bébé, barrière d&#x27;escalier : dites ce qui est fourni et où le trouver. Si vous ne fournissez rien, dites où en louer près de chez vous.</p><h2>La sécurité dans la maison</h2><ul><li><span>Escaliers, balcons, fenêtres en hauteur.</span></li><li><span>Produits ménagers rangés hors de portée.</span></li><li><span>Piscine ou accès direct à la mer. Voir <a href="../../blog/livret-d-accueil-villa-avec-piscine/">la page piscine</a>.</span></li><li><span>Prises électriques et appareils de cuisine.</span></li></ul><h2>La santé</h2><p>Pédiatre ou médecin le plus proche, pharmacie de garde, hôpital avec urgences pédiatriques. Ce sont des informations qu&#x27;on espère ne pas utiliser, mais qu&#x27;il faut trouver vite. Voir <a href="../../blog/numeros-urgence-securite-livret-d-accueil/">les informations d&#x27;urgence</a>.</p><h2>Les activités</h2><p>Plages peu profondes, aires de jeux, glaciers, activités par temps de pluie, sorties de moins d&#x27;une heure. Classez-les « avec des enfants » dans vos <a href="../../blog/recommander-bonnes-adresses-voyageurs/">adresses</a>.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Indiquez les restaurants qui accueillent bien les enfants, avec ou sans menu dédié. C&#x27;est une question qui revient à chaque séjour en famille.</p></aside><h2>Un exemple de page « avec des enfants »</h2><div class="tbl"><table><thead><tr><th>Besoin</th><th>Ce qu&#x27;on indique</th></tr></thead><tbody><tr><td>Dormir</td><td>Lit parapluie et matelas : placard de la chambre 2</td></tr><tr><td>Manger</td><td>Chaise haute, couverts et assiettes en plastique : cuisine, tiroir du bas</td></tr><tr><td>Se baigner</td><td>Plage de sable à 10 min, eau peu profonde, bar avec glaces</td></tr><tr><td>Jouer</td><td>Aire de jeux ombragée sur la place du village</td></tr><tr><td>Se soigner</td><td>Pharmacie à 5 min, pédiatre de garde : voir la page urgences</td></tr></tbody></table></div><h2>Les petites attentions qui changent tout</h2><ul><li><span>Un tabouret pour atteindre le lavabo.</span></li><li><span>Quelques jeux de société ou livres dans le salon.</span></li><li><span>Une veilleuse dans le couloir.</span></li><li><span>Des cache-prises si la maison accueille souvent des tout-petits.</span></li></ul><p>Rien de tout cela n&#x27;est obligatoire, mais quand vous le proposez, dites-le dans le livret et dans l&#x27;annonce : c&#x27;est souvent ce qui décide une famille.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Le ton</h2><p>Un livret pour les familles n&#x27;a pas besoin d&#x27;être enfantin. Il doit surtout être rassurant et facile à parcourir en cinq minutes, entre deux valises.</p><p>Votre clientèle est surtout familiale ? <a href="../../#contact">Je l&#x27;intègre dès le départ</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Faut-il fournir du matériel pour bébé ?</summary><p>Ce n&#x27;est pas obligatoire. Si vous le faites, vérifiez qu&#x27;il est en bon état et conforme, et indiquez où il se trouve.</p></details><details><summary>Comment parler de la sécurité sans faire peur ?</summary><p>Restez factuel : où sont les escaliers, la piscine, les produits ménagers, et ce qui a été prévu pour les enfants.</p></details><details><summary>Peut-on faire une page à part pour les enfants ?</summary><p>Oui, certains hôtes ajoutent une page illustrée pour les enfants avec les animaux à voir et les glaces à goûter. Les familles adorent.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

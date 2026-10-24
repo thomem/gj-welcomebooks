@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Ce qu'un livret d'accueil doit contenir pour une location en Sicile : conduite, plages, horaires, marchés, chaleur, visites. Conseils d'un hôte sicilien.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/livret-noto.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/livret-accueil-maison-de-vacances-sicile/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/livret-accueil-maison-de-vacances-sicile/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Faut-il une voiture pour une location en Sicile ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dans la plupart des cas, oui, surtout en dehors des villes. Indiquez où se garer et les zones à circulation limitée."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Le livret doit-il être en italien ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pas forcément. Écrivez-le dans la langue de vos voyageurs : souvent l'anglais, parfois le français ou l'allemand. Gardez les noms de lieux en italien."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Travaillez-vous sur place en Sicile ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Je connais bien la région de Syracuse, mais tout se fait à distance : un appel, des photos, vos adresses. Je peux créer un livret pour n'importe quelle maison de l'île."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Un livret d&#x27;accueil pour une maison en Sicile</h1>
     <p class="lead">Une maison en Sicile n&#x27;accueille pas comme un appartement à Paris. Le rythme, la mer, la chaleur, la conduite : voici ce qui mérite une place dans votre livret.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>6 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>6 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/livret-noto.webp" width="1400" height="990" alt="Page d&#x27;un livret d&#x27;accueil imprimé" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Le rythme de la journée</h2><p>Beaucoup de commerces ferment en début d&#x27;après-midi et rouvrent en fin de journée, et l&#x27;on dîne tard. Dites-le à vos voyageurs, avec les horaires de vos adresses.</p><h2>La voiture</h2><p>Indiquez où se garer, comment fonctionnent les zones à circulation limitée (ZTL) des centres historiques, et les routes à éviter en pleine saison. Une amende de ZTL reçue des mois plus tard laisse un mauvais souvenir.</p><h2>La mer selon le vent</h2><p>Sur une île, une plage peut être parfaite le matin et agitée l&#x27;après-midi. Si vous savez où aller selon le vent, c&#x27;est le conseil le plus précieux de votre livret.</p><h2>La chaleur</h2><p>Climatisation, volets à fermer aux heures chaudes, eau, crème solaire, heures à éviter pour les visites : ces conseils simples rendent le séjour bien plus agréable en été.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Les visites et les marchés</h2><p>Baroque, sites antiques, marchés, granita du matin : la Sicile déborde de choses à faire. Choisissez celles qui sont à portée de votre maison et donnez votre ordre de préférence. Le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a> a été pensé pour une maison près de Syracuse.</p><p>Vous avez une maison en Sicile ? <a href="../../#contact">Je connais bien le terrain</a>.</p>
+      <h2>Le rythme de la journée</h2><p>Beaucoup de commerces ferment en début d&#x27;après-midi et rouvrent en fin de journée, et l&#x27;on dîne tard. Dites-le à vos voyageurs, avec les horaires de vos adresses.</p><h2>La voiture</h2><p>Indiquez où se garer, comment fonctionnent les zones à circulation limitée (ZTL) des centres historiques, et les routes à éviter en pleine saison. Une amende de ZTL reçue des mois plus tard laisse un mauvais souvenir.</p><h2>La mer selon le vent</h2><p>Sur une île, une plage peut être parfaite le matin et agitée l&#x27;après-midi. Si vous savez où aller selon le vent, c&#x27;est le conseil le plus précieux de votre livret.</p><h2>La chaleur</h2><p>Climatisation, volets à fermer aux heures chaudes, eau, crème solaire, heures à éviter pour les visites : ces conseils simples rendent le séjour bien plus agréable en été.</p><h2>Les questions que posent les voyageurs en Sicile</h2><ul><li><span>Peut-on boire l&#x27;eau du robinet ? Elle est généralement potable, mais beaucoup de foyers boivent de l&#x27;eau en bouteille : dites ce que vous faites chez vous.</span></li><li><span>Où trouver une granita et une brioche le matin ?</span></li><li><span>Quels jours ferment les commerces ? Souvent le dimanche après-midi et parfois un jour de semaine.</span></li><li><span>Peut-on payer par carte partout ? Pas toujours dans les petits commerces et sur les marchés : prévoir un peu d&#x27;espèces.</span></li></ul><h2>Les distances réelles</h2><p>Sur l&#x27;île, les temps de trajet sont souvent plus longs que ce que la carte laisse penser : routes sinueuses, traversées de villages, circulation en été. Donnez des durées réalistes plutôt que des kilomètres, comme dans le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a>.</p><h2>Les saisons</h2><div class="tbl"><table><thead><tr><th>Période</th><th>À savoir</th></tr></thead><tbody><tr><td>Avril à juin</td><td>Idéal pour les visites, mer encore fraîche au début</td></tr><tr><td>Juillet et août</td><td>Chaleur forte, plages pleines, réserver les restaurants</td></tr><tr><td>Septembre et octobre</td><td>Mer chaude, moins de monde, certaines adresses ferment fin octobre</td></tr><tr><td>Hiver</td><td>Beaucoup d&#x27;établissements de plage fermés, villes plus calmes</td></tr></tbody></table></div><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Les visites et les marchés</h2><p>Baroque, sites antiques, marchés, granita du matin : la Sicile déborde de choses à faire. Choisissez celles qui sont à portée de votre maison et donnez votre ordre de préférence. Le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a> a été pensé pour une maison près de Syracuse.</p><p>Vous avez une maison en Sicile ? <a href="../../#contact">Je connais bien le terrain</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Faut-il une voiture pour une location en Sicile ?</summary><p>Dans la plupart des cas, oui, surtout en dehors des villes. Indiquez où se garer et les zones à circulation limitée.</p></details><details><summary>Le livret doit-il être en italien ?</summary><p>Pas forcément. Écrivez-le dans la langue de vos voyageurs : souvent l&#x27;anglais, parfois le français ou l&#x27;allemand. Gardez les noms de lieux en italien.</p></details><details><summary>Travaillez-vous sur place en Sicile ?</summary><p>Je connais bien la région de Syracuse, mais tout se fait à distance : un appel, des photos, vos adresses. Je peux créer un livret pour n&#x27;importe quelle maison de l&#x27;île.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

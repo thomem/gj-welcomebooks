@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Numeri di emergenza, ospedale, farmacia di turno, chiusura di acqua e luce: la pagina sicurezza indispensabile del welcome book della casa vacanza.",
    "inLanguage": "it",
    "image": "https://thomem.github.io/gj-welcomebooks/img/v-urgences-it.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/it/blog/numeri-emergenza-sicurezza-welcome-book/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/it/blog/numeri-emergenza-sicurezza-welcome-book/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "it",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Il 112 funziona ovunque in Europa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sì, il 112 è il numero di emergenza comune in tutta l'Unione europea, gratuito da fisso e cellulare."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bisogna dare il proprio numero personale?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Date un numero raggiungibile durante il soggiorno: il vostro, quello di un referente sul posto o della gestione."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dove mettere la pagina emergenze?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nelle prime pagine, con le informazioni pratiche, ben segnalata nell'indice."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../../it/">Home</a></li><li><a href="../../../it/blog/">Consigli</a></li></ol>
     <h1>La pagina emergenze e sicurezza</h1>
     <p class="lead">È la pagina che si spera di non aprire mai. Quando serve, va trovata in dieci secondi, in una lingua che l&#x27;ospite capisce.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Di Gustave</span><span>5 min di lettura</span><span>Aggiornato il 23 ottobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Di Gustave</span><span>5 min di lettura</span><span>Aggiornato il 24 ottobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../../img/v-urgences-it.webp" width="1400" height="990" alt="Pagina emergenze di un welcome book con numeri e luoghi utili" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>I numeri</h2><p>In tutta l&#x27;Unione europea il 112 è il numero unico di emergenza, gratuito da fisso e cellulare. Aggiungete i numeri nazionali: in Italia il 118 per le emergenze sanitarie; in Francia il 15, il 17 e il 18. Verificate quelli del vostro paese.</p><h2>I luoghi</h2><ul><li><span>L&#x27;ospedale più vicino con pronto soccorso, e il tempo di percorrenza.</span></li><li><span>La farmacia più vicina, e come trovare quella di turno.</span></li><li><span>La guardia medica per le cure non urgenti.</span></li><li><span>Un veterinario se accettate animali.</span></li></ul><h2>La casa</h2><ul><li><span>Dove sono il quadro elettrico e il rubinetto generale dell&#x27;acqua.</span></li><li><span>Come chiudere il gas.</span></li><li><span>Dove sono la cassetta di pronto soccorso e l&#x27;estintore.</span></li><li><span>Cosa fare in caso di perdita, blackout o porta bloccata.</span></li></ul><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Scrivete l&#x27;indirizzo esatto della casa in cima a questa pagina. In caso di emergenza è la prima cosa che chiede l&#x27;operatore, e l&#x27;ospite non sempre lo sa a memoria.</p></aside><aside class="mid"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un esempio concreto</b><p>Sfogliate un vero welcome book stampato, pagina per pagina, nella home.</p><a href="../../../it/#livret">Vedere l&#x27;esempio →</a></div></aside><h2>Metterla al posto giusto</h2><p>All&#x27;inizio del libretto, con le informazioni pratiche, e segnalata nell&#x27;indice. In un libretto multilingue è la prima pagina da tradurre. Vedi <a href="../../../it/blog/welcome-book-multilingue-ospiti-stranieri/">il welcome book multilingue</a>.</p><p>Tutti i miei libretti si aprono con queste informazioni: <a href="../../../it/#livret">vedere l&#x27;esempio</a>.</p>
+      <h2>I numeri</h2><p>In tutta l&#x27;Unione europea il 112 è il numero unico di emergenza, gratuito da fisso e cellulare. Aggiungete i numeri nazionali: in Italia il 118 per le emergenze sanitarie; in Francia il 15, il 17 e il 18. Verificate quelli del vostro paese.</p><h2>I luoghi</h2><ul><li><span>L&#x27;ospedale più vicino con pronto soccorso, e il tempo di percorrenza.</span></li><li><span>La farmacia più vicina, e come trovare quella di turno.</span></li><li><span>La guardia medica per le cure non urgenti.</span></li><li><span>Un veterinario se accettate animali.</span></li></ul><h2>La casa</h2><ul><li><span>Dove sono il quadro elettrico e il rubinetto generale dell&#x27;acqua.</span></li><li><span>Come chiudere il gas.</span></li><li><span>Dove sono la cassetta di pronto soccorso e l&#x27;estintore.</span></li><li><span>Cosa fare in caso di perdita, blackout o porta bloccata.</span></li></ul><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Scrivete l&#x27;indirizzo esatto della casa in cima a questa pagina. In caso di emergenza è la prima cosa che chiede l&#x27;operatore, e l&#x27;ospite non sempre lo sa a memoria.</p></aside><h2>Un modello di pagina emergenze</h2><div class="tbl"><table><thead><tr><th>Informazione</th><th>Da compilare</th></tr></thead><tbody><tr><td>Indirizzo esatto della casa</td><td>Via, numero, CAP, comune</td></tr><tr><td>Numero unico di emergenza europeo</td><td>112</td></tr><tr><td>Numeri nazionali</td><td>Secondo il paese</td></tr><tr><td>Ospedale con pronto soccorso</td><td>Nome, indirizzo, tempo di percorrenza</td></tr><tr><td>Farmacia più vicina</td><td>Nome, indirizzo, orari</td></tr><tr><td>Il vostro numero o quello del referente sul posto</td><td>Per i problemi in casa</td></tr><tr><td>Quadro elettrico e rubinetto generale</td><td>Posizione precisa</td></tr></tbody></table></div><h2>Dire chi chiamare e quando</h2><p>Gli ospiti spesso esitano: chiamare l&#x27;host, il 112 o un medico? Una riga semplice aiuta: per un&#x27;emergenza che riguarda una persona, chiamate prima il 112; per un problema in casa, chiamate noi.</p><h2>Le informazioni pratiche di sicurezza</h2><ul><li><span>Dov&#x27;è il rilevatore di fumo e come fermarlo in caso di falso allarme.</span></li><li><span>Cosa fare in caso di temporale o blackout.</span></li><li><span>I rischi locali se ci sono: incendi estivi, ondate di calore, vento forte.</span></li></ul><aside class="mid"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un esempio concreto</b><p>Sfogliate un vero welcome book stampato, pagina per pagina, nella home.</p><a href="../../../it/#livret">Vedere l&#x27;esempio →</a></div></aside><h2>Metterla al posto giusto</h2><p>All&#x27;inizio del libretto, con le informazioni pratiche, e segnalata nell&#x27;indice. In un libretto multilingue è la prima pagina da tradurre. Vedi <a href="../../../it/blog/welcome-book-multilingue-ospiti-stranieri/">il welcome book multilingue</a>.</p><p>Tutti i miei libretti si aprono con queste informazioni: <a href="../../../it/#livret">vedere l&#x27;esempio</a>.</p>
+      <section class="afaq"><h2>Domande frequenti</h2><details><summary>Il 112 funziona ovunque in Europa?</summary><p>Sì, il 112 è il numero di emergenza comune in tutta l&#x27;Unione europea, gratuito da fisso e cellulare.</p></details><details><summary>Bisogna dare il proprio numero personale?</summary><p>Date un numero raggiungibile durante il soggiorno: il vostro, quello di un referente sul posto o della gestione.</p></details><details><summary>Dove mettere la pagina emergenze?</summary><p>Nelle prime pagine, con le informazioni pratiche, ben segnalata nell&#x27;indice.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Preferite che lo faccia io?</h2><p>Creo welcome book illustrati, pronti da stampare, partendo dalla vostra casa e dalla vostra zona. Libretto da stampare: 249 €. Libretto + versione smartphone: 299 €.</p></div>

@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Comment choisir et présenter restaurants, plages et visites dans le livret d'accueil de votre location : moins d'adresses, mieux décrites, vraiment utiles.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/livret-ortigia.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/recommander-bonnes-adresses-voyageurs/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/recommander-bonnes-adresses-voyageurs/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Faut-il indiquer les prix des restaurants ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Une indication suffit (simple, moyen, pour une occasion). Les prix exacts changent trop souvent pour rester justes toute la saison."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Doit-on mettre des adresses qu'on n'a pas testées ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Mieux vaut éviter. Si vous voulez en citer une, dites-le : « On nous en a dit du bien, nous n'y sommes pas encore allés »."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment présenter les adresses sur une carte ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dans la version téléphone, chaque adresse peut apparaître sur une carte avec l'itinéraire depuis la maison. Sur papier, une petite carte dessinée du quartier aide à se repérer."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Recommander des adresses à vos voyageurs</h1>
     <p class="lead">C&#x27;est la partie que les voyageurs préfèrent, et celle qui fait la différence avec un guide touristique. Votre avantage : vous connaissez le coin.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>6 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>6 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/livret-ortigia.webp" width="1400" height="990" alt="Page d&#x27;un livret d&#x27;accueil imprimé" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Moins, mais mieux</h2><p>Vingt restaurants piochés sur internet n&#x27;aident personne. Cinq adresses que vous connaissez, avec une phrase sur chacune, valent bien plus. Vos voyageurs viennent chercher votre regard.</p><h2>Ce qu&#x27;il faut indiquer pour chaque adresse</h2><ul><li><span>Le nom et le quartier, ou la distance depuis la maison.</span></li><li><span>Pourquoi vous la recommandez, en une phrase.</span></li><li><span>Ce qu&#x27;il faut commander ou voir.</span></li><li><span>S&#x27;il faut réserver, les jours de fermeture.</span></li><li><span>Le moyen de s&#x27;y rendre.</span></li></ul><h2>Classer par envie, pas par type</h2><p>« À deux pas de la maison », « Pour un soir spécial », « Quand il pleut », « Avec des enfants » : ces catégories parlent plus aux voyageurs que « Restaurants » et « Bars ».</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Les horaires changent avec les saisons. Ajoutez une petite mention invitant à vérifier, et relisez vos adresses chaque année.</p></aside><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Sur papier et sur carte</h2><p>Dans le livret imprimé, les adresses se lisent comme un petit magazine. Dans la <a href="../../#telephone">version téléphone</a>, elles apparaissent sur une carte avec l&#x27;itinéraire depuis la maison. Les deux se complètent bien.</p><p>Mettre vos adresses à jour chaque année, c&#x27;est justement le rôle du <a href="../../#prix">suivi annuel</a>.</p>
+      <h2>Moins, mais mieux</h2><p>Vingt restaurants piochés sur internet n&#x27;aident personne. Cinq adresses que vous connaissez, avec une phrase sur chacune, valent bien plus. Vos voyageurs viennent chercher votre regard.</p><h2>Ce qu&#x27;il faut indiquer pour chaque adresse</h2><ul><li><span>Le nom et le quartier, ou la distance depuis la maison.</span></li><li><span>Pourquoi vous la recommandez, en une phrase.</span></li><li><span>Ce qu&#x27;il faut commander ou voir.</span></li><li><span>S&#x27;il faut réserver, les jours de fermeture.</span></li><li><span>Le moyen de s&#x27;y rendre.</span></li></ul><h2>Classer par envie, pas par type</h2><p>« À deux pas de la maison », « Pour un soir spécial », « Quand il pleut », « Avec des enfants » : ces catégories parlent plus aux voyageurs que « Restaurants » et « Bars ».</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Les horaires changent avec les saisons. Ajoutez une petite mention invitant à vérifier, et relisez vos adresses chaque année.</p></aside><h2>Un exemple de fiche adresse</h2><aside class="ex"><b>Exemple</b><p>Trattoria da Nino · 5 min à pied. Notre adresse pour le premier soir : poisson du jour grillé, pâtes aux oursins en saison. Petite salle, réservez le week-end. Fermé le lundi. Paiement par carte accepté.</p></aside><p>Cinq lignes suffisent : où, pourquoi, quoi commander, ce qu&#x27;il faut savoir, comment y aller. C&#x27;est ce format que je reprends dans les livrets que je crée.</p><h2>Combien d&#x27;adresses par catégorie</h2><div class="tbl"><table><thead><tr><th>Catégorie</th><th>Nombre conseillé</th></tr></thead><tbody><tr><td>Restaurants près de la maison</td><td>3 à 5</td></tr><tr><td>Restaurants pour une occasion</td><td>1 à 3</td></tr><tr><td>Bars, apéritif, coucher de soleil</td><td>2 à 3</td></tr><tr><td>Plages ou balades</td><td>3 à 6</td></tr><tr><td>Visites à moins d&#x27;une heure</td><td>4 à 8</td></tr><tr><td>Courses (supermarché, marché, boulangerie)</td><td>3 à 5</td></tr></tbody></table></div><h2>Faut-il mettre des adresses partenaires ?</h2><p>Si un restaurant ou un loueur vous propose un arrangement, soyez transparent avec vos voyageurs. Une recommandation sincère vaut beaucoup plus qu&#x27;une publicité déguisée, et les voyageurs font vite la différence.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Sur papier et sur carte</h2><p>Dans le livret imprimé, les adresses se lisent comme un petit magazine. Dans la <a href="../../#telephone">version téléphone</a>, elles apparaissent sur une carte avec l&#x27;itinéraire depuis la maison. Les deux se complètent bien.</p><p>Mettre vos adresses à jour chaque année, c&#x27;est justement le rôle du <a href="../../#prix">suivi annuel</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Faut-il indiquer les prix des restaurants ?</summary><p>Une indication suffit (simple, moyen, pour une occasion). Les prix exacts changent trop souvent pour rester justes toute la saison.</p></details><details><summary>Doit-on mettre des adresses qu&#x27;on n&#x27;a pas testées ?</summary><p>Mieux vaut éviter. Si vous voulez en citer une, dites-le : « On nous en a dit du bien, nous n&#x27;y sommes pas encore allés ».</p></details><details><summary>Comment présenter les adresses sur une carte ?</summary><p>Dans la version téléphone, chaque adresse peut apparaître sur une carte avec l&#x27;itinéraire depuis la maison. Sur papier, une petite carte dessinée du quartier aide à se repérer.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

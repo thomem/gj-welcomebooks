@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "La bonne longueur pour le livret d'accueil d'une location saisonnière : combien de pages, comment les répartir, et ce qu'il vaut mieux couper.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/v-pages-fr.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/combien-de-pages-livret-d-accueil/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/combien-de-pages-livret-d-accueil/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Un livret trop long est-il un problème ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Seulement s'il est mal rangé. Avec un sommaire et des chapitres clairs, un livret de 40 pages reste facile à utiliser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Faut-il numéroter les pages ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, dès que le livret a un sommaire. C'est ce qui permet de trouver la bonne page en quelques secondes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "La version téléphone doit-elle être aussi longue ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Elle peut contenir la même chose, mais organisée en rubriques qu'on ouvre une par une. La longueur gêne beaucoup moins à l'écran."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Combien de pages pour un livret d&#x27;accueil ?</h1>
     <p class="lead">Trop court, il ne répond pas aux questions. Trop long, personne ne le lit. Il n&#x27;y a pas de nombre magique, mais il y a une bonne façon de penser la longueur.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/v-pages-fr.webp" width="1400" height="990" alt="Schéma de la répartition des pages d&#x27;un livret d&#x27;accueil par chapitre" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>La règle : une page, une question</h2><p>Chaque page doit répondre à une question que se pose un voyageur : comment me connecter, où dîner ce soir, quand sortir les poubelles. Une page qui ne répond à aucune question peut partir.</p><h2>Des ordres de grandeur</h2><ul><li><span>Un studio en ville : 8 à 12 pages suffisent souvent.</span></li><li><span>Une maison avec jardin : 15 à 25 pages.</span></li><li><span>Une villa avec piscine dans une région riche en visites : 30 pages et plus, à condition d&#x27;avoir un sommaire.</span></li></ul><p>Le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a> fait 39 pages parce que la maison est proche de nombreux sites à visiter. Le sommaire en dix chapitres permet de s&#x27;y retrouver.</p><h2>Où va la place</h2><p>Dans la plupart des livrets, les adresses (visites, plages, restaurants, courses) prennent plus de la moitié des pages. Les informations pratiques et les règles tiennent en quelques pages bien rangées.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Si un chapitre dépasse cinq ou six pages, découpez-le en sous-parties avec des titres clairs. On ne lit pas un livret d&#x27;accueil, on y cherche quelque chose.</p></aside><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Ce qu&#x27;il vaut mieux couper</h2><ul><li><span>L&#x27;histoire complète de la région, copiée d&#x27;un guide.</span></li><li><span>Les adresses que vous ne connaissez pas vous-même.</span></li><li><span>Les règles répétées à plusieurs endroits.</span></li><li><span>Les modes d&#x27;emploi d&#x27;appareils évidents.</span></li></ul><p>Voir aussi <a href="../../blog/erreurs-livret-accueil-location/">les erreurs fréquentes</a>. Si vous voulez un livret à la bonne longueur pour votre maison, <a href="../../#contact">parlons-en</a>.</p>
+      <h2>La règle : une page, une question</h2><p>Chaque page doit répondre à une question que se pose un voyageur : comment me connecter, où dîner ce soir, quand sortir les poubelles. Une page qui ne répond à aucune question peut partir.</p><h2>Des ordres de grandeur</h2><ul><li><span>Un studio en ville : 8 à 12 pages suffisent souvent.</span></li><li><span>Une maison avec jardin : 15 à 25 pages.</span></li><li><span>Une villa avec piscine dans une région riche en visites : 30 pages et plus, à condition d&#x27;avoir un sommaire.</span></li></ul><p>Le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a> fait 39 pages parce que la maison est proche de nombreux sites à visiter. Le sommaire en dix chapitres permet de s&#x27;y retrouver.</p><h2>Où va la place</h2><p>Dans la plupart des livrets, les adresses (visites, plages, restaurants, courses) prennent plus de la moitié des pages. Les informations pratiques et les règles tiennent en quelques pages bien rangées.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Si un chapitre dépasse cinq ou six pages, découpez-le en sous-parties avec des titres clairs. On ne lit pas un livret d&#x27;accueil, on y cherche quelque chose.</p></aside><h2>Combien de mots par page</h2><p>Une page de livret d&#x27;accueil se lit en quelques secondes. Visez des paragraphes de deux à quatre lignes, des listes plutôt que des blocs de texte, et un titre clair par sujet. Une page trop dense est une page qu&#x27;on saute.</p><h2>Le test des dix secondes</h2><p>Ouvrez votre livret au hasard. En dix secondes, savez-vous de quoi parle la page et où est l&#x27;information principale ? Si ce n&#x27;est pas le cas, raccourcissez ou ajoutez des intertitres.</p><h2>Livret court ou livret long : exemples</h2><div class="tbl"><table><thead><tr><th>Logement</th><th>Ce qui compte le plus</th><th>Longueur conseillée</th></tr></thead><tbody><tr><td>Studio en centre-ville</td><td>Arrivée, Wi‑Fi, transports, quartier</td><td>8 à 12 pages</td></tr><tr><td>Maison de village</td><td>Règles, appareils, commerces, balades</td><td>15 à 20 pages</td></tr><tr><td>Villa avec piscine</td><td>Piscine, sécurité, visites, restaurants</td><td>25 à 40 pages</td></tr><tr><td>Conciergerie</td><td>Base commune + pages propres au logement</td><td>Variable</td></tr></tbody></table></div><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Ce qu&#x27;il vaut mieux couper</h2><ul><li><span>L&#x27;histoire complète de la région, copiée d&#x27;un guide.</span></li><li><span>Les adresses que vous ne connaissez pas vous-même.</span></li><li><span>Les règles répétées à plusieurs endroits.</span></li><li><span>Les modes d&#x27;emploi d&#x27;appareils évidents.</span></li></ul><p>Voir aussi <a href="../../blog/erreurs-livret-accueil-location/">les erreurs fréquentes</a>. Si vous voulez un livret à la bonne longueur pour votre maison, <a href="../../#contact">parlons-en</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Un livret trop long est-il un problème ?</summary><p>Seulement s&#x27;il est mal rangé. Avec un sommaire et des chapitres clairs, un livret de 40 pages reste facile à utiliser.</p></details><details><summary>Faut-il numéroter les pages ?</summary><p>Oui, dès que le livret a un sommaire. C&#x27;est ce qui permet de trouver la bonne page en quelques secondes.</p></details><details><summary>La version téléphone doit-elle être aussi longue ?</summary><p>Elle peut contenir la même chose, mais organisée en rubriques qu&#x27;on ouvre une par une. La longueur gêne beaucoup moins à l&#x27;écran.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

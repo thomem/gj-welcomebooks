@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "How to choose and present restaurants, beaches and sights in your rental's welcome book: fewer places, better described, actually useful.",
    "inLanguage": "en",
    "image": "https://thomem.github.io/gj-welcomebooks/img/livret-ortigia.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/en/blog/recommend-local-places-to-guests/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/en/blog/recommend-local-places-to-guests/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "en",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Should I list restaurant prices?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A rough indication is enough (simple, mid-range, special occasion). Exact prices change too often to stay right all season."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Should I include places I haven't tried?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Better not. If you do, say so: “We've heard good things, we haven't been yet”."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I show places on a map?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In the phone version each place can appear on a map with directions from the house. On paper, a small hand-drawn map of the area helps."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../../en/">Home</a></li><li><a href="../../../en/blog/">Guides</a></li></ol>
     <h1>Recommending local places to guests</h1>
     <p class="lead">It&#x27;s the part guests love most, and what sets your book apart from a guidebook. Your advantage: you know the area.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>By Gustave</span><span>6 min read</span><span>Updated 23 October 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>By Gustave</span><span>6 min read</span><span>Updated 24 October 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../../img/livret-ortigia.webp" width="1400" height="990" alt="Page of a printed welcome book" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Fewer, but better</h2><p>Twenty restaurants copied from the internet help nobody. Five places you know, with one sentence each, are worth far more. Guests want your take.</p><h2>What to include for each place</h2><ul><li><span>Name and area, or distance from the house.</span></li><li><span>Why you recommend it, in one sentence.</span></li><li><span>What to order or see.</span></li><li><span>Whether to book, closing days.</span></li><li><span>How to get there.</span></li></ul><h2>Sort by mood, not by type</h2><p>“A short walk from the house”, “For a special night”, “When it rains”, “With kids”: these speak to guests more than “Restaurants” and “Bars”.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Opening hours change with the seasons. Add a note inviting guests to check, and review your places every year.</p></aside><aside class="mid"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>A real example</b><p>Flip through a real printed welcome book, page by page, on the home page.</p><a href="../../../en/#livret">See the example →</a></div></aside><h2>On paper and on a map</h2><p>In the printed book, places read like a small magazine. In the <a href="../../../en/#telephone">phone version</a>, they appear on a map with directions from the house. The two work well together.</p><p>Updating your places every year is exactly what the <a href="../../../en/#prix">yearly update</a> is for.</p>
+      <h2>Fewer, but better</h2><p>Twenty restaurants copied from the internet help nobody. Five places you know, with one sentence each, are worth far more. Guests want your take.</p><h2>What to include for each place</h2><ul><li><span>Name and area, or distance from the house.</span></li><li><span>Why you recommend it, in one sentence.</span></li><li><span>What to order or see.</span></li><li><span>Whether to book, closing days.</span></li><li><span>How to get there.</span></li></ul><h2>Sort by mood, not by type</h2><p>“A short walk from the house”, “For a special night”, “When it rains”, “With kids”: these speak to guests more than “Restaurants” and “Bars”.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Opening hours change with the seasons. Add a note inviting guests to check, and review your places every year.</p></aside><h2>An example place entry</h2><aside class="ex"><b>Example</b><p>Trattoria da Nino · 5 min walk. Our pick for the first night: grilled catch of the day, sea-urchin pasta in season. Small room, book at weekends. Closed Mondays. Cards accepted.</p></aside><p>Five lines are enough: where, why, what to order, what to know, how to get there. It&#x27;s the format I use in the books I make.</p><h2>How many places per category</h2><div class="tbl"><table><thead><tr><th>Category</th><th>Suggested number</th></tr></thead><tbody><tr><td>Restaurants near the house</td><td>3 to 5</td></tr><tr><td>Restaurants for a special night</td><td>1 to 3</td></tr><tr><td>Bars, aperitivo, sunset</td><td>2 to 3</td></tr><tr><td>Beaches or walks</td><td>3 to 6</td></tr><tr><td>Sights within an hour</td><td>4 to 8</td></tr><tr><td>Shopping (supermarket, market, bakery)</td><td>3 to 5</td></tr></tbody></table></div><h2>Partner places?</h2><p>If a restaurant or rental shop offers you a deal, be open with your guests. A sincere recommendation is worth far more than a disguised ad, and guests quickly tell the difference.</p><aside class="mid"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>A real example</b><p>Flip through a real printed welcome book, page by page, on the home page.</p><a href="../../../en/#livret">See the example →</a></div></aside><h2>On paper and on a map</h2><p>In the printed book, places read like a small magazine. In the <a href="../../../en/#telephone">phone version</a>, they appear on a map with directions from the house. The two work well together.</p><p>Updating your places every year is exactly what the <a href="../../../en/#prix">yearly update</a> is for.</p>
+      <section class="afaq"><h2>Frequently asked questions</h2><details><summary>Should I list restaurant prices?</summary><p>A rough indication is enough (simple, mid-range, special occasion). Exact prices change too often to stay right all season.</p></details><details><summary>Should I include places I haven&#x27;t tried?</summary><p>Better not. If you do, say so: “We&#x27;ve heard good things, we haven&#x27;t been yet”.</p></details><details><summary>How do I show places on a map?</summary><p>In the phone version each place can appear on a map with directions from the house. On paper, a small hand-drawn map of the area helps.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Rather have it done for you?</h2><p>I create illustrated, print-ready welcome books based on your house and your area. Printable book: €249. Book + phone version: €299.</p></div>

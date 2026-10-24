@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Les erreurs les plus courantes dans les livrets d'accueil de locations saisonnières : trop long, pas à jour, mal rangé, mot de passe illisible… et les solutions.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/livret-ortigia.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/erreurs-livret-accueil-location/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/erreurs-livret-accueil-location/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Combien de temps faut-il pour refaire un livret d'accueil ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Seul, comptez plusieurs soirées pour écrire, vérifier et mettre en page. Avec un professionnel, l'essentiel de votre temps se résume à un appel et à une relecture."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Faut-il jeter l'ancien livret ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Non, il sert de base : il contient souvent les bonnes informations, seulement mal rangées ou dépassées."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quelle est l'erreur la plus fréquente ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Un livret pas à jour. Un code Wi‑Fi ou une adresse faux fait douter de tout le reste."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>7 erreurs fréquentes dans un livret d&#x27;accueil</h1>
     <p class="lead">La plupart des livrets d&#x27;accueil ont les mêmes défauts. Bonne nouvelle : ils se corrigent facilement.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/livret-ortigia.webp" width="1400" height="990" alt="Page d&#x27;un livret d&#x27;accueil imprimé" fetchpriority="high"></div></figure>
     <div class="prose">
-      <ol><li><span>Trop long. Quarante pages de texte serré, personne ne les lit. Visez l&#x27;essentiel, bien rangé, avec un sommaire.</span></li><li><span>Pas à jour. Un restaurant fermé ou un ancien code Wi‑Fi fait perdre confiance dans tout le reste. Relisez chaque saison.</span></li><li><span>Le Wi‑Fi caché en page 12. C&#x27;est la première information à donner.</span></li><li><span>Un ton de règlement. Des interdictions en majuscules donnent une mauvaise première impression. Voir <a href="../../blog/rediger-reglement-interieur-location-saisonniere/">comment rédiger les règles</a>.</span></li><li><span>Aucune adresse personnelle. Copier un guide touristique n&#x27;apporte rien. Vos voyageurs veulent votre regard.</span></li><li><span>Une seule langue pour une clientèle internationale. <a href="../../blog/livret-accueil-multilingue-voyageurs-etrangers/">Quelques conseils pour le multilingue</a>.</span></li><li><span>Un document sans soin. Des photocopies dans une pochette plastique donnent une image négligée du logement.</span></li></ol><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Le bon réflexe</h2><p>Relisez votre livret comme si vous arriviez pour la première fois, de nuit, fatigué, sans parler la langue. Tout ce qui vous ferait chercher doit être corrigé.</p><p>Ou laissez-moi m&#x27;en charger : <a href="../../#prix">voir les offres</a>.</p>
+      <ol><li><span>Trop long. Quarante pages de texte serré, personne ne les lit. Visez l&#x27;essentiel, bien rangé, avec un sommaire.</span></li><li><span>Pas à jour. Un restaurant fermé ou un ancien code Wi‑Fi fait perdre confiance dans tout le reste. Relisez chaque saison.</span></li><li><span>Le Wi‑Fi caché en page 12. C&#x27;est la première information à donner.</span></li><li><span>Un ton de règlement. Des interdictions en majuscules donnent une mauvaise première impression. Voir <a href="../../blog/rediger-reglement-interieur-location-saisonniere/">comment rédiger les règles</a>.</span></li><li><span>Aucune adresse personnelle. Copier un guide touristique n&#x27;apporte rien. Vos voyageurs veulent votre regard.</span></li><li><span>Une seule langue pour une clientèle internationale. <a href="../../blog/livret-accueil-multilingue-voyageurs-etrangers/">Quelques conseils pour le multilingue</a>.</span></li><li><span>Un document sans soin. Des photocopies dans une pochette plastique donnent une image négligée du logement.</span></li></ol><h2>La grille pour relire votre livret</h2><div class="tbl"><table><thead><tr><th>Question</th><th>Oui / Non</th></tr></thead><tbody><tr><td>Le Wi‑Fi est-il sur la première ou la deuxième page ?</td><td></td></tr><tr><td>Le numéro d&#x27;urgence et l&#x27;adresse exacte sont-ils faciles à trouver ?</td><td></td></tr><tr><td>Chaque adresse a-t-elle été vérifiée cette saison ?</td><td></td></tr><tr><td>Le sommaire renvoie-t-il aux bonnes pages ?</td><td></td></tr><tr><td>Les règles expliquent-elles pourquoi ?</td><td></td></tr><tr><td>Le livret est-il lisible par un voyageur étranger ?</td><td></td></tr><tr><td>Le départ est-il expliqué en quelques lignes ?</td><td></td></tr></tbody></table></div><p>Chaque « non » est une correction à faire. Cinq minutes de relecture avant la saison évitent des dizaines de messages.</p><h2>L&#x27;erreur invisible : écrire pour soi</h2><p>On connaît sa maison par cœur. On écrit « la clim se règle comme d&#x27;habitude » ou « le parking habituel » sans s&#x27;en rendre compte. Faites lire le livret à quelqu&#x27;un qui n&#x27;est jamais venu : ses questions montrent ce qui manque.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Le bon réflexe</h2><p>Relisez votre livret comme si vous arriviez pour la première fois, de nuit, fatigué, sans parler la langue. Tout ce qui vous ferait chercher doit être corrigé.</p><p>Ou laissez-moi m&#x27;en charger : <a href="../../#prix">voir les offres</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Combien de temps faut-il pour refaire un livret d&#x27;accueil ?</summary><p>Seul, comptez plusieurs soirées pour écrire, vérifier et mettre en page. Avec un professionnel, l&#x27;essentiel de votre temps se résume à un appel et à une relecture.</p></details><details><summary>Faut-il jeter l&#x27;ancien livret ?</summary><p>Non, il sert de base : il contient souvent les bonnes informations, seulement mal rangées ou dépassées.</p></details><details><summary>Quelle est l&#x27;erreur la plus fréquente ?</summary><p>Un livret pas à jour. Un code Wi‑Fi ou une adresse faux fait douter de tout le reste.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

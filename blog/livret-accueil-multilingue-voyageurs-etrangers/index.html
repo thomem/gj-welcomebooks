@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Faut-il traduire le livret d'accueil de votre location ? Quelles langues choisir, comment gérer plusieurs langues en version imprimée et digitale.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/livret-sports-nautiques.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/livret-accueil-multilingue-voyageurs-etrangers/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/livret-accueil-multilingue-voyageurs-etrangers/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Le livret imprimé peut-il contenir plusieurs langues ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, mais au-delà de deux langues il devient difficile à lire. Une version par langue, ou une version anglaise plus la version téléphone, est souvent plus claire."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Peut-on utiliser un traducteur automatique ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pour un premier jet, oui, à condition de faire relire par quelqu'un qui parle la langue, surtout les règles et les urgences."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Combien de langues pour la version téléphone ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Autant que nécessaire. La version que je propose va jusqu'à huit langues ; quatre suffisent pour la plupart des logements."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Un livret d&#x27;accueil pour les voyageurs étrangers</h1>
     <p class="lead">Si une bonne partie de vos voyageurs vient de l&#x27;étranger, un livret dans votre seule langue rate une partie de son rôle. Voici comment s&#x27;y prendre sans tripler le travail.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/livret-sports-nautiques.webp" width="1400" height="990" alt="Page d&#x27;un livret d&#x27;accueil imprimé" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Quelles langues ?</h2><p>Regardez vos réservations des deux dernières saisons. L&#x27;anglais est presque toujours utile ; ajoutez ensuite les deux ou trois nationalités qui reviennent le plus.</p><h2>Version imprimée : une langue par livret</h2><p>Un livret qui mélange quatre langues page par page devient difficile à lire. Mieux vaut un livret par langue, ou un livret principal en anglais si votre clientèle est très variée. Le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a> est écrit en anglais pour cette raison.</p><h2>Version téléphone : toutes les langues</h2><p>Sur téléphone, le voyageur choisit sa langue à l&#x27;ouverture. C&#x27;est là que le multilingue est le plus simple. La <a href="../../#telephone">version téléphone</a> que je propose peut aller jusqu&#x27;à huit langues, y compris l&#x27;arabe et l&#x27;hébreu qui se lisent de droite à gauche.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Évitez la traduction automatique sans relecture. Une règle de la maison mal traduite peut dire l&#x27;inverse de ce que vous vouliez.</p></aside><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Les détails qui changent selon les pays</h2><p>Numéro d&#x27;urgence, prises électriques, eau du robinet, pourboire, horaires des repas : ce qui vous semble évident ne l&#x27;est pas pour quelqu&#x27;un qui vient de l&#x27;autre bout du monde. Une petite rubrique « bon à savoir » rend service.</p><p>Besoin d&#x27;un livret en plusieurs langues ? <a href="../../#contact">Parlons-en</a>.</p>
+      <h2>Quelles langues ?</h2><p>Regardez vos réservations des deux dernières saisons. L&#x27;anglais est presque toujours utile ; ajoutez ensuite les deux ou trois nationalités qui reviennent le plus.</p><h2>Version imprimée : une langue par livret</h2><p>Un livret qui mélange quatre langues page par page devient difficile à lire. Mieux vaut un livret par langue, ou un livret principal en anglais si votre clientèle est très variée. Le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a> est écrit en anglais pour cette raison.</p><h2>Version téléphone : toutes les langues</h2><p>Sur téléphone, le voyageur choisit sa langue à l&#x27;ouverture. C&#x27;est là que le multilingue est le plus simple. La <a href="../../#telephone">version téléphone</a> que je propose peut aller jusqu&#x27;à huit langues, y compris l&#x27;arabe et l&#x27;hébreu qui se lisent de droite à gauche.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Évitez la traduction automatique sans relecture. Une règle de la maison mal traduite peut dire l&#x27;inverse de ce que vous vouliez.</p></aside><h2>Ce qu&#x27;il faut traduire en priorité</h2><div class="tbl"><table><thead><tr><th>Priorité</th><th>Pages</th></tr></thead><tbody><tr><td>1. Indispensable</td><td>Urgences, Wi‑Fi, arrivée et départ, règles de sécurité</td></tr><tr><td>2. Très utile</td><td>Fonctionnement des appareils, tri des déchets, règles de la maison</td></tr><tr><td>3. Confort</td><td>Restaurants, plages, visites, transports</td></tr><tr><td>4. Facultatif</td><td>Histoire du lieu, mot de bienvenue long</td></tr></tbody></table></div><p>Si vous ne pouvez pas tout traduire, commencez par la ligne 1. Une page d&#x27;urgence que le voyageur comprend vaut plus qu&#x27;un livret entier dans une langue qu&#x27;il ne lit pas. Voir <a href="../../blog/numeros-urgence-securite-livret-d-accueil/">la page urgences</a>.</p><h2>Les noms propres et les panneaux</h2><p>Gardez les noms de rues, de restaurants et de lieux dans la langue locale, tels qu&#x27;ils apparaissent sur les panneaux. Le voyageur doit pouvoir les retrouver dans la rue ou dans son application de cartes.</p><h2>Les langues qui s&#x27;écrivent de droite à gauche</h2><p>L&#x27;arabe et l&#x27;hébreu demandent une mise en page inversée : la lecture commence à droite, et les listes et les icônes suivent. C&#x27;est simple à gérer dans une version téléphone bien conçue, plus délicat dans un livret imprimé où l&#x27;on préfère souvent une version séparée.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Les détails qui changent selon les pays</h2><p>Numéro d&#x27;urgence, prises électriques, eau du robinet, pourboire, horaires des repas : ce qui vous semble évident ne l&#x27;est pas pour quelqu&#x27;un qui vient de l&#x27;autre bout du monde. Une petite rubrique « bon à savoir » rend service.</p><p>Besoin d&#x27;un livret en plusieurs langues ? <a href="../../#contact">Parlons-en</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Le livret imprimé peut-il contenir plusieurs langues ?</summary><p>Oui, mais au-delà de deux langues il devient difficile à lire. Une version par langue, ou une version anglaise plus la version téléphone, est souvent plus claire.</p></details><details><summary>Peut-on utiliser un traducteur automatique ?</summary><p>Pour un premier jet, oui, à condition de faire relire par quelqu&#x27;un qui parle la langue, surtout les règles et les urgences.</p></details><details><summary>Combien de langues pour la version téléphone ?</summary><p>Autant que nécessaire. La version que je propose va jusqu&#x27;à huit langues ; quatre suffisent pour la plupart des logements.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

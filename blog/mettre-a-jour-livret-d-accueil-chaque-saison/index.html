@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Le calendrier pour tenir à jour le livret d'accueil d'une location saisonnière : ce qu'il faut vérifier avant la saison, en cours de saison et chaque année.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/v-calendrier-fr.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/mettre-a-jour-livret-d-accueil-chaque-saison/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/mettre-a-jour-livret-d-accueil-chaque-saison/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "À quelle fréquence mettre à jour son livret ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Au moins une fois par an, avant la saison, et à chaque changement important dans le logement."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Que comprend le suivi annuel ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Une relecture complète avec vous, la mise à jour du PDF à imprimer et de la version téléphone, et l'hébergement de cette version pour que le lien et le QR code continuent de marcher."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Faut-il réimprimer tout le livret à chaque fois ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Non. Avec une reliure spirale, vous pouvez remplacer seulement les pages modifiées."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Mettre à jour son livret d&#x27;accueil</h1>
     <p class="lead">Un livret faux est pire qu&#x27;un livret absent : le voyageur ne sait plus à quoi se fier. Quelques rendez-vous dans l&#x27;année suffisent à le garder juste.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/v-calendrier-fr.webp" width="1400" height="990" alt="Calendrier annuel de mise à jour d&#x27;un livret d&#x27;accueil" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Avant la saison</h2><ul><li><span>Horaires d&#x27;été des commerces, restaurants et sites.</span></li><li><span>Restaurants fermés, nouvelles adresses.</span></li><li><span>Calendrier de collecte des déchets. Voir <a href="../../blog/expliquer-tri-dechets-voyageurs-location/">le tri des déchets</a>.</span></li><li><span>Transports saisonniers : navettes, bateaux, bus d&#x27;été.</span></li></ul><h2>Après chaque changement dans le logement</h2><ul><li><span>Nouveau code Wi‑Fi ou nouvelle box.</span></li><li><span>Nouvel appareil, nouvelle règle.</span></li><li><span>Changement de numéro de téléphone ou de contact sur place.</span></li></ul><h2>Une fois par an</h2><p>Relisez le livret en entier, comme un voyageur. Changez les photos qui ne correspondent plus, retirez ce qui ne sert pas, ajoutez les questions qu&#x27;on vous a posées pendant la saison.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Gardez une note sur votre téléphone pendant la saison : chaque question d&#x27;un voyageur est une ligne à ajouter au livret.</p></aside><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Papier et téléphone</h2><p>Une version téléphone se met à jour sans réimprimer. Pour le papier, il suffit souvent de réimprimer les pages qui changent si le livret est relié en spirale. Voir <a href="../../blog/imprimer-livret-accueil-papier-format-reliure/">les conseils d&#x27;impression</a>.</p><p>Le <a href="../../#prix">suivi annuel à 30 €</a> couvre exactement cela : chaque année, je reprends le livret avec vous et je mets à jour les deux versions.</p>
+      <h2>Avant la saison</h2><ul><li><span>Horaires d&#x27;été des commerces, restaurants et sites.</span></li><li><span>Restaurants fermés, nouvelles adresses.</span></li><li><span>Calendrier de collecte des déchets. Voir <a href="../../blog/expliquer-tri-dechets-voyageurs-location/">le tri des déchets</a>.</span></li><li><span>Transports saisonniers : navettes, bateaux, bus d&#x27;été.</span></li></ul><h2>Après chaque changement dans le logement</h2><ul><li><span>Nouveau code Wi‑Fi ou nouvelle box.</span></li><li><span>Nouvel appareil, nouvelle règle.</span></li><li><span>Changement de numéro de téléphone ou de contact sur place.</span></li></ul><h2>Une fois par an</h2><p>Relisez le livret en entier, comme un voyageur. Changez les photos qui ne correspondent plus, retirez ce qui ne sert pas, ajoutez les questions qu&#x27;on vous a posées pendant la saison.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Gardez une note sur votre téléphone pendant la saison : chaque question d&#x27;un voyageur est une ligne à ajouter au livret.</p></aside><h2>Le calendrier de l&#x27;année</h2><div class="tbl"><table><thead><tr><th>Période</th><th>À faire</th></tr></thead><tbody><tr><td>Février à avril</td><td>Relecture complète, mise à jour des adresses et des horaires d&#x27;été</td></tr><tr><td>Mai</td><td>Impression des nouveaux exemplaires, vérification du QR code</td></tr><tr><td>Juin à septembre</td><td>Noter chaque question des voyageurs</td></tr><tr><td>Octobre</td><td>Bilan : ajouter les réponses manquantes, retirer ce qui ne sert pas</td></tr><tr><td>Hiver</td><td>Horaires d&#x27;hiver si vous louez toute l&#x27;année</td></tr></tbody></table></div><h2>Les signes qu&#x27;il faut mettre à jour</h2><ul><li><span>Un voyageur vous signale une adresse fermée.</span></li><li><span>Vous recevez deux fois la même question dans la saison.</span></li><li><span>Vous avez changé un appareil, une box, une règle.</span></li><li><span>La couverture ou les pages sont abîmées.</span></li></ul><p>Avec une version téléphone, la mise à jour est immédiate. Avec le papier, une reliure spirale permet de remplacer seulement les pages concernées.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Papier et téléphone</h2><p>Une version téléphone se met à jour sans réimprimer. Pour le papier, il suffit souvent de réimprimer les pages qui changent si le livret est relié en spirale. Voir <a href="../../blog/imprimer-livret-accueil-papier-format-reliure/">les conseils d&#x27;impression</a>.</p><p>Le <a href="../../#prix">suivi annuel à 30 €</a> couvre exactement cela : chaque année, je reprends le livret avec vous et je mets à jour les deux versions.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>À quelle fréquence mettre à jour son livret ?</summary><p>Au moins une fois par an, avant la saison, et à chaque changement important dans le logement.</p></details><details><summary>Que comprend le suivi annuel ?</summary><p>Une relecture complète avec vous, la mise à jour du PDF à imprimer et de la version téléphone, et l&#x27;hébergement de cette version pour que le lien et le QR code continuent de marcher.</p></details><details><summary>Faut-il réimprimer tout le livret à chaque fois ?</summary><p>Non. Avec une reliure spirale, vous pouvez remplacer seulement les pages modifiées.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

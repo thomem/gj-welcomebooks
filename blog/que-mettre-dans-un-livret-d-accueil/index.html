@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Ce qu'il faut mettre dans le livret d'accueil d'une location saisonnière ou d'un Airbnb : les dix rubriques essentielles, dans le bon ordre, avec des exemples.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/livret-sommaire.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/que-mettre-dans-un-livret-d-accueil/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/que-mettre-dans-un-livret-d-accueil/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Faut-il mettre des photos dans le livret d'accueil ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Quelques-unes, là où elles aident vraiment : l'entrée à trouver, le portail, la boîte à clés, un appareil un peu particulier. Pour le reste, des illustrations ou une belle mise en page suffisent et vieillissent mieux."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Le livret doit-il reprendre tout ce qui est dans l'annonce Airbnb ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Non. L'annonce sert à réserver, le livret sert à vivre dans le logement. Reprenez seulement les règles et les informations utiles sur place, sans les descriptions commerciales."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Peut-on faire un livret d'accueil sans sommaire ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pour un studio de quelques pages, oui. Dès que le livret dépasse une dizaine de pages, un sommaire fait gagner beaucoup de temps aux voyageurs."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Que mettre dans un livret d&#x27;accueil ?</h1>
     <p class="lead">Un bon livret d&#x27;accueil répond aux questions de vos voyageurs avant qu&#x27;ils ne vous les posent. Voici les dix rubriques qui reviennent dans tous les livrets réussis, dans l&#x27;ordre où un voyageur en a besoin.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>7 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>7 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/livret-sommaire.webp" width="1400" height="990" alt="Page d&#x27;un livret d&#x27;accueil imprimé" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>1. Les informations pratiques, en premier</h2><p>C&#x27;est la page qu&#x27;on ouvre en posant les valises. Mettez-y l&#x27;adresse exacte (utile pour un taxi ou une livraison), le nom et le mot de passe du Wi‑Fi, vos numéros de téléphone, le numéro d&#x27;urgence du pays, l&#x27;hôpital et la pharmacie les plus proches.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Écrivez le mot de passe Wi‑Fi en grand, dans une police où l&#x27;on distingue le O du 0 et le l du I. C&#x27;est la question numéro un de tous les séjours.</p></aside><h2>2. L&#x27;arrivée et le départ</h2><p>Horaires, récupération des clés, ce qu&#x27;il faut faire en partant : sortir les poubelles, laisser les clés, fermer les volets. Voir notre guide dédié aux <a href="../../blog/instructions-arrivee-location-saisonniere/">instructions d&#x27;arrivée</a>.</p><h2>3. Les règles de la maison et de la résidence</h2><p>Bruit, fumée, animaux, invités, piscine, parking, portail, accès à la mer. Gardez un ton aimable et expliquez le pourquoi : une règle comprise est une règle respectée. Nous avons écrit un article entier sur <a href="../../blog/rediger-reglement-interieur-location-saisonniere/">la façon de rédiger un règlement intérieur</a>.</p><h2>4. Le fonctionnement du logement</h2><p>Climatisation, chauffe-eau, plaques, lave-linge, volets, barbecue. Une ligne par appareil suffit, avec le petit piège à connaître (« le bouton du chauffe-eau est derrière la porte »).</p><h2>5. Le tri des déchets</h2><p>Jours de collecte, bacs, ce qui va où. C&#x27;est souvent la rubrique la plus utile et la plus mal faite. <a href="../../blog/expliquer-tri-dechets-voyageurs-location/">Voici comment l&#x27;expliquer simplement</a>.</p><h2>6. Que faire autour</h2><p>Plages, balades, visites, activités par temps de pluie. Mieux vaut cinq adresses que vous connaissez que vingt trouvées en ligne.</p><h2>7. Où manger et sortir</h2><p>Restaurants près de la maison, une adresse pour une occasion, un bar pour le coucher de soleil. Indiquez la distance et s&#x27;il faut réserver. Nos conseils pour <a href="../../blog/recommander-bonnes-adresses-voyageurs/">bien recommander des adresses</a>.</p><h2>8. Faire ses courses</h2><p>Supermarché le plus proche, marché, boulangerie, glacier, horaires d&#x27;été. Les voyageurs arrivent souvent tard et cherchent de quoi dîner.</p><h2>9. Se déplacer</h2><p>Bus, train, taxis, location de voiture, stationnement, zones à accès limité dans les centres historiques.</p><h2>10. Un dernier mot</h2><p>Quelques lignes signées de votre main. C&#x27;est ce qui transforme un document pratique en accueil.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Dans quel ordre ?</h2><p>L&#x27;ordre ci-dessus suit le séjour : d&#x27;abord ce dont on a besoin en arrivant, ensuite ce qui sert pendant, enfin le départ et le mot de la fin. Un sommaire en début de livret permet d&#x27;aller directement à la bonne page.</p><p>Le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a> suit exactement cette structure en dix chapitres.</p>
+      <h2>1. Les informations pratiques, en premier</h2><p>C&#x27;est la page qu&#x27;on ouvre en posant les valises. Mettez-y l&#x27;adresse exacte (utile pour un taxi ou une livraison), le nom et le mot de passe du Wi‑Fi, vos numéros de téléphone, le numéro d&#x27;urgence du pays, l&#x27;hôpital et la pharmacie les plus proches.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Écrivez le mot de passe Wi‑Fi en grand, dans une police où l&#x27;on distingue le O du 0 et le l du I. C&#x27;est la question numéro un de tous les séjours.</p></aside><h2>2. L&#x27;arrivée et le départ</h2><p>Horaires, récupération des clés, ce qu&#x27;il faut faire en partant : sortir les poubelles, laisser les clés, fermer les volets. Voir notre guide dédié aux <a href="../../blog/instructions-arrivee-location-saisonniere/">instructions d&#x27;arrivée</a>.</p><h2>3. Les règles de la maison et de la résidence</h2><p>Bruit, fumée, animaux, invités, piscine, parking, portail, accès à la mer. Gardez un ton aimable et expliquez le pourquoi : une règle comprise est une règle respectée. Nous avons écrit un article entier sur <a href="../../blog/rediger-reglement-interieur-location-saisonniere/">la façon de rédiger un règlement intérieur</a>.</p><h2>4. Le fonctionnement du logement</h2><p>Climatisation, chauffe-eau, plaques, lave-linge, volets, barbecue. Une ligne par appareil suffit, avec le petit piège à connaître (« le bouton du chauffe-eau est derrière la porte »).</p><h2>5. Le tri des déchets</h2><p>Jours de collecte, bacs, ce qui va où. C&#x27;est souvent la rubrique la plus utile et la plus mal faite. <a href="../../blog/expliquer-tri-dechets-voyageurs-location/">Voici comment l&#x27;expliquer simplement</a>.</p><h2>6. Que faire autour</h2><p>Plages, balades, visites, activités par temps de pluie. Mieux vaut cinq adresses que vous connaissez que vingt trouvées en ligne.</p><h2>7. Où manger et sortir</h2><p>Restaurants près de la maison, une adresse pour une occasion, un bar pour le coucher de soleil. Indiquez la distance et s&#x27;il faut réserver. Nos conseils pour <a href="../../blog/recommander-bonnes-adresses-voyageurs/">bien recommander des adresses</a>.</p><h2>8. Faire ses courses</h2><p>Supermarché le plus proche, marché, boulangerie, glacier, horaires d&#x27;été. Les voyageurs arrivent souvent tard et cherchent de quoi dîner.</p><h2>9. Se déplacer</h2><p>Bus, train, taxis, location de voiture, stationnement, zones à accès limité dans les centres historiques.</p><h2>10. Un dernier mot</h2><p>Quelques lignes signées de votre main. C&#x27;est ce qui transforme un document pratique en accueil.</p><h2>Un exemple de sommaire complet</h2><div class="tbl"><table><thead><tr><th>Chapitre</th><th>Ce qu&#x27;on y trouve</th><th>Pages</th></tr></thead><tbody><tr><td>Informations générales</td><td>Adresse, Wi‑Fi, contacts, urgences, hôpital, pharmacie</td><td>2 à 3</td></tr><tr><td>Règles de la résidence</td><td>Portail, parking, piscine, jardin, voisinage</td><td>1 à 2</td></tr><tr><td>Profiter de la maison</td><td>Appareils, chauffage, clim, tri des déchets</td><td>2 à 4</td></tr><tr><td>Que faire</td><td>Plages, balades, activités, jours de pluie</td><td>3 à 6</td></tr><tr><td>Visites</td><td>Villes, sites, musées, avec horaires et distances</td><td>4 à 8</td></tr><tr><td>Sortir</td><td>Restaurants, bars, adresses pour un soir spécial</td><td>3 à 5</td></tr><tr><td>Courses</td><td>Supermarché, marché, boulangerie, glacier</td><td>1 à 2</td></tr><tr><td>Transports</td><td>Bus, train, taxis, parking, location</td><td>1 à 2</td></tr><tr><td>Départ et dernier mot</td><td>Check-list de départ, remerciements</td><td>1</td></tr></tbody></table></div><p>Ce tableau donne un ordre de grandeur. Un studio en ville peut se contenter de la moitié des pages ; une villa dans une région riche en visites en demandera davantage. Voir <a href="../../blog/combien-de-pages-livret-d-accueil/">combien de pages prévoir</a>.</p><h2>Ce que les voyageurs cherchent en premier</h2><p>Dans les premières minutes, les questions sont toujours les mêmes : le Wi‑Fi, la clim ou le chauffage, l&#x27;eau chaude, où faire des courses ce soir. Le lendemain matin viennent la plage, la boulangerie, le café. Les visites et les restaurants pour un soir spécial arrivent ensuite. Un livret bien construit suit ce rythme.</p><aside class="ex"><b>À recopier</b><p>Wi‑Fi : réseau « Maison-Mer » · mot de passe : soleil2026 (tout en minuscules). Si la connexion coupe, débranchez la box 30 secondes : elle est dans le meuble de l&#x27;entrée.</p></aside><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Dans quel ordre ?</h2><p>L&#x27;ordre ci-dessus suit le séjour : d&#x27;abord ce dont on a besoin en arrivant, ensuite ce qui sert pendant, enfin le départ et le mot de la fin. Un sommaire en début de livret permet d&#x27;aller directement à la bonne page.</p><p>Le livret présenté sur <a href="../../#livret">la page d&#x27;accueil</a> suit exactement cette structure en dix chapitres.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Faut-il mettre des photos dans le livret d&#x27;accueil ?</summary><p>Quelques-unes, là où elles aident vraiment : l&#x27;entrée à trouver, le portail, la boîte à clés, un appareil un peu particulier. Pour le reste, des illustrations ou une belle mise en page suffisent et vieillissent mieux.</p></details><details><summary>Le livret doit-il reprendre tout ce qui est dans l&#x27;annonce Airbnb ?</summary><p>Non. L&#x27;annonce sert à réserver, le livret sert à vivre dans le logement. Reprenez seulement les règles et les informations utiles sur place, sans les descriptions commerciales.</p></details><details><summary>Peut-on faire un livret d&#x27;accueil sans sommaire ?</summary><p>Pour un studio de quelques pages, oui. Dès que le livret dépasse une dizaine de pages, un sommaire fait gagner beaucoup de temps aux voyageurs.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

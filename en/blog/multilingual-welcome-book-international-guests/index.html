@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Should you translate your rental's welcome book? Which languages to choose and how to handle several languages in print and on phone.",
    "inLanguage": "en",
    "image": "https://thomem.github.io/gj-welcomebooks/img/livret-sports-nautiques.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/en/blog/multilingual-welcome-book-international-guests/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/en/blog/multilingual-welcome-book-international-guests/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "en",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can one printed book hold several languages?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, but beyond two it gets hard to read. One version per language, or an English version plus the phone version, is usually clearer."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I use machine translation?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For a first draft, yes, as long as someone who speaks the language reviews it, especially rules and emergencies."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How many languages in the phone version?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "As many as needed. The version I offer goes up to eight; four are enough for most properties."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../../en/">Home</a></li><li><a href="../../../en/blog/">Guides</a></li></ol>
     <h1>A welcome book for international guests</h1>
     <p class="lead">If many of your guests come from abroad, a book in one language misses part of its job. Here&#x27;s how to handle it without tripling the work.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>By Gustave</span><span>5 min read</span><span>Updated 23 October 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>By Gustave</span><span>5 min read</span><span>Updated 24 October 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../../img/livret-sports-nautiques.webp" width="1400" height="990" alt="Page of a printed welcome book" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Which languages?</h2><p>Look at your bookings from the last two seasons. English is almost always useful; then add the two or three nationalities that come back most.</p><h2>Printed version: one language per book</h2><p>A book mixing four languages page by page is hard to read. Better one book per language, or a main book in English if your guests are very varied. The book on <a href="../../../en/#livret">the home page</a> is in English for that reason.</p><h2>Phone version: every language</h2><p>On the phone, guests pick their language when they open it. That&#x27;s where multilingual is easiest. The <a href="../../../en/#telephone">phone version</a> I offer handles up to eight languages, including Arabic and Hebrew, read right to left.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Avoid unreviewed machine translation. A badly translated house rule can say the opposite of what you meant.</p></aside><aside class="mid"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>A real example</b><p>Flip through a real printed welcome book, page by page, on the home page.</p><a href="../../../en/#livret">See the example →</a></div></aside><h2>Details that change by country</h2><p>Emergency number, plugs, tap water, tipping, meal times: what seems obvious to you isn&#x27;t for someone from the other side of the world. A short “good to know” section helps.</p><p>Need a book in several languages? <a href="../../../en/#contact">Let&#x27;s talk</a>.</p>
+      <h2>Which languages?</h2><p>Look at your bookings from the last two seasons. English is almost always useful; then add the two or three nationalities that come back most.</p><h2>Printed version: one language per book</h2><p>A book mixing four languages page by page is hard to read. Better one book per language, or a main book in English if your guests are very varied. The book on <a href="../../../en/#livret">the home page</a> is in English for that reason.</p><h2>Phone version: every language</h2><p>On the phone, guests pick their language when they open it. That&#x27;s where multilingual is easiest. The <a href="../../../en/#telephone">phone version</a> I offer handles up to eight languages, including Arabic and Hebrew, read right to left.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Avoid unreviewed machine translation. A badly translated house rule can say the opposite of what you meant.</p></aside><h2>What to translate first</h2><div class="tbl"><table><thead><tr><th>Priority</th><th>Pages</th></tr></thead><tbody><tr><td>1. Essential</td><td>Emergencies, Wi‑Fi, check-in and check-out, safety rules</td></tr><tr><td>2. Very useful</td><td>Appliances, waste sorting, house rules</td></tr><tr><td>3. Comfort</td><td>Restaurants, beaches, sights, transport</td></tr><tr><td>4. Optional</td><td>History of the place, long welcome message</td></tr></tbody></table></div><p>If you can&#x27;t translate everything, start with row 1. An emergency page guests understand is worth more than a whole book in a language they can&#x27;t read. See <a href="../../../en/blog/emergency-numbers-safety-welcome-book/">the emergency page</a>.</p><h2>Place names and signs</h2><p>Keep street, restaurant and place names in the local language, exactly as on signs. Guests must be able to find them in the street or in their map app.</p><h2>Right-to-left languages</h2><p>Arabic and Hebrew need a mirrored layout: reading starts on the right, and lists and icons follow. It&#x27;s easy in a well-built phone version, trickier in a printed book where a separate version is usually better.</p><aside class="mid"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>A real example</b><p>Flip through a real printed welcome book, page by page, on the home page.</p><a href="../../../en/#livret">See the example →</a></div></aside><h2>Details that change by country</h2><p>Emergency number, plugs, tap water, tipping, meal times: what seems obvious to you isn&#x27;t for someone from the other side of the world. A short “good to know” section helps.</p><p>Need a book in several languages? <a href="../../../en/#contact">Let&#x27;s talk</a>.</p>
+      <section class="afaq"><h2>Frequently asked questions</h2><details><summary>Can one printed book hold several languages?</summary><p>Yes, but beyond two it gets hard to read. One version per language, or an English version plus the phone version, is usually clearer.</p></details><details><summary>Can I use machine translation?</summary><p>For a first draft, yes, as long as someone who speaks the language reviews it, especially rules and emergencies.</p></details><details><summary>How many languages in the phone version?</summary><p>As many as needed. The version I offer goes up to eight; four are enough for most properties.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Rather have it done for you?</h2><p>I create illustrated, print-ready welcome books based on your house and your area. Printable book: €249. Book + phone version: €299.</p></div>

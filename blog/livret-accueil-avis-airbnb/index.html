@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Comment un bon livret d'accueil aide sur les critères notés par les voyageurs Airbnb : arrivée, communication, exactitude, emplacement.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/livret-dernier-mot.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/livret-accueil-avis-airbnb/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/livret-accueil-avis-airbnb/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Le livret d'accueil compte-t-il dans l'algorithme d'Airbnb ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pas directement. Il agit à travers les notes et les commentaires des voyageurs, qui eux comptent."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Faut-il mentionner le livret dans l'annonce ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, en une ligne : « Un livret d'accueil avec nos adresses vous attend sur place ». C'est rassurant pour les voyageurs qui hésitent."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment savoir si le livret est utile ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Notez les questions que les voyageurs vous posent encore. Si elles diminuent, le livret fait son travail ; sinon, ajoutez les réponses manquantes."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Livret d&#x27;accueil et avis Airbnb</h1>
     <p class="lead">Un livret d&#x27;accueil ne remplace ni la propreté ni un bon lit. Mais il agit sur plusieurs critères que les voyageurs notent après leur séjour.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>5 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/livret-dernier-mot.webp" width="1400" height="990" alt="Page d&#x27;un livret d&#x27;accueil imprimé" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Les critères notés par les voyageurs</h2><p>En plus de la note globale, Airbnb demande aux voyageurs de noter la propreté, l&#x27;exactitude de l&#x27;annonce, l&#x27;arrivée, la communication, l&#x27;emplacement et la qualité-prix. Le livret touche directement trois d&#x27;entre eux.</p><h2>L&#x27;arrivée</h2><p>Des <a href="../../blog/instructions-arrivee-location-saisonniere/">instructions d&#x27;arrivée</a> claires et un livret qui répond aux questions du premier soir évitent la mauvaise surprise du portail fermé ou de l&#x27;eau froide.</p><h2>La communication</h2><p>Le voyageur trouve seul ce qu&#x27;il cherche, et vous recevez moins de messages. Quand il vous écrit, c&#x27;est pour une vraie question.</p><h2>L&#x27;emplacement</h2><p>Un logement un peu excentré est mieux noté quand on donne les clés du coin : la plage où aller selon le vent, la boulangerie ouverte le dimanche, le restaurant où les gens du coin vont dîner. Voir <a href="../../blog/recommander-bonnes-adresses-voyageurs/">comment recommander des adresses</a>.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Et le reste</h2><p>Un livret soigné, posé sur la table, montre que le logement est tenu avec attention. Ce n&#x27;est pas un critère à part, mais c&#x27;est une impression qui reste.</p><p>Envie d&#x27;un livret à la hauteur de votre logement ? <a href="../../#prix">Voir les offres</a>.</p>
+      <h2>Les critères notés par les voyageurs</h2><p>En plus de la note globale, Airbnb demande aux voyageurs de noter la propreté, l&#x27;exactitude de l&#x27;annonce, l&#x27;arrivée, la communication, l&#x27;emplacement et la qualité-prix. Le livret touche directement trois d&#x27;entre eux.</p><h2>L&#x27;arrivée</h2><p>Des <a href="../../blog/instructions-arrivee-location-saisonniere/">instructions d&#x27;arrivée</a> claires et un livret qui répond aux questions du premier soir évitent la mauvaise surprise du portail fermé ou de l&#x27;eau froide.</p><h2>La communication</h2><p>Le voyageur trouve seul ce qu&#x27;il cherche, et vous recevez moins de messages. Quand il vous écrit, c&#x27;est pour une vraie question.</p><h2>L&#x27;emplacement</h2><p>Un logement un peu excentré est mieux noté quand on donne les clés du coin : la plage où aller selon le vent, la boulangerie ouverte le dimanche, le restaurant où les gens du coin vont dîner. Voir <a href="../../blog/recommander-bonnes-adresses-voyageurs/">comment recommander des adresses</a>.</p><h2>Les petites choses qui reviennent dans les commentaires</h2><ul><li><span>« On a eu du mal à trouver l&#x27;entrée » : un problème d&#x27;arrivée, réglé par des instructions et une photo.</span></li><li><span>« Le Wi‑Fi ne marchait pas » : souvent un mot de passe mal recopié ou une box à redémarrer.</span></li><li><span>« On ne savait pas quoi faire des poubelles » : une page de tri claire.</span></li><li><span>« Les conseils de l&#x27;hôte étaient parfaits » : des adresses personnelles bien choisies.</span></li></ul><p>Ces phrases reviennent souvent dans les commentaires des voyageurs, dans un sens comme dans l&#x27;autre. Presque toutes concernent une information qu&#x27;un bon livret donne.</p><h2>Ce que le livret ne fera pas</h2><p>Il ne compense pas un logement mal entretenu, une annonce trompeuse ou un lit inconfortable. Il aide à transformer un bon séjour en très bon séjour, et à éviter qu&#x27;une petite incompréhension ne devienne une mauvaise note.</p><h2>Demander un avis avec élégance</h2><p>La dernière page du livret peut remercier les voyageurs et leur dire, simplement, que leur avis compte pour vous. Restez discret et ne proposez pas de contrepartie : les règles des plateformes interdisent en général d&#x27;offrir quelque chose en échange d&#x27;un avis.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Et le reste</h2><p>Un livret soigné, posé sur la table, montre que le logement est tenu avec attention. Ce n&#x27;est pas un critère à part, mais c&#x27;est une impression qui reste.</p><p>Envie d&#x27;un livret à la hauteur de votre logement ? <a href="../../#prix">Voir les offres</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Le livret d&#x27;accueil compte-t-il dans l&#x27;algorithme d&#x27;Airbnb ?</summary><p>Pas directement. Il agit à travers les notes et les commentaires des voyageurs, qui eux comptent.</p></details><details><summary>Faut-il mentionner le livret dans l&#x27;annonce ?</summary><p>Oui, en une ligne : « Un livret d&#x27;accueil avec nos adresses vous attend sur place ». C&#x27;est rassurant pour les voyageurs qui hésitent.</p></details><details><summary>Comment savoir si le livret est utile ?</summary><p>Notez les questions que les voyageurs vous posent encore. Si elles diminuent, le livret fait son travail ; sinon, ajoutez les réponses manquantes.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "Plages selon le vent, sable, douche extérieure, serviettes, sécurité en mer, lidos : ce qu'il faut mettre dans le livret d'accueil d'une location en bord de mer.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/v-mer-fr.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/livret-d-accueil-location-bord-de-mer/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/livret-d-accueil-location-bord-de-mer/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Faut-il fournir des serviettes de plage ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "C'est très apprécié. Si vous en fournissez, séparez-les clairement des serviettes de bain dans le livret et dans le logement."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment parler des méduses ou des oursins ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Simplement, sans inquiéter : où on en trouve parfois, comment les éviter, et la pharmacie la plus proche."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Doit-on indiquer les plages surveillées ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, surtout pour les familles. Indiquez les plages surveillées en été et la signification des drapeaux de baignade."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>Le livret d&#x27;accueil d&#x27;une maison au bord de la mer</h1>
     <p class="lead">Au bord de la mer, la journée tourne autour de la plage. Votre livret peut faire la différence entre une baignade réussie et une après-midi dans les vagues et le vent.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>6 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>6 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/v-mer-fr.webp" width="1400" height="990" alt="Illustration d&#x27;une page plages pour une location au bord de la mer" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Quelle plage, selon le temps</h2><p>C&#x27;est le conseil que vos voyageurs ne trouveront nulle part ailleurs : où aller quand le vent vient de telle direction, où l&#x27;eau est calme le matin, quelle crique reste à l&#x27;ombre l&#x27;après-midi.</p><h2>Les types de plages</h2><ul><li><span>Plages de sable ou de galets, pour savoir s&#x27;il faut des chaussures d&#x27;eau.</span></li><li><span>Plages libres ou établissements payants avec transats.</span></li><li><span>Accès en voiture, à pied, et le temps de marche.</span></li><li><span>Plages adaptées aux enfants, eau peu profonde.</span></li></ul><h2>Ce que la maison fournit</h2><p>Serviettes de plage, parasol, glacière, masques et palmes : dites ce qui est disponible et où le trouver, et ce qu&#x27;il faut rapporter propre.</p><h2>Le sable et le sel</h2><p>Douche extérieure, bassine pour les pieds, endroit où laisser sécher les maillots : une ligne sur ce sujet évite du sable dans les lits et des serviettes de bain à la plage.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Ajoutez les heures à éviter au soleil en plein été et un rappel sur la crème solaire. Ce sont des conseils simples qui comptent pour les voyageurs venus de pays plus froids.</p></aside><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>La sécurité en mer</h2><p>Drapeaux de baignade, courants, oursins, méduses en fin d&#x27;été : sans dramatiser, quelques lignes rendent service. Le livret de <a href="../../#livret">la page d&#x27;accueil</a> consacre plusieurs pages à la mer, aux sports nautiques et aux bateaux.</p><p>Votre maison est au bord de l&#x27;eau ? <a href="../../#contact">Parlons-en</a>. Voir aussi <a href="../../blog/livret-accueil-maison-de-vacances-sicile/">le livret pour une maison en Sicile</a>.</p>
+      <h2>Quelle plage, selon le temps</h2><p>C&#x27;est le conseil que vos voyageurs ne trouveront nulle part ailleurs : où aller quand le vent vient de telle direction, où l&#x27;eau est calme le matin, quelle crique reste à l&#x27;ombre l&#x27;après-midi.</p><h2>Les types de plages</h2><ul><li><span>Plages de sable ou de galets, pour savoir s&#x27;il faut des chaussures d&#x27;eau.</span></li><li><span>Plages libres ou établissements payants avec transats.</span></li><li><span>Accès en voiture, à pied, et le temps de marche.</span></li><li><span>Plages adaptées aux enfants, eau peu profonde.</span></li></ul><h2>Ce que la maison fournit</h2><p>Serviettes de plage, parasol, glacière, masques et palmes : dites ce qui est disponible et où le trouver, et ce qu&#x27;il faut rapporter propre.</p><h2>Le sable et le sel</h2><p>Douche extérieure, bassine pour les pieds, endroit où laisser sécher les maillots : une ligne sur ce sujet évite du sable dans les lits et des serviettes de bain à la plage.</p><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Ajoutez les heures à éviter au soleil en plein été et un rappel sur la crème solaire. Ce sont des conseils simples qui comptent pour les voyageurs venus de pays plus froids.</p></aside><h2>Un exemple de page plages</h2><div class="tbl"><table><thead><tr><th>Plage</th><th>Type</th><th>Idéale quand</th><th>Accès</th></tr></thead><tbody><tr><td>La crique du port</td><td>Galets, eau claire</td><td>Vent du nord</td><td>5 min à pied</td></tr><tr><td>La grande plage</td><td>Sable, eau peu profonde</td><td>Mer calme, avec des enfants</td><td>10 min en voiture</td></tr><tr><td>La pointe rocheuse</td><td>Rochers, snorkeling</td><td>Matin, mer plate</td><td>15 min à pied, chaussures conseillées</td></tr><tr><td>L&#x27;établissement de plage</td><td>Sable, transats payants</td><td>Pour une journée confort</td><td>10 min en voiture, réserver en août</td></tr></tbody></table></div><p>Un tableau de ce genre, avec vos vraies plages, est souvent la page la plus photographiée du livret.</p><h2>Ce qu&#x27;on rapporte de la plage</h2><p>Expliquez simplement ce que vous attendez : rincer les masques et palmes à la douche extérieure, faire sécher les serviettes de plage sur l&#x27;étendoir, laisser les chaussures pleines de sable dehors. Les voyageurs le font volontiers quand c&#x27;est écrit.</p><h2>La mer hors saison</h2><p>Au printemps et en automne, certaines plages et certains établissements ferment, et la mer peut être plus agitée. Dites-le dans le livret pour éviter les déceptions.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>La sécurité en mer</h2><p>Drapeaux de baignade, courants, oursins, méduses en fin d&#x27;été : sans dramatiser, quelques lignes rendent service. Le livret de <a href="../../#livret">la page d&#x27;accueil</a> consacre plusieurs pages à la mer, aux sports nautiques et aux bateaux.</p><p>Votre maison est au bord de l&#x27;eau ? <a href="../../#contact">Parlons-en</a>. Voir aussi <a href="../../blog/livret-accueil-maison-de-vacances-sicile/">le livret pour une maison en Sicile</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Faut-il fournir des serviettes de plage ?</summary><p>C&#x27;est très apprécié. Si vous en fournissez, séparez-les clairement des serviettes de bain dans le livret et dans le logement.</p></details><details><summary>Comment parler des méduses ou des oursins ?</summary><p>Simplement, sans inquiéter : où on en trouve parfois, comment les éviter, et la pharmacie la plus proche.</p></details><details><summary>Doit-on indiquer les plages surveillées ?</summary><p>Oui, surtout pour les familles. Indiquez les plages surveillées en été et la signification des drapeaux de baignade.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>

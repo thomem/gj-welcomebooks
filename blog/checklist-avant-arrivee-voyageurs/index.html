@@ -272,6 +272,21 @@ footer .palms{padding-bottom:30px}
 .mid p{font-size:15px;color:var(--muted);margin:4px 0 10px}
 .mid a{font:700 14px var(--body);color:var(--terra-ink)}
 @media (max-width:520px){.mid{grid-template-columns:1fr}.mid img{max-width:180px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+.tbl table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5;min-width:520px}
+.tbl th{background:var(--navy);color:var(--on-dark);text-align:left;font:700 13px/1.3 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:12px 16px}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--cream)}
+.ex{border-left:4px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.ex b{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.ex p{font:italic 500 21px/1.5 var(--display);color:var(--navy)}
+.afaq{margin-top:28px;display:flex;flex-direction:column}
+.afaq h2{margin-bottom:10px}
+.afaq details{border-bottom:1px solid var(--line)}
+.afaq details:first-of-type{border-top:1px solid var(--line)}
+.afaq summary{font:500 22px/1.3 var(--display);padding:16px 0}
+.afaq summary::after{width:28px;height:28px;font-size:18px}
+.afaq p{font-size:17px;padding-bottom:18px}
 .endcta{margin-top:48px;border-radius:24px;padding:34px;background:linear-gradient(rgba(160,79,43,.8),rgba(160,79,43,.8)),url(../../img/terre-bande.webp) center/cover;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
 .endcta h2{color:#fff;font-size:clamp(28px,3vw,36px)}
 .endcta p{color:#FFEBDD;margin-top:10px;max-width:52ch}
@@ -302,8 +317,8 @@ footer .palms{padding-bottom:30px}
    "description": "La check-list complète pour préparer votre location saisonnière ou votre Airbnb avant chaque arrivée : ménage, linge, consommables, sécurité, accueil.",
    "inLanguage": "fr",
    "image": "https://thomem.github.io/gj-welcomebooks/img/v-checklist-fr.webp",
-   "datePublished": "2026-10-23",
-   "dateModified": "2026-10-23",
+   "datePublished": "2026-10-24",
+   "dateModified": "2026-10-24",
    "mainEntityOfPage": "https://thomem.github.io/gj-welcomebooks/blog/checklist-avant-arrivee-voyageurs/",
    "author": {
     "@type": "Person",
@@ -337,6 +352,36 @@ footer .palms{padding-bottom:30px}
      "item": "https://thomem.github.io/gj-welcomebooks/blog/checklist-avant-arrivee-voyageurs/"
     }
    ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fr",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Qui doit utiliser la check-list ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La personne qui prépare le logement, vous ou votre équipe de ménage. L'important est qu'elle soit la même à chaque fois."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Faut-il laisser une attention de bienvenue ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ce n'est pas obligatoire, mais une bouteille d'eau fraîche ou quelques produits locaux font souvent plaisir et sont souvent mentionnés dans les avis."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment vérifier le Wi‑Fi à distance ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Certaines box permettent de le faire depuis une application. Sinon, demandez à la personne qui fait le ménage de tester avec son téléphone."
+     }
+    }
+   ]
   }
  ]
 }
@@ -361,7 +406,7 @@ footer .palms{padding-bottom:30px}
     <ol class="crumbs"><li><a href="../../">Accueil</a></li><li><a href="../../blog/">Conseils</a></li></ol>
     <h1>La check-list avant l&#x27;arrivée des voyageurs</h1>
     <p class="lead">Entre deux séjours, il y a souvent peu de temps. Une liste fixe évite d&#x27;oublier le détail qui gâche une arrivée : le papier toilette, la bouteille de gaz vide, le livret qui a disparu.</p>
-    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>6 min de lecture</span><span>Mis à jour le 23 octobre 2026</span></p>
+    <p class="meta"><span><span class="palm" aria-hidden="true"></span>Par Gustave</span><span>6 min de lecture</span><span>Mis à jour le 24 octobre 2026</span></p>
   </div>
 </section>
 <div class="zig" aria-hidden="true"></div>
@@ -369,7 +414,8 @@ footer .palms{padding-bottom:30px}
   <div class="wrap">
     <figure><div class="paper"><img src="../../img/v-checklist-fr.webp" width="1400" height="990" alt="Check-list illustrée des préparatifs avant l&#x27;arrivée des voyageurs" fetchpriority="high"></div></figure>
     <div class="prose">
-      <h2>Le logement</h2><ul><li><span>Ménage complet, y compris le frigo, le four et les placards.</span></li><li><span>Lits faits, linge de toilette propre, une serviette par personne et par usage.</span></li><li><span>Poubelles vides, bacs propres et sortis le bon jour.</span></li><li><span>Fenêtres, volets et portes qui ferment bien.</span></li></ul><h2>Les consommables</h2><ul><li><span>Papier toilette, savon, liquide vaisselle, éponge, sacs poubelle.</span></li><li><span>Sel, poivre, huile, café, thé : le minimum pour le premier soir.</span></li><li><span>Ampoules de rechange, piles pour les télécommandes.</span></li><li><span>Bouteille de gaz ou bois pour le barbecue si vous en proposez.</span></li></ul><h2>La sécurité</h2><ul><li><span>Détecteur de fumée testé.</span></li><li><span>Trousse de premiers secours complète.</span></li><li><span>Extincteur ou couverture anti-feu dans la cuisine.</span></li><li><span>Numéros d&#x27;urgence affichés et à jour. Voir <a href="../../blog/numeros-urgence-securite-livret-d-accueil/">les informations d&#x27;urgence à donner</a>.</span></li></ul><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Gardez cette liste plastifiée dans un placard fermé, avec les produits de ménage. La personne qui prépare le logement s&#x27;en sert à chaque passage.</p></aside><h2>L&#x27;accueil</h2><ul><li><span>Le <a href="../../blog/que-mettre-dans-un-livret-d-accueil/">livret d&#x27;accueil</a> posé en évidence, à sa place, en bon état.</span></li><li><span>Le code Wi‑Fi testé et identique à celui du livret.</span></li><li><span>Climatisation ou chauffage réglé selon la saison.</span></li><li><span>Une petite attention si vous en faites une : eau fraîche, fruits, produits locaux.</span></li></ul><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Avant de fermer la porte</h2><p>Faites le tour comme un voyageur : entrez, posez une valise, cherchez le Wi‑Fi, allumez la douche, ouvrez le livret. Tout ce qui vous ferait hésiter mérite d&#x27;être corrigé.</p><p>Un livret qui répond aux questions du premier soir fait une grande partie du travail. C&#x27;est ce que je crée : <a href="../../#prix">voir les offres</a>.</p>
+      <h2>Le logement</h2><ul><li><span>Ménage complet, y compris le frigo, le four et les placards.</span></li><li><span>Lits faits, linge de toilette propre, une serviette par personne et par usage.</span></li><li><span>Poubelles vides, bacs propres et sortis le bon jour.</span></li><li><span>Fenêtres, volets et portes qui ferment bien.</span></li></ul><h2>Les consommables</h2><ul><li><span>Papier toilette, savon, liquide vaisselle, éponge, sacs poubelle.</span></li><li><span>Sel, poivre, huile, café, thé : le minimum pour le premier soir.</span></li><li><span>Ampoules de rechange, piles pour les télécommandes.</span></li><li><span>Bouteille de gaz ou bois pour le barbecue si vous en proposez.</span></li></ul><h2>La sécurité</h2><ul><li><span>Détecteur de fumée testé.</span></li><li><span>Trousse de premiers secours complète.</span></li><li><span>Extincteur ou couverture anti-feu dans la cuisine.</span></li><li><span>Numéros d&#x27;urgence affichés et à jour. Voir <a href="../../blog/numeros-urgence-securite-livret-d-accueil/">les informations d&#x27;urgence à donner</a>.</span></li></ul><aside class="tip"><span class="palm" aria-hidden="true"></span><p>Gardez cette liste plastifiée dans un placard fermé, avec les produits de ménage. La personne qui prépare le logement s&#x27;en sert à chaque passage.</p></aside><h2>L&#x27;accueil</h2><ul><li><span>Le <a href="../../blog/que-mettre-dans-un-livret-d-accueil/">livret d&#x27;accueil</a> posé en évidence, à sa place, en bon état.</span></li><li><span>Le code Wi‑Fi testé et identique à celui du livret.</span></li><li><span>Climatisation ou chauffage réglé selon la saison.</span></li><li><span>Une petite attention si vous en faites une : eau fraîche, fruits, produits locaux.</span></li></ul><h2>La check-list par moment</h2><div class="tbl"><table><thead><tr><th>Quand</th><th>Quoi</th></tr></thead><tbody><tr><td>J‑3</td><td>Confirmer l&#x27;heure d&#x27;arrivée, vérifier le stock de consommables</td></tr><tr><td>J‑1</td><td>Envoyer le message d&#x27;arrivée avec le code et l&#x27;adresse</td></tr><tr><td>Jour J, ménage</td><td>Linge, salle de bain, cuisine, poubelles</td></tr><tr><td>Jour J, avant de partir</td><td>Test du Wi‑Fi, clim ou chauffage, livret à sa place, lumière d&#x27;entrée</td></tr><tr><td>Pendant le séjour</td><td>Rester joignable, répondre vite au premier message</td></tr></tbody></table></div><h2>Le kit de dépannage</h2><p>Un tiroir ou une boîte qui ne bouge pas, avec ce qui sert le plus souvent : ampoules, piles, multiprise, adaptateur de prise pour les voyageurs étrangers, tournevis, ruban adhésif, bougies et allumettes. Indiquez son emplacement dans le livret.</p><aside class="ex"><b>Phrase pour le livret</b><p>En cas de petit souci, le tiroir sous l&#x27;évier contient ampoules, piles, adaptateurs et une lampe de poche.</p></aside><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Avant de fermer la porte</h2><p>Faites le tour comme un voyageur : entrez, posez une valise, cherchez le Wi‑Fi, allumez la douche, ouvrez le livret. Tout ce qui vous ferait hésiter mérite d&#x27;être corrigé.</p><p>Un livret qui répond aux questions du premier soir fait une grande partie du travail. C&#x27;est ce que je crée : <a href="../../#prix">voir les offres</a>.</p>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Qui doit utiliser la check-list ?</summary><p>La personne qui prépare le logement, vous ou votre équipe de ménage. L&#x27;important est qu&#x27;elle soit la même à chaque fois.</p></details><details><summary>Faut-il laisser une attention de bienvenue ?</summary><p>Ce n&#x27;est pas obligatoire, mais une bouteille d&#x27;eau fraîche ou quelques produits locaux font souvent plaisir et sont souvent mentionnés dans les avis.</p></details><details><summary>Comment vérifier le Wi‑Fi à distance ?</summary><p>Certaines box permettent de le faire depuis une application. Sinon, demandez à la personne qui fait le ménage de tester avec son téléphone.</p></details></section>
     </div>
     <aside class="endcta">
       <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>
