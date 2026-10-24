@@ -220,6 +220,22 @@ footer .palms{padding-bottom:30px}
 .stage .phone .scr{border-radius:18px;aspect-ratio:390/780}
 .legend{margin-top:18px;font-size:13px;color:var(--on-dark-muted);text-align:center}
 
+/* styles régionaux */
+.stgrid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.stimg{background:var(--sand);aspect-ratio:1400/1000}.stimg img{width:100%;height:100%;object-fit:cover}
+.stx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sw{display:flex;gap:6px}.sw span{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.stx h3{font-size:30px;margin-top:4px}
+.stsub{font:700 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--terra-ink)}
+.stx p:not(.stsub){font-size:15.5px;color:var(--muted)}
+.stbtn{margin-top:auto;padding-top:8px;font:700 14px var(--body);color:var(--navy);text-decoration:none}
+.stbtn:hover{color:var(--terra-ink)}
+@media (max-width:900px){.stgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.stgrid{grid-template-columns:1fr}}
+.sub.pp{background:#fff;border-color:var(--line)}
+.chk{flex-direction:row;align-items:flex-start;gap:12px;font:500 15px/1.4 var(--body);letter-spacing:0;text-transform:none;color:var(--ink)}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--navy)}
 /* galerie du livret */
 .gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
 .gal-nav{display:flex;gap:8px}
@@ -418,7 +434,7 @@ footer .palms{padding-bottom:30px}
       <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Qui doit utiliser la check-list ?</summary><p>La personne qui prépare le logement, vous ou votre équipe de ménage. L&#x27;important est qu&#x27;elle soit la même à chaque fois.</p></details><details><summary>Faut-il laisser une attention de bienvenue ?</summary><p>Ce n&#x27;est pas obligatoire, mais une bouteille d&#x27;eau fraîche ou quelques produits locaux font souvent plaisir et sont souvent mentionnés dans les avis.</p></details><details><summary>Comment vérifier le Wi‑Fi à distance ?</summary><p>Certaines box permettent de le faire depuis une application. Sinon, demandez à la personne qui fait le ménage de tester avec son téléphone.</p></details></section>
     </div>
     <aside class="endcta">
-      <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>
+      <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €. Impression et envoi suivi : +30 €.</p></div>
       <div class="btns"><a class="btn btn-gold" href="../../#prix">Voir les offres</a><a class="btn btn-ghost" href="../../#contact">Me parler de votre logement</a></div>
     </aside>
   </div>

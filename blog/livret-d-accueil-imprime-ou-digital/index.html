@@ -220,6 +220,22 @@ footer .palms{padding-bottom:30px}
 .stage .phone .scr{border-radius:18px;aspect-ratio:390/780}
 .legend{margin-top:18px;font-size:13px;color:var(--on-dark-muted);text-align:center}
 
+/* styles régionaux */
+.stgrid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.stimg{background:var(--sand);aspect-ratio:1400/1000}.stimg img{width:100%;height:100%;object-fit:cover}
+.stx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sw{display:flex;gap:6px}.sw span{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.stx h3{font-size:30px;margin-top:4px}
+.stsub{font:700 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--terra-ink)}
+.stx p:not(.stsub){font-size:15.5px;color:var(--muted)}
+.stbtn{margin-top:auto;padding-top:8px;font:700 14px var(--body);color:var(--navy);text-decoration:none}
+.stbtn:hover{color:var(--terra-ink)}
+@media (max-width:900px){.stgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.stgrid{grid-template-columns:1fr}}
+.sub.pp{background:#fff;border-color:var(--line)}
+.chk{flex-direction:row;align-items:flex-start;gap:12px;font:500 15px/1.4 var(--body);letter-spacing:0;text-transform:none;color:var(--ink)}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--navy)}
 /* galerie du livret */
 .gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
 .gal-nav{display:flex;gap:8px}
@@ -378,7 +394,7 @@ footer .palms{padding-bottom:30px}
      "name": "Combien coûte l'impression d'un livret d'accueil ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Cela dépend du nombre de pages, du papier et de la reliure. Pour un livret de 20 à 40 pages, comptez en général quelques euros à une vingtaine d'euros l'exemplaire en copisterie ou chez un imprimeur en ligne."
+      "text": "Cela dépend du nombre de pages, du papier et de la reliure : en copisterie ou chez un imprimeur en ligne, comptez de quelques euros à une vingtaine d'euros l'exemplaire. Je propose aussi l'impression et l'envoi suivi pour 30 € de plus."
      }
     }
    ]
@@ -415,10 +431,10 @@ footer .palms{padding-bottom:30px}
     <figure><div class="paper"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="Page d&#x27;un livret d&#x27;accueil imprimé" fetchpriority="high"></div></figure>
     <div class="prose">
       <h2>Ce que le livret imprimé fait mieux</h2><ul><li><span>Il est là, à l&#x27;arrivée, sans lien à chercher ni réseau à capter.</span></li><li><span>On le feuillette en famille, au petit-déjeuner, sur la terrasse.</span></li><li><span>Il donne une image soignée du logement : c&#x27;est un objet, presque un cadeau.</span></li><li><span>Il ne dépend d&#x27;aucune application, d&#x27;aucune batterie, d&#x27;aucun forfait étranger.</span></li></ul><h2>Ce que la version digitale fait mieux</h2><ul><li><span>On peut la consulter avant d&#x27;arriver, depuis le lien envoyé dans le message de réservation.</span></li><li><span>Elle peut proposer plusieurs langues au choix.</span></li><li><span>Elle ouvre directement l&#x27;itinéraire, l&#x27;appel ou le Wi‑Fi en un geste.</span></li><li><span>Elle se met à jour sans réimprimer.</span></li></ul><h2>Le meilleur des deux</h2><p>La solution la plus confortable pour vos voyageurs combine les deux : un livret imprimé dans le logement, avec un QR code sur la couverture qui ouvre la version téléphone. Le papier pour l&#x27;accueil, le téléphone pour se déplacer et retrouver une adresse.</p><h2>Comparatif rapide</h2><div class="tbl"><table><thead><tr><th></th><th>Livret imprimé</th><th>Version téléphone</th></tr></thead><tbody><tr><td>Disponible à l&#x27;arrivée</td><td>Oui, sur la table</td><td>Oui, si le lien a été envoyé</td></tr><tr><td>Consultable avant le séjour</td><td>Non</td><td>Oui</td></tr><tr><td>Plusieurs langues</td><td>Un livret par langue</td><td>Choix à l&#x27;ouverture</td></tr><tr><td>Itinéraire, appel, Wi‑Fi en un geste</td><td>Non</td><td>Oui</td></tr><tr><td>Mise à jour</td><td>Réimpression</td><td>Immédiate</td></tr><tr><td>Effet sur l&#x27;image du logement</td><td>Très fort</td><td>Bon</td></tr><tr><td>Dépend du réseau et de la batterie</td><td>Non</td><td>Oui</td></tr></tbody></table></div><h2>Quel choix selon votre logement</h2><ul><li><span>Maison de vacances, villa, gîte : le livret imprimé d&#x27;abord, la version téléphone en complément.</span></li><li><span>Appartement en ville avec beaucoup de séjours courts : la version téléphone peut suffire, avec un petit livret de quelques pages.</span></li><li><span>Clientèle très internationale : un livret imprimé en anglais et la version téléphone pour les autres langues.</span></li><li><span>Conciergerie : un livret imprimé par logement, avec une identité commune. Voir <a href="../../blog/livret-d-accueil-conciergerie-plusieurs-logements/">l&#x27;article dédié</a>.</span></li></ul><p>Dans la pratique, la plupart des hôtes qui ont essayé les deux finissent par garder les deux. Le <a href="../../blog/qr-code-livret-d-accueil/">QR code sur la couverture</a> fait le lien.</p><aside class="mid"><img src="../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un exemple concret</b><p>Feuilletez un vrai livret d&#x27;accueil imprimé, page par page, sur la page d&#x27;accueil.</p><a href="../../#livret">Feuilleter l&#x27;exemple →</a></div></aside><h2>Et le coût ?</h2><p>Un livret imprimé coûte quelques euros à imprimer, en copisterie ou chez un imprimeur en ligne. La version téléphone demande un hébergement, mais pas de réimpression quand une information change. Nos <a href="../../blog/imprimer-livret-accueil-papier-format-reliure/">conseils d&#x27;impression</a> détaillent papier, format et reliure.</p><p>C&#x27;est exactement ce que je propose : <a href="../../#prix">le livret à imprimer, et la version téléphone en option</a>.</p>
-      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Un livret imprimé s&#x27;abîme-t-il vite ?</summary><p>Avec un papier épais, une couverture pelliculée et une reliure spirale, il tient facilement une saison complète. Prévoyez un deuxième exemplaire en réserve.</p></details><details><summary>La version téléphone remplace-t-elle les messages Airbnb ?</summary><p>Non, mais elle les allège. Vous envoyez le lien une fois, avec les instructions d&#x27;arrivée, et le voyageur trouve le reste seul.</p></details><details><summary>Combien coûte l&#x27;impression d&#x27;un livret d&#x27;accueil ?</summary><p>Cela dépend du nombre de pages, du papier et de la reliure. Pour un livret de 20 à 40 pages, comptez en général quelques euros à une vingtaine d&#x27;euros l&#x27;exemplaire en copisterie ou chez un imprimeur en ligne.</p></details></section>
+      <section class="afaq"><h2>Questions fréquentes</h2><details><summary>Un livret imprimé s&#x27;abîme-t-il vite ?</summary><p>Avec un papier épais, une couverture pelliculée et une reliure spirale, il tient facilement une saison complète. Prévoyez un deuxième exemplaire en réserve.</p></details><details><summary>La version téléphone remplace-t-elle les messages Airbnb ?</summary><p>Non, mais elle les allège. Vous envoyez le lien une fois, avec les instructions d&#x27;arrivée, et le voyageur trouve le reste seul.</p></details><details><summary>Combien coûte l&#x27;impression d&#x27;un livret d&#x27;accueil ?</summary><p>Cela dépend du nombre de pages, du papier et de la reliure : en copisterie ou chez un imprimeur en ligne, comptez de quelques euros à une vingtaine d&#x27;euros l&#x27;exemplaire. Je propose aussi l&#x27;impression et l&#x27;envoi suivi pour 30 € de plus.</p></details></section>
     </div>
     <aside class="endcta">
-      <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €.</p></div>
+      <div><h2>Vous préférez qu&#x27;on le fasse pour vous ?</h2><p>Je crée des livrets d&#x27;accueil illustrés, prêts à imprimer, à partir de votre maison et de votre région. Livret à imprimer : 249 €. Livret + version téléphone : 299 €. Impression et envoi suivi : +30 €.</p></div>
       <div class="btns"><a class="btn btn-gold" href="../../#prix">Voir les offres</a><a class="btn btn-ghost" href="../../#contact">Me parler de votre logement</a></div>
     </aside>
   </div>

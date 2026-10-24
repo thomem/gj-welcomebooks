@@ -220,6 +220,22 @@ footer .palms{padding-bottom:30px}
 .stage .phone .scr{border-radius:18px;aspect-ratio:390/780}
 .legend{margin-top:18px;font-size:13px;color:var(--on-dark-muted);text-align:center}
 
+/* styles régionaux */
+.stgrid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.stimg{background:var(--sand);aspect-ratio:1400/1000}.stimg img{width:100%;height:100%;object-fit:cover}
+.stx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sw{display:flex;gap:6px}.sw span{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.stx h3{font-size:30px;margin-top:4px}
+.stsub{font:700 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--terra-ink)}
+.stx p:not(.stsub){font-size:15.5px;color:var(--muted)}
+.stbtn{margin-top:auto;padding-top:8px;font:700 14px var(--body);color:var(--navy);text-decoration:none}
+.stbtn:hover{color:var(--terra-ink)}
+@media (max-width:900px){.stgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.stgrid{grid-template-columns:1fr}}
+.sub.pp{background:#fff;border-color:var(--line)}
+.chk{flex-direction:row;align-items:flex-start;gap:12px;font:500 15px/1.4 var(--body);letter-spacing:0;text-transform:none;color:var(--ink)}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--navy)}
 /* galerie du livret */
 .gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
 .gal-nav{display:flex;gap:8px}
@@ -378,7 +394,7 @@ footer .palms{padding-bottom:30px}
      "name": "Quanto costa stampare un welcome book?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Dipende da pagine, carta e rilegatura. Per un libretto di 20-40 pagine contate in genere da pochi euro a una ventina di euro a copia, in copisteria o da una tipografia online."
+      "text": "Dipende da pagine, carta e rilegatura: in copisteria o da una tipografia online contate da pochi euro a una ventina di euro a copia. Offro anche stampa e spedizione tracciata per 30 € in più."
      }
     }
    ]
@@ -415,10 +431,10 @@ footer .palms{padding-bottom:30px}
     <figure><div class="paper"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="Pagina di un welcome book stampato" fetchpriority="high"></div></figure>
     <div class="prose">
       <h2>Cosa fa meglio il libretto stampato</h2><ul><li><span>È lì all&#x27;arrivo, senza link da cercare né rete da prendere.</span></li><li><span>Si sfoglia in famiglia, a colazione o in terrazza.</span></li><li><span>Dà un&#x27;immagine curata della casa: è un oggetto, quasi un regalo.</span></li><li><span>Non dipende da app, batterie o roaming.</span></li></ul><h2>Cosa fa meglio la versione digitale</h2><ul><li><span>Si può consultare prima di arrivare, dal link nel messaggio di prenotazione.</span></li><li><span>Può offrire più lingue.</span></li><li><span>Apre percorso, chiamata o Wi‑Fi con un tocco.</span></li><li><span>Si aggiorna senza ristampare.</span></li></ul><h2>Il meglio dei due</h2><p>La soluzione più comoda per gli ospiti unisce le due: un libretto stampato in casa, con un QR code in copertina che apre la versione smartphone. La carta per l&#x27;accoglienza, il telefono per muoversi.</p><h2>Confronto rapido</h2><div class="tbl"><table><thead><tr><th></th><th>Libretto stampato</th><th>Versione smartphone</th></tr></thead><tbody><tr><td>Disponibile all&#x27;arrivo</td><td>Sì, sul tavolo</td><td>Sì, se il link è stato inviato</td></tr><tr><td>Consultabile prima del soggiorno</td><td>No</td><td>Sì</td></tr><tr><td>Più lingue</td><td>Un libretto per lingua</td><td>Scelta all&#x27;apertura</td></tr><tr><td>Percorso, chiamata, Wi‑Fi con un tocco</td><td>No</td><td>Sì</td></tr><tr><td>Aggiornamento</td><td>Ristampa</td><td>Immediato</td></tr><tr><td>Effetto sull&#x27;immagine della casa</td><td>Molto forte</td><td>Buono</td></tr><tr><td>Dipende da rete e batteria</td><td>No</td><td>Sì</td></tr></tbody></table></div><h2>Cosa scegliere per la vostra casa</h2><ul><li><span>Casa vacanza, villa, agriturismo: prima il libretto stampato, la versione smartphone come complemento.</span></li><li><span>Appartamento in città con tanti soggiorni brevi: la versione smartphone può bastare, con un libretto di poche pagine.</span></li><li><span>Clientela molto internazionale: libretto stampato in inglese e versione smartphone per le altre lingue.</span></li><li><span>Property manager: un libretto stampato per alloggio, con un&#x27;identità comune. Vedi <a href="../../../it/blog/welcome-book-property-manager-piu-alloggi/">l&#x27;articolo dedicato</a>.</span></li></ul><p>In pratica, la maggior parte degli host che provano entrambi finisce per tenerli tutti e due. Il <a href="../../../it/blog/qr-code-nel-welcome-book/">QR code in copertina</a> li collega.</p><aside class="mid"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>Un esempio concreto</b><p>Sfogliate un vero welcome book stampato, pagina per pagina, nella home.</p><a href="../../../it/#livret">Vedere l&#x27;esempio →</a></div></aside><h2>E il costo?</h2><p>Un libretto stampato costa pochi euro in copisteria o da una tipografia online. La versione smartphone richiede un hosting, ma niente ristampe quando un&#x27;informazione cambia. I nostri <a href="../../../it/blog/stampare-welcome-book-carta-formato-rilegatura/">consigli per la stampa</a> parlano di carta, formato e rilegatura.</p><p>È proprio ciò che propongo: <a href="../../../it/#prix">il libretto da stampare, con la versione smartphone su richiesta</a>.</p>
-      <section class="afaq"><h2>Domande frequenti</h2><details><summary>Un libretto stampato si rovina in fretta?</summary><p>Con carta spessa, copertina plastificata e rilegatura a spirale regge tranquillamente una stagione intera. Tenete una copia di scorta.</p></details><details><summary>La versione smartphone sostituisce i messaggi Airbnb?</summary><p>No, ma li alleggerisce. Inviate il link una volta con le istruzioni di arrivo e l&#x27;ospite trova il resto da solo.</p></details><details><summary>Quanto costa stampare un welcome book?</summary><p>Dipende da pagine, carta e rilegatura. Per un libretto di 20-40 pagine contate in genere da pochi euro a una ventina di euro a copia, in copisteria o da una tipografia online.</p></details></section>
+      <section class="afaq"><h2>Domande frequenti</h2><details><summary>Un libretto stampato si rovina in fretta?</summary><p>Con carta spessa, copertina plastificata e rilegatura a spirale regge tranquillamente una stagione intera. Tenete una copia di scorta.</p></details><details><summary>La versione smartphone sostituisce i messaggi Airbnb?</summary><p>No, ma li alleggerisce. Inviate il link una volta con le istruzioni di arrivo e l&#x27;ospite trova il resto da solo.</p></details><details><summary>Quanto costa stampare un welcome book?</summary><p>Dipende da pagine, carta e rilegatura: in copisteria o da una tipografia online contate da pochi euro a una ventina di euro a copia. Offro anche stampa e spedizione tracciata per 30 € in più.</p></details></section>
     </div>
     <aside class="endcta">
-      <div><h2>Preferite che lo faccia io?</h2><p>Creo welcome book illustrati, pronti da stampare, partendo dalla vostra casa e dalla vostra zona. Libretto da stampare: 249 €. Libretto + versione smartphone: 299 €.</p></div>
+      <div><h2>Preferite che lo faccia io?</h2><p>Creo welcome book illustrati, pronti da stampare, partendo dalla vostra casa e dalla vostra zona. Libretto da stampare: 249 €. Libretto + versione smartphone: 299 €. Stampa e spedizione tracciata: +30 €.</p></div>
       <div class="btns"><a class="btn btn-gold" href="../../../it/#prix">Vedere i prezzi</a><a class="btn btn-ghost" href="../../../it/#contact">Parlatemi della vostra casa</a></div>
     </aside>
   </div>

@@ -220,6 +220,22 @@ footer .palms{padding-bottom:30px}
 .stage .phone .scr{border-radius:18px;aspect-ratio:390/780}
 .legend{margin-top:18px;font-size:13px;color:var(--on-dark-muted);text-align:center}
 
+/* styles régionaux */
+.stgrid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.stimg{background:var(--sand);aspect-ratio:1400/1000}.stimg img{width:100%;height:100%;object-fit:cover}
+.stx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sw{display:flex;gap:6px}.sw span{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.stx h3{font-size:30px;margin-top:4px}
+.stsub{font:700 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--terra-ink)}
+.stx p:not(.stsub){font-size:15.5px;color:var(--muted)}
+.stbtn{margin-top:auto;padding-top:8px;font:700 14px var(--body);color:var(--navy);text-decoration:none}
+.stbtn:hover{color:var(--terra-ink)}
+@media (max-width:900px){.stgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.stgrid{grid-template-columns:1fr}}
+.sub.pp{background:#fff;border-color:var(--line)}
+.chk{flex-direction:row;align-items:flex-start;gap:12px;font:500 15px/1.4 var(--body);letter-spacing:0;text-transform:none;color:var(--ink)}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--navy)}
 /* galerie du livret */
 .gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
 .gal-nav{display:flex;gap:8px}
@@ -378,7 +394,7 @@ footer .palms{padding-bottom:30px}
      "name": "How much does printing a welcome book cost?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It depends on pages, paper and binding. For a 20 to 40-page book, expect roughly a few euros to around twenty euros per copy at a copy shop or online printer."
+      "text": "It depends on pages, paper and binding: at a copy shop or online printer, expect a few euros to around twenty euros per copy. I also offer printing and tracked shipping for €30 more."
      }
     }
    ]
@@ -415,10 +431,10 @@ footer .palms{padding-bottom:30px}
     <figure><div class="paper"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="Page of a printed welcome book" fetchpriority="high"></div></figure>
     <div class="prose">
       <h2>What the printed book does better</h2><ul><li><span>It&#x27;s there when guests arrive, no link to find, no signal needed.</span></li><li><span>Families leaf through it at breakfast or on the terrace.</span></li><li><span>It makes the place feel cared for: it&#x27;s an object, almost a gift.</span></li><li><span>No app, no battery, no foreign data plan.</span></li></ul><h2>What the digital version does better</h2><ul><li><span>Guests can read it before arriving, from the link in your booking message.</span></li><li><span>It can offer several languages.</span></li><li><span>It opens directions, calls or Wi‑Fi in one tap.</span></li><li><span>It updates without reprinting.</span></li></ul><h2>The best of both</h2><p>The most comfortable option for guests combines the two: a printed book in the house, with a QR code on the cover that opens the phone version. Paper for the welcome, the phone for getting around.</p><h2>Quick comparison</h2><div class="tbl"><table><thead><tr><th></th><th>Printed book</th><th>Phone version</th></tr></thead><tbody><tr><td>Available on arrival</td><td>Yes, on the table</td><td>Yes, if the link was sent</td></tr><tr><td>Readable before the stay</td><td>No</td><td>Yes</td></tr><tr><td>Several languages</td><td>One book per language</td><td>Choice when opening</td></tr><tr><td>Directions, call, Wi‑Fi in one tap</td><td>No</td><td>Yes</td></tr><tr><td>Updating</td><td>Reprint</td><td>Instant</td></tr><tr><td>Effect on the image of the place</td><td>Very strong</td><td>Good</td></tr><tr><td>Depends on signal and battery</td><td>No</td><td>Yes</td></tr></tbody></table></div><h2>Which to choose for your property</h2><ul><li><span>Holiday home, villa, cottage: the printed book first, the phone version as an extra.</span></li><li><span>City flat with lots of short stays: the phone version may be enough, with a short printed book.</span></li><li><span>Very international guests: a printed book in English and the phone version for other languages.</span></li><li><span>Property managers: one printed book per property with a shared look. See <a href="../../../en/blog/welcome-books-property-managers-multiple-rentals/">the dedicated guide</a>.</span></li></ul><p>In practice, most hosts who try both end up keeping both. The <a href="../../../en/blog/qr-code-in-welcome-book/">QR code on the cover</a> links them.</p><aside class="mid"><img src="../../../img/livret-couverture.webp" width="1400" height="990" alt="" loading="lazy"><div><b>A real example</b><p>Flip through a real printed welcome book, page by page, on the home page.</p><a href="../../../en/#livret">See the example →</a></div></aside><h2>What about cost?</h2><p>A printed book costs a few euros to print at a copy shop or online printer. The phone version needs hosting, but no reprint when something changes. Our <a href="../../../en/blog/how-to-print-a-welcome-book-paper-size-binding/">printing guide</a> covers paper, size and binding.</p><p>That&#x27;s exactly what I offer: <a href="../../../en/#prix">the printable book, with the phone version as an option</a>.</p>
-      <section class="afaq"><h2>Frequently asked questions</h2><details><summary>Does a printed book wear out quickly?</summary><p>With thick paper, a laminated cover and spiral binding it easily lasts a full season. Keep a spare copy.</p></details><details><summary>Does the phone version replace Airbnb messages?</summary><p>No, but it lightens them. You send the link once with the check-in instructions and guests find the rest on their own.</p></details><details><summary>How much does printing a welcome book cost?</summary><p>It depends on pages, paper and binding. For a 20 to 40-page book, expect roughly a few euros to around twenty euros per copy at a copy shop or online printer.</p></details></section>
+      <section class="afaq"><h2>Frequently asked questions</h2><details><summary>Does a printed book wear out quickly?</summary><p>With thick paper, a laminated cover and spiral binding it easily lasts a full season. Keep a spare copy.</p></details><details><summary>Does the phone version replace Airbnb messages?</summary><p>No, but it lightens them. You send the link once with the check-in instructions and guests find the rest on their own.</p></details><details><summary>How much does printing a welcome book cost?</summary><p>It depends on pages, paper and binding: at a copy shop or online printer, expect a few euros to around twenty euros per copy. I also offer printing and tracked shipping for €30 more.</p></details></section>
     </div>
     <aside class="endcta">
-      <div><h2>Rather have it done for you?</h2><p>I create illustrated, print-ready welcome books based on your house and your area. Printable book: €249. Book + phone version: €299.</p></div>
+      <div><h2>Rather have it done for you?</h2><p>I create illustrated, print-ready welcome books based on your house and your area. Printable book: €249. Book + phone version: €299. Printing and tracked shipping: +€30.</p></div>
       <div class="btns"><a class="btn btn-gold" href="../../../en/#prix">See pricing</a><a class="btn btn-ghost" href="../../../en/#contact">Tell me about your place</a></div>
     </aside>
   </div>

@@ -98,6 +98,13 @@
     },
     {
      "@type": "Offer",
+     "name": "Je l'imprime et je vous l'envoie",
+     "description": "Impression du livret et envoi par colis suivi",
+     "price": "30",
+     "priceCurrency": "EUR"
+    },
+    {
+     "@type": "Offer",
      "name": "Le suivi annuel",
      "description": "Suivi annuel : mise à jour du livret et hébergement de la version téléphone",
      "priceCurrency": "EUR",
@@ -119,7 +126,7 @@
      "name": "Est-ce que vous imprimez le livret ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Je vous envoie un PDF haute définition prêt pour l'imprimeur, en A4 ou A5. Vous le faites imprimer où vous voulez, en copisterie ou chez un imprimeur en ligne. Je peux vous indiquer le papier et la reliure qui vont bien."
+      "text": "Oui, si vous le souhaitez : pour 30 € de plus, j'imprime le livret sur un papier épais avec une couverture pelliculée et je vous l'envoie par colis suivi. Vous pouvez aussi recevoir seulement le PDF haute définition et l'imprimer où vous voulez."
      }
     },
     {
@@ -361,6 +368,22 @@ footer .palms{padding-bottom:30px}
 .stage .phone .scr{border-radius:18px;aspect-ratio:390/780}
 .legend{margin-top:18px;font-size:13px;color:var(--on-dark-muted);text-align:center}
 
+/* styles régionaux */
+.stgrid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.stimg{background:var(--sand);aspect-ratio:1400/1000}.stimg img{width:100%;height:100%;object-fit:cover}
+.stx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sw{display:flex;gap:6px}.sw span{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.stx h3{font-size:30px;margin-top:4px}
+.stsub{font:700 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--terra-ink)}
+.stx p:not(.stsub){font-size:15.5px;color:var(--muted)}
+.stbtn{margin-top:auto;padding-top:8px;font:700 14px var(--body);color:var(--navy);text-decoration:none}
+.stbtn:hover{color:var(--terra-ink)}
+@media (max-width:900px){.stgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.stgrid{grid-template-columns:1fr}}
+.sub.pp{background:#fff;border-color:var(--line)}
+.chk{flex-direction:row;align-items:flex-start;gap:12px;font:500 15px/1.4 var(--body);letter-spacing:0;text-transform:none;color:var(--ink)}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--navy)}
 /* galerie du livret */
 .gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
 .gal-nav{display:flex;gap:8px}
@@ -456,6 +479,7 @@ footer .palms{padding-bottom:30px}
     <nav class="nav" aria-label="Menu">
       <a href="#livret">Le livret</a>
       <a href="#telephone">Version téléphone</a>
+      <a href="#styles">Styles</a>
       <a href="#prix">Prix</a>
       <a href="blog/">Conseils</a>
       <a href="#questions">Questions</a>
@@ -510,10 +534,18 @@ footer .palms{padding-bottom:30px}
       <div class="gal-nav"><button type="button" id="prev" aria-label="←"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" id="next" aria-label="→"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
     </div>
     <div class="strip" id="strip" tabindex="0"><figure><div class="paper"><img src="img/livret-couverture.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : La couverture, avec le QR code vers la version téléphone"></div><figcaption><b>01</b><span>La couverture, avec le QR code vers la version téléphone</span></figcaption></figure><figure><div class="paper"><img src="img/livret-sommaire.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : Le sommaire en dix chapitres"></div><figcaption><b>02</b><span>Le sommaire en dix chapitres</span></figcaption></figure><figure><div class="paper"><img src="img/livret-que-faire.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : Une ouverture de chapitre"></div><figcaption><b>03</b><span>Une ouverture de chapitre</span></figcaption></figure><figure><div class="paper"><img src="img/livret-ortigia.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : Les visites, lieu par lieu"></div><figcaption><b>04</b><span>Les visites, lieu par lieu</span></figcaption></figure><figure><div class="paper"><img src="img/livret-noto.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : Noto et ses adresses"></div><figcaption><b>05</b><span>Noto et ses adresses</span></figcaption></figure><figure><div class="paper"><img src="img/livret-nature.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : Nature &amp; sports"></div><figcaption><b>06</b><span>Nature &amp; sports</span></figcaption></figure><figure><div class="paper"><img src="img/livret-sports-nautiques.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : Les sports nautiques"></div><figcaption><b>07</b><span>Les sports nautiques</span></figcaption></figure><figure><div class="paper"><img src="img/livret-tri-dechets.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : Le tri des déchets, enfin clair"></div><figcaption><b>08</b><span>Le tri des déchets, enfin clair</span></figcaption></figure><figure><div class="paper"><img src="img/livret-dernier-mot.webp" width="1400" height="990" loading="lazy" alt="Page d&#x27;un livret d&#x27;accueil imprimé : Le dernier mot des hôtes"></div><figcaption><b>09</b><span>Le dernier mot des hôtes</span></figcaption></figure></div>
-    <p class="gal-foot">Je vous livre un PDF haute définition prêt pour l&#x27;imprimeur, en A4 ou A5, dans la langue de vos voyageurs. Vous l&#x27;imprimez où vous voulez, et je vous dis quel papier et quelle reliure choisir.</p>
+    <p class="gal-foot">Je vous livre un PDF haute définition prêt pour l&#x27;imprimeur, en A4 ou A5, dans la langue de vos voyageurs. Vous l&#x27;imprimez où vous voulez, ou je l&#x27;imprime et vous l&#x27;envoie en suivi pour 30 € de plus.</p>
   </div>
 </section>
 <div class="zig on-sand" aria-hidden="true"></div>
+
+<section id="styles" aria-labelledby="h-st">
+  <div class="wrap">
+    <div class="text"><h2 id="h-st">Choisissez le style de votre livret</h2><p class="muted">Six univers, chacun dessiné à partir des carreaux, des couleurs et des symboles d&#x27;une région. Je les adapte ensuite à votre maison : couleurs, nom, emblème, et même un style entièrement nouveau si votre région n&#x27;y figure pas.</p></div>
+    <ul class="stgrid"><li class="stc"><div class="stimg"><img src="img/style-sicile-fan.webp" width="1400" height="1000" loading="lazy" alt="Couverture et sommaire du style Sicile"></div><div class="stx"><div class="sw"><span style="background:#173A5E"></span><span style="background:#C46F48"></span><span style="background:#E2A62A"></span><span style="background:#FBF7F0"></span></div><h3>Sicile</h3><p class="stsub">Le livret présenté plus haut</p><p>Carreaux bleus et terre cuite, palmiers, léopard. Pour les maisons du Sud, face à la mer.</p><a class="stbtn" href="#contact" data-style="sicile">Choisir ce style →</a></div></li><li class="stc"><div class="stimg"><img src="img/style-provence-fan.webp" width="1400" height="1000" loading="lazy" alt="Couverture et sommaire du style Provence"></div><div class="stx"><div class="sw"><span style="background:#4A3C6B"></span><span style="background:#8C7BB5"></span><span style="background:#D9A441"></span><span style="background:#C2643C"></span></div><h3>Provence</h3><p class="stsub">Mas des Lavandes · Luberon</p><p>Tomettes hexagonales ocre et lavande, brins de lavande. Pour les mas, les bastides et les maisons de village.</p><a class="stbtn" href="#contact" data-style="provence">Choisir ce style →</a></div></li><li class="stc"><div class="stimg"><img src="img/style-lisbonne-fan.webp" width="1400" height="1000" loading="lazy" alt="Couverture et sommaire du style Lisbonne"></div><div class="stx"><div class="sw"><span style="background:#16306B"></span><span style="background:#1E4FA0"></span><span style="background:#E7B33C"></span><span style="background:#F4F1E8"></span></div><h3>Lisbonne</h3><p class="stsub">Casa do Azulejo · Alfama</p><p>Azulejos bleu cobalt sur fond blanc, touches de jaune, hirondelle. Pour les appartements de ville et les maisons de bord de mer.</p><a class="stbtn" href="#contact" data-style="lisbonne">Choisir ce style →</a></div></li><li class="stc"><div class="stimg"><img src="img/style-amalfi-fan.webp" width="1400" height="1000" loading="lazy" alt="Couverture et sommaire du style Amalfi"></div><div class="stx"><div class="sw"><span style="background:#13606A"></span><span style="background:#1C9AA1"></span><span style="background:#F2C230"></span><span style="background:#4F8A3C"></span></div><h3>Amalfi</h3><p class="stsub">Villa Limonaia · Ravello</p><p>Maïoliques aux citrons, turquoise et jaune soleil. Pour les villas, les terrasses et les jardins méditerranéens.</p><a class="stbtn" href="#contact" data-style="amalfi">Choisir ce style →</a></div></li><li class="stc"><div class="stimg"><img src="img/style-cyclades-fan.webp" width="1400" height="1000" loading="lazy" alt="Couverture et sommaire du style Cyclades"></div><div class="stx"><div class="sw"><span style="background:#163F78"></span><span style="background:#1F5EA8"></span><span style="background:#C93A7E"></span><span style="background:#F6F4EF"></span></div><h3>Cyclades</h3><p class="stsub">Spiti Galazio · Santorin</p><p>Chaux blanche, bleu égée et bougainvillier, petite chapelle à dôme. Pour les maisons blanches et les îles.</p><a class="stbtn" href="#contact" data-style="cyclades">Choisir ce style →</a></div></li><li class="stc"><div class="stimg"><img src="img/style-marrakech-fan.webp" width="1400" height="1000" loading="lazy" alt="Couverture et sommaire du style Marrakech"></div><div class="stx"><div class="sw"><span style="background:#173E37"></span><span style="background:#11705F"></span><span style="background:#E3A13A"></span><span style="background:#B4533A"></span></div><h3>Marrakech</h3><p class="stsub">Riad Yasmine · Médina</p><p>Zellige étoilé vert émeraude et safran, lanterne dorée. Pour les riads, les maisons d&#x27;hôtes et les villas avec patio.</p><a class="stbtn" href="#contact" data-style="marrakech">Choisir ce style →</a></div></li></ul>
+  </div>
+</section>
+<div class="zig" aria-hidden="true"></div>
 
 <section class="dark" aria-labelledby="h-in">
   <div class="wrap">
@@ -577,12 +609,17 @@ footer .palms{padding-bottom:30px}
         <a class="btn btn-navy" href="#contact" data-offre="2">On en parle</a>
       </article>
     </div>
+    <div class="sub pp">
+      <div><p class="sub-k">En option</p><h3>Je l&#x27;imprime et je vous l&#x27;envoie</h3></div>
+      <p class="sub-p">Vous ne voulez pas vous occuper de l&#x27;imprimeur ? J&#x27;imprime le livret sur un papier épais, avec une couverture pelliculée et une reliure solide, et je vous l&#x27;envoie par colis suivi.</p>
+      <p class="sub-a">+30 €<small>impression et envoi suivi</small></p>
+    </div>
     <div class="sub">
       <div><p class="sub-k">Ensuite, si vous le souhaitez</p><h3>Le suivi annuel</h3></div>
       <p class="sub-p">Chaque année, je reprends votre livret avec vous : adresses, horaires, codes, nouvelles règles. Je mets à jour le PDF à imprimer et j&#x27;héberge la version téléphone pour que le lien et le QR code continuent de marcher.</p>
       <p class="sub-a">30 €<small>par an</small></p>
     </div>
-    <p class="small">L&#x27;impression n&#x27;est pas comprise : vous la payez directement à l&#x27;imprimeur. Langue supplémentaire sur demande.</p>
+    <p class="small">Langue supplémentaire sur demande. Livraison suivie en France et en Europe ; pour le reste du monde, demandez-moi.</p>
   </div>
 </section>
 
@@ -597,7 +634,7 @@ footer .palms{padding-bottom:30px}
 <section id="questions" aria-labelledby="h-q">
   <div class="wrap">
     <h2 id="h-q">Vos questions</h2>
-    <div class="faq"><details open><summary>Est-ce que vous imprimez le livret ?</summary><p>Je vous envoie un PDF haute définition prêt pour l&#x27;imprimeur, en A4 ou A5. Vous le faites imprimer où vous voulez, en copisterie ou chez un imprimeur en ligne. Je peux vous indiquer le papier et la reliure qui vont bien.</p></details><details><summary>Dans quelles langues ?</summary><p>Le livret imprimé est écrit dans la langue de vos voyageurs : français, anglais, italien, allemand, espagnol… Celui présenté ici est en anglais. La version téléphone peut réunir plusieurs langues.</p></details><details><summary>Vous travaillez seulement en Sicile ?</summary><p>Non. Tout se fait à distance : un appel en visio, des photos, vos adresses. Je travaille pour des logements en France, en Italie et ailleurs.</p></details><details><summary>De quoi avez-vous besoin de ma part ?</summary><p>Quelques photos du logement, les infos pratiques (Wi‑Fi, accès, règles) et vos adresses préférées. On fait le reste ensemble pendant l&#x27;appel.</p></details><details><summary>Combien de temps ça prend ?</summary><p>En général une à deux semaines, selon le nombre de pages et de langues.</p></details><details><summary>Et si une info change ?</summary><p>C&#x27;est le rôle du suivi annuel à 30 € : chaque année, je mets votre livret à jour, la version à imprimer comme la version téléphone.</p></details></div>
+    <div class="faq"><details open><summary>Est-ce que vous imprimez le livret ?</summary><p>Oui, si vous le souhaitez : pour 30 € de plus, j&#x27;imprime le livret sur un papier épais avec une couverture pelliculée et je vous l&#x27;envoie par colis suivi. Vous pouvez aussi recevoir seulement le PDF haute définition et l&#x27;imprimer où vous voulez.</p></details><details><summary>Dans quelles langues ?</summary><p>Le livret imprimé est écrit dans la langue de vos voyageurs : français, anglais, italien, allemand, espagnol… Celui présenté ici est en anglais. La version téléphone peut réunir plusieurs langues.</p></details><details><summary>Vous travaillez seulement en Sicile ?</summary><p>Non. Tout se fait à distance : un appel en visio, des photos, vos adresses. Je travaille pour des logements en France, en Italie et ailleurs.</p></details><details><summary>De quoi avez-vous besoin de ma part ?</summary><p>Quelques photos du logement, les infos pratiques (Wi‑Fi, accès, règles) et vos adresses préférées. On fait le reste ensemble pendant l&#x27;appel.</p></details><details><summary>Combien de temps ça prend ?</summary><p>En général une à deux semaines, selon le nombre de pages et de langues.</p></details><details><summary>Et si une info change ?</summary><p>C&#x27;est le rôle du suivi annuel à 30 € : chaque année, je mets votre livret à jour, la version à imprimer comme la version téléphone.</p></details></div>
   </div>
 </section>
 
@@ -616,9 +653,14 @@ footer .palms{padding-bottom:30px}
         <label for="f-mail">Votre e‑mail<input id="f-mail" name="email" type="email" autocomplete="email"></label>
       </div>
       <div class="row">
+        <label for="f-tel">Votre téléphone<input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="+33 6 12 34 56 78"></label>
         <label for="f-lieu">Où est le logement<input id="f-lieu" name="lieu" placeholder="Ex. Syracuse, Nice, Lisbonne"></label>
-        <label for="f-offre">Ce qui vous intéresse<select id="f-offre" name="offre"><option>Livret à imprimer</option><option>Livret + version téléphone</option><option>Plusieurs logements</option><option>Je ne sais pas encore</option></select></label>
       </div>
+      <div class="row">
+        <label for="f-offre">Ce qui vous intéresse<select id="f-offre" name="offre"><option>Livret à imprimer</option><option>Livret + version téléphone</option><option>Plusieurs logements</option><option>Je ne sais pas encore</option></select></label>
+        <label for="f-style">Style souhaité<select id="f-style" name="style"><option value="sicile">Sicile</option><option value="provence">Provence</option><option value="lisbonne">Lisbonne</option><option value="amalfi">Amalfi</option><option value="cyclades">Cyclades</option><option value="marrakech">Marrakech</option><option value="?">Je ne sais pas encore</option></select></label>
+      </div>
+      <label class="chk" for="f-print"><input id="f-print" name="impression" type="checkbox"><span>Je veux aussi le livret imprimé et envoyé en suivi (+30 €)</span></label>
       <label for="f-msg">Quelques mots sur la maison<textarea id="f-msg" name="message" placeholder="Le lien de l&#x27;annonce, le nombre de chambres, les langues de vos voyageurs…"></textarea></label>
       <button class="btn btn-navy" type="submit">Envoyer</button>
       <p class="ok" id="ok" hidden></p>
@@ -640,13 +682,15 @@ footer .palms{padding-bottom:30px}
 
 <script>
 (function(){
-  var T={"copy": "Copier", "copied": "Copiée", "selected": "Sélectionnée", "f_err": "Il me faut votre nom et votre e‑mail pour vous répondre.", "f_ok": "Votre messagerie s'ouvre avec le message prêt. Si rien ne s'ouvre, écrivez-moi à ", "f_subj": "Livret d'accueil", "f_sending": "Envoi en cours…", "f_done": "Merci, votre message est bien arrivé. Je vous réponds rapidement.", "f_fail": "L'envoi n'a pas marché. Écrivez-moi directement à "}, email='gustave.jeannin@gmail.com';
+  var T={"copy": "Copier", "copied": "Copiée", "selected": "Sélectionnée", "f_err": "Il me faut votre nom, votre e‑mail et votre téléphone pour vous répondre.", "f_ok": "Votre messagerie s'ouvre avec le message prêt. Si rien ne s'ouvre, écrivez-moi à ", "f_subj": "Livret d'accueil", "f_sending": "Envoi en cours…", "f_done": "Merci, votre message est bien arrivé. Je vous réponds rapidement.", "f_fail": "L'envoi n'a pas marché. Écrivez-moi directement à "}, email='gustave.jeannin@gmail.com';
   var copy=document.getElementById('copy');
   copy.addEventListener('click',function(){
     var sel=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);copy.textContent=T.selected};
     try{navigator.clipboard.writeText(email).then(function(){copy.textContent=T.copied;setTimeout(function(){copy.textContent=T.copy},2000)},sel)}catch(e){sel()}
   });
   var sel=document.getElementById('f-offre');
+  var sty=document.getElementById('f-style');
+  document.querySelectorAll('[data-style]').forEach(function(a){a.addEventListener('click',function(){sty.value=a.dataset.style})});
   document.querySelectorAll('[data-offre]').forEach(function(a){a.addEventListener('click',function(){sel.selectedIndex=+a.dataset.offre})});
   var strip=document.getElementById('strip');
   function step(d){var f=strip.querySelector('figure');strip.scrollBy({left:d*(f.offsetWidth+22),behavior:'smooth'})}
@@ -656,15 +700,16 @@ footer .palms{padding-bottom:30px}
   var KEY='b991da2b-bfb3-48ed-84df-72043345ddb6', btn=f.querySelector('button[type=submit]');
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var nom=f.nom.value.trim(),mail=f.email.value.trim();
+    var nom=f.nom.value.trim(),mail=f.email.value.trim(),tel=f.tel.value.trim(),imp=f.impression.checked?'OUI (+30 €)':'non';
     ok.hidden=false;
-    if(!nom||!/^\S+@\S+\.\S+$/.test(mail)){ok.textContent=T.f_err;return}
+    if(!nom||!/^\S+@\S+\.\S+$/.test(mail)||tel.replace(/\D/g,'').length<6){ok.textContent=T.f_err;return}
     if(f.botcheck.checked)return;
-    var body=nom+'\n'+mail+'\n'+f.lieu.value+'\n'+sel.value+'\n\n'+f.message.value;
+    var stv=sty.options[sty.selectedIndex].text;
+    var body=nom+'\n'+mail+'\n'+tel+'\n'+f.lieu.value+'\n'+sel.value+' / '+stv+' / impression : '+imp+'\n\n'+f.message.value;
     if(!KEY){ok.textContent=T.f_ok+email+'.';location.href='mailto:'+email+'?subject='+encodeURIComponent(T.f_subj+' — '+nom)+'&body='+encodeURIComponent(body);return}
     btn.disabled=true;ok.textContent=T.f_sending;
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify({access_key:KEY,subject:T.f_subj+' — '+nom,from_name:'GJ Welcome Books',name:nom,email:mail,logement:f.lieu.value,offre:sel.value,message:f.message.value,langue:document.documentElement.lang})})
+      body:JSON.stringify({access_key:KEY,subject:T.f_subj+' — '+nom,from_name:'GJ Welcome Books',name:nom,email:mail,telephone:tel,logement:f.lieu.value,offre:sel.value,style:stv,impression_envoi:imp,message:f.message.value,langue:document.documentElement.lang})})
     .then(function(r){return r.json()}).then(function(j){if(j.success){ok.textContent=T.f_done;f.reset()}else throw 0})
     .catch(function(){ok.textContent=T.f_fail+email+'.'}).finally(function(){btn.disabled=false});
   });

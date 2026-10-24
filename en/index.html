@@ -98,6 +98,13 @@
     },
     {
      "@type": "Offer",
+     "name": "I print it and ship it to you",
+     "description": "Printing of the book and tracked shipping",
+     "price": "30",
+     "priceCurrency": "EUR"
+    },
+    {
+     "@type": "Offer",
      "name": "Yearly update",
      "description": "Yearly update: refreshed book and hosting of the phone version",
      "priceCurrency": "EUR",
@@ -119,7 +126,7 @@
      "name": "Do you print the book?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "I send you a high-resolution PDF, ready for the printer, in A4 or A5. Print it wherever you like, at a local copy shop or an online printer. I can recommend the right paper and binding."
+      "text": "Yes, if you like: for €30 more I print the book on thick paper with a laminated cover and send it to you by tracked parcel. You can also just get the high-resolution PDF and print it wherever you want."
      }
     },
     {
@@ -361,6 +368,22 @@ footer .palms{padding-bottom:30px}
 .stage .phone .scr{border-radius:18px;aspect-ratio:390/780}
 .legend{margin-top:18px;font-size:13px;color:var(--on-dark-muted);text-align:center}
 
+/* styles régionaux */
+.stgrid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.stimg{background:var(--sand);aspect-ratio:1400/1000}.stimg img{width:100%;height:100%;object-fit:cover}
+.stx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sw{display:flex;gap:6px}.sw span{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.stx h3{font-size:30px;margin-top:4px}
+.stsub{font:700 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--terra-ink)}
+.stx p:not(.stsub){font-size:15.5px;color:var(--muted)}
+.stbtn{margin-top:auto;padding-top:8px;font:700 14px var(--body);color:var(--navy);text-decoration:none}
+.stbtn:hover{color:var(--terra-ink)}
+@media (max-width:900px){.stgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.stgrid{grid-template-columns:1fr}}
+.sub.pp{background:#fff;border-color:var(--line)}
+.chk{flex-direction:row;align-items:flex-start;gap:12px;font:500 15px/1.4 var(--body);letter-spacing:0;text-transform:none;color:var(--ink)}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--navy)}
 /* galerie du livret */
 .gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
 .gal-nav{display:flex;gap:8px}
@@ -456,6 +479,7 @@ footer .palms{padding-bottom:30px}
     <nav class="nav" aria-label="Menu">
       <a href="#livret">The book</a>
       <a href="#telephone">Phone version</a>
+      <a href="#styles">Styles</a>
       <a href="#prix">Pricing</a>
       <a href="../en/blog/">Guides</a>
       <a href="#questions">Questions</a>
@@ -510,10 +534,18 @@ footer .palms{padding-bottom:30px}
       <div class="gal-nav"><button type="button" id="prev" aria-label="←"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" id="next" aria-label="→"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
     </div>
     <div class="strip" id="strip" tabindex="0"><figure><div class="paper"><img src="../img/livret-couverture.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : The cover, with a QR code to the phone version"></div><figcaption><b>01</b><span>The cover, with a QR code to the phone version</span></figcaption></figure><figure><div class="paper"><img src="../img/livret-sommaire.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : The index, ten chapters"></div><figcaption><b>02</b><span>The index, ten chapters</span></figcaption></figure><figure><div class="paper"><img src="../img/livret-que-faire.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : A chapter opener"></div><figcaption><b>03</b><span>A chapter opener</span></figcaption></figure><figure><div class="paper"><img src="../img/livret-ortigia.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : Sightseeing, place by place"></div><figcaption><b>04</b><span>Sightseeing, place by place</span></figcaption></figure><figure><div class="paper"><img src="../img/livret-noto.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : Noto and its addresses"></div><figcaption><b>05</b><span>Noto and its addresses</span></figcaption></figure><figure><div class="paper"><img src="../img/livret-nature.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : Nature &amp; sports"></div><figcaption><b>06</b><span>Nature &amp; sports</span></figcaption></figure><figure><div class="paper"><img src="../img/livret-sports-nautiques.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : Water sports"></div><figcaption><b>07</b><span>Water sports</span></figcaption></figure><figure><div class="paper"><img src="../img/livret-tri-dechets.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : Waste sorting, finally clear"></div><figcaption><b>08</b><span>Waste sorting, finally clear</span></figcaption></figure><figure><div class="paper"><img src="../img/livret-dernier-mot.webp" width="1400" height="990" loading="lazy" alt="Page of a printed welcome book : A word from the hosts"></div><figcaption><b>09</b><span>A word from the hosts</span></figcaption></figure></div>
-    <p class="gal-foot">You get a high-resolution, print-ready PDF in A4 or A5, in your guests&#x27; language. Print it wherever you like; I&#x27;ll tell you which paper and binding to choose.</p>
+    <p class="gal-foot">You get a high-resolution, print-ready PDF in A4 or A5, in your guests&#x27; language. Print it wherever you like, or I print it and ship it tracked for €30 more.</p>
   </div>
 </section>
 <div class="zig on-sand" aria-hidden="true"></div>
+
+<section id="styles" aria-labelledby="h-st">
+  <div class="wrap">
+    <div class="text"><h2 id="h-st">Choose the style of your book</h2><p class="muted">Six looks, each drawn from the tiles, colours and symbols of a region. I then adapt it to your house: colours, name, emblem, or a completely new style if your region isn&#x27;t here.</p></div>
+    <ul class="stgrid"><li class="stc"><div class="stimg"><img src="../img/style-sicile-fan.webp" width="1400" height="1000" loading="lazy" alt="Cover and index of the style Sicily"></div><div class="stx"><div class="sw"><span style="background:#173A5E"></span><span style="background:#C46F48"></span><span style="background:#E2A62A"></span><span style="background:#FBF7F0"></span></div><h3>Sicily</h3><p class="stsub">The book shown above</p><p>Blue and terracotta tiles, palm trees, the leopard. For southern houses facing the sea.</p><a class="stbtn" href="#contact" data-style="sicile">Choose this style →</a></div></li><li class="stc"><div class="stimg"><img src="../img/style-provence-fan.webp" width="1400" height="1000" loading="lazy" alt="Cover and index of the style Provence"></div><div class="stx"><div class="sw"><span style="background:#4A3C6B"></span><span style="background:#8C7BB5"></span><span style="background:#D9A441"></span><span style="background:#C2643C"></span></div><h3>Provence</h3><p class="stsub">Mas des Lavandes · Luberon</p><p>Hexagonal ochre and lavender tiles, sprigs of lavender. For farmhouses, bastides and village houses.</p><a class="stbtn" href="#contact" data-style="provence">Choose this style →</a></div></li><li class="stc"><div class="stimg"><img src="../img/style-lisbonne-fan.webp" width="1400" height="1000" loading="lazy" alt="Cover and index of the style Lisbon"></div><div class="stx"><div class="sw"><span style="background:#16306B"></span><span style="background:#1E4FA0"></span><span style="background:#E7B33C"></span><span style="background:#F4F1E8"></span></div><h3>Lisbon</h3><p class="stsub">Casa do Azulejo · Alfama</p><p>Cobalt-blue azulejos on white, touches of yellow, a swallow. For city flats and seaside houses.</p><a class="stbtn" href="#contact" data-style="lisbonne">Choose this style →</a></div></li><li class="stc"><div class="stimg"><img src="../img/style-amalfi-fan.webp" width="1400" height="1000" loading="lazy" alt="Cover and index of the style Amalfi"></div><div class="stx"><div class="sw"><span style="background:#13606A"></span><span style="background:#1C9AA1"></span><span style="background:#F2C230"></span><span style="background:#4F8A3C"></span></div><h3>Amalfi</h3><p class="stsub">Villa Limonaia · Ravello</p><p>Lemon maiolica tiles, turquoise and sunny yellow. For villas, terraces and Mediterranean gardens.</p><a class="stbtn" href="#contact" data-style="amalfi">Choose this style →</a></div></li><li class="stc"><div class="stimg"><img src="../img/style-cyclades-fan.webp" width="1400" height="1000" loading="lazy" alt="Cover and index of the style Cyclades"></div><div class="stx"><div class="sw"><span style="background:#163F78"></span><span style="background:#1F5EA8"></span><span style="background:#C93A7E"></span><span style="background:#F6F4EF"></span></div><h3>Cyclades</h3><p class="stsub">Spiti Galazio · Santorini</p><p>Whitewash, Aegean blue and bougainvillea, a little domed chapel. For white houses and islands.</p><a class="stbtn" href="#contact" data-style="cyclades">Choose this style →</a></div></li><li class="stc"><div class="stimg"><img src="../img/style-marrakech-fan.webp" width="1400" height="1000" loading="lazy" alt="Cover and index of the style Marrakech"></div><div class="stx"><div class="sw"><span style="background:#173E37"></span><span style="background:#11705F"></span><span style="background:#E3A13A"></span><span style="background:#B4533A"></span></div><h3>Marrakech</h3><p class="stsub">Riad Yasmine · Medina</p><p>Emerald and saffron star zellige, a golden lantern. For riads, guesthouses and villas with a patio.</p><a class="stbtn" href="#contact" data-style="marrakech">Choose this style →</a></div></li></ul>
+  </div>
+</section>
+<div class="zig" aria-hidden="true"></div>
 
 <section class="dark" aria-labelledby="h-in">
   <div class="wrap">
@@ -577,12 +609,17 @@ footer .palms{padding-bottom:30px}
         <a class="btn btn-navy" href="#contact" data-offre="2">Let&#x27;s talk</a>
       </article>
     </div>
+    <div class="sub pp">
+      <div><p class="sub-k">Optional</p><h3>I print it and ship it to you</h3></div>
+      <p class="sub-p">Don&#x27;t want to deal with a printer? I print the book on thick paper, with a laminated cover and sturdy binding, and send it to you by tracked parcel.</p>
+      <p class="sub-a">+€30<small>printing and tracked shipping</small></p>
+    </div>
     <div class="sub">
       <div><p class="sub-k">Afterwards, if you like</p><h3>Yearly update</h3></div>
       <p class="sub-p">Every year I go through your book with you: addresses, opening hours, codes, new rules. I update the print PDF and host the phone version so the link and QR code keep working.</p>
       <p class="sub-a">€30<small>per year</small></p>
     </div>
-    <p class="small">Printing is not included: you pay the printer directly. Extra languages on request.</p>
+    <p class="small">Extra languages on request. Tracked delivery in France and Europe; for the rest of the world, ask me.</p>
   </div>
 </section>
 
@@ -597,7 +634,7 @@ footer .palms{padding-bottom:30px}
 <section id="questions" aria-labelledby="h-q">
   <div class="wrap">
     <h2 id="h-q">Your questions</h2>
-    <div class="faq"><details open><summary>Do you print the book?</summary><p>I send you a high-resolution PDF, ready for the printer, in A4 or A5. Print it wherever you like, at a local copy shop or an online printer. I can recommend the right paper and binding.</p></details><details><summary>Which languages?</summary><p>The printed book is written in your guests&#x27; language: English, French, Italian, German, Spanish… The one shown here is in English. The phone version can hold several languages.</p></details><details><summary>Do you only work in Sicily?</summary><p>No. Everything happens remotely: a video call, photos, your addresses. I work with properties in France, Italy and anywhere else.</p></details><details><summary>What do you need from me?</summary><p>A few photos of the place, the practical info (Wi‑Fi, access, rules) and your favourite addresses. We go through the rest together on the call.</p></details><details><summary>How long does it take?</summary><p>Usually one to two weeks, depending on the number of pages and languages.</p></details><details><summary>What if something changes?</summary><p>That&#x27;s what the €30 yearly update is for: every year I refresh your book, both the printable version and the phone version.</p></details></div>
+    <div class="faq"><details open><summary>Do you print the book?</summary><p>Yes, if you like: for €30 more I print the book on thick paper with a laminated cover and send it to you by tracked parcel. You can also just get the high-resolution PDF and print it wherever you want.</p></details><details><summary>Which languages?</summary><p>The printed book is written in your guests&#x27; language: English, French, Italian, German, Spanish… The one shown here is in English. The phone version can hold several languages.</p></details><details><summary>Do you only work in Sicily?</summary><p>No. Everything happens remotely: a video call, photos, your addresses. I work with properties in France, Italy and anywhere else.</p></details><details><summary>What do you need from me?</summary><p>A few photos of the place, the practical info (Wi‑Fi, access, rules) and your favourite addresses. We go through the rest together on the call.</p></details><details><summary>How long does it take?</summary><p>Usually one to two weeks, depending on the number of pages and languages.</p></details><details><summary>What if something changes?</summary><p>That&#x27;s what the €30 yearly update is for: every year I refresh your book, both the printable version and the phone version.</p></details></div>
   </div>
 </section>
 
@@ -616,9 +653,14 @@ footer .palms{padding-bottom:30px}
         <label for="f-mail">Your email<input id="f-mail" name="email" type="email" autocomplete="email"></label>
       </div>
       <div class="row">
+        <label for="f-tel">Your phone<input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="+44 7700 900123"></label>
         <label for="f-lieu">Where the property is<input id="f-lieu" name="lieu" placeholder="E.g. Syracuse, Lisbon, Mykonos"></label>
-        <label for="f-offre">What you&#x27;re interested in<select id="f-offre" name="offre"><option>Printable book</option><option>Book + phone version</option><option>Several properties</option><option>Not sure yet</option></select></label>
       </div>
+      <div class="row">
+        <label for="f-offre">What you&#x27;re interested in<select id="f-offre" name="offre"><option>Printable book</option><option>Book + phone version</option><option>Several properties</option><option>Not sure yet</option></select></label>
+        <label for="f-style">Preferred style<select id="f-style" name="style"><option value="sicile">Sicily</option><option value="provence">Provence</option><option value="lisbonne">Lisbon</option><option value="amalfi">Amalfi</option><option value="cyclades">Cyclades</option><option value="marrakech">Marrakech</option><option value="?">Not sure yet</option></select></label>
+      </div>
+      <label class="chk" for="f-print"><input id="f-print" name="impression" type="checkbox"><span>I also want the printed book, shipped tracked (+€30)</span></label>
       <label for="f-msg">A few words about the house<textarea id="f-msg" name="message" placeholder="Your listing link, number of bedrooms, your guests&#x27; languages…"></textarea></label>
       <button class="btn btn-navy" type="submit">Send</button>
       <p class="ok" id="ok" hidden></p>
@@ -640,13 +682,15 @@ footer .palms{padding-bottom:30px}
 
 <script>
 (function(){
-  var T={"copy": "Copy", "copied": "Copied", "selected": "Selected", "f_err": "I need your name and email to reply.", "f_ok": "Your email app is opening with the message ready. If nothing opens, write to me at ", "f_subj": "Welcome book", "f_sending": "Sending…", "f_done": "Thank you, your message has arrived. I'll get back to you soon.", "f_fail": "Sending didn't work. Write to me directly at "}, email='gustave.jeannin@gmail.com';
+  var T={"copy": "Copy", "copied": "Copied", "selected": "Selected", "f_err": "I need your name, email and phone number to reply.", "f_ok": "Your email app is opening with the message ready. If nothing opens, write to me at ", "f_subj": "Welcome book", "f_sending": "Sending…", "f_done": "Thank you, your message has arrived. I'll get back to you soon.", "f_fail": "Sending didn't work. Write to me directly at "}, email='gustave.jeannin@gmail.com';
   var copy=document.getElementById('copy');
   copy.addEventListener('click',function(){
     var sel=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);copy.textContent=T.selected};
     try{navigator.clipboard.writeText(email).then(function(){copy.textContent=T.copied;setTimeout(function(){copy.textContent=T.copy},2000)},sel)}catch(e){sel()}
   });
   var sel=document.getElementById('f-offre');
+  var sty=document.getElementById('f-style');
+  document.querySelectorAll('[data-style]').forEach(function(a){a.addEventListener('click',function(){sty.value=a.dataset.style})});
   document.querySelectorAll('[data-offre]').forEach(function(a){a.addEventListener('click',function(){sel.selectedIndex=+a.dataset.offre})});
   var strip=document.getElementById('strip');
   function step(d){var f=strip.querySelector('figure');strip.scrollBy({left:d*(f.offsetWidth+22),behavior:'smooth'})}
@@ -656,15 +700,16 @@ footer .palms{padding-bottom:30px}
   var KEY='b991da2b-bfb3-48ed-84df-72043345ddb6', btn=f.querySelector('button[type=submit]');
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var nom=f.nom.value.trim(),mail=f.email.value.trim();
+    var nom=f.nom.value.trim(),mail=f.email.value.trim(),tel=f.tel.value.trim(),imp=f.impression.checked?'OUI (+30 €)':'non';
     ok.hidden=false;
-    if(!nom||!/^\S+@\S+\.\S+$/.test(mail)){ok.textContent=T.f_err;return}
+    if(!nom||!/^\S+@\S+\.\S+$/.test(mail)||tel.replace(/\D/g,'').length<6){ok.textContent=T.f_err;return}
     if(f.botcheck.checked)return;
-    var body=nom+'\n'+mail+'\n'+f.lieu.value+'\n'+sel.value+'\n\n'+f.message.value;
+    var stv=sty.options[sty.selectedIndex].text;
+    var body=nom+'\n'+mail+'\n'+tel+'\n'+f.lieu.value+'\n'+sel.value+' / '+stv+' / impression : '+imp+'\n\n'+f.message.value;
     if(!KEY){ok.textContent=T.f_ok+email+'.';location.href='mailto:'+email+'?subject='+encodeURIComponent(T.f_subj+' — '+nom)+'&body='+encodeURIComponent(body);return}
     btn.disabled=true;ok.textContent=T.f_sending;
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify({access_key:KEY,subject:T.f_subj+' — '+nom,from_name:'GJ Welcome Books',name:nom,email:mail,logement:f.lieu.value,offre:sel.value,message:f.message.value,langue:document.documentElement.lang})})
+      body:JSON.stringify({access_key:KEY,subject:T.f_subj+' — '+nom,from_name:'GJ Welcome Books',name:nom,email:mail,telephone:tel,logement:f.lieu.value,offre:sel.value,style:stv,impression_envoi:imp,message:f.message.value,langue:document.documentElement.lang})})
     .then(function(r){return r.json()}).then(function(j){if(j.success){ok.textContent=T.f_done;f.reset()}else throw 0})
     .catch(function(){ok.textContent=T.f_fail+email+'.'}).finally(function(){btn.disabled=false});
   });

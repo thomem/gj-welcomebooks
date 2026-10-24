@@ -220,6 +220,22 @@ footer .palms{padding-bottom:30px}
 .stage .phone .scr{border-radius:18px;aspect-ratio:390/780}
 .legend{margin-top:18px;font-size:13px;color:var(--on-dark-muted);text-align:center}
 
+/* styles régionaux */
+.stgrid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stc{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.stimg{background:var(--sand);aspect-ratio:1400/1000}.stimg img{width:100%;height:100%;object-fit:cover}
+.stx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sw{display:flex;gap:6px}.sw span{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.stx h3{font-size:30px;margin-top:4px}
+.stsub{font:700 12px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--terra-ink)}
+.stx p:not(.stsub){font-size:15.5px;color:var(--muted)}
+.stbtn{margin-top:auto;padding-top:8px;font:700 14px var(--body);color:var(--navy);text-decoration:none}
+.stbtn:hover{color:var(--terra-ink)}
+@media (max-width:900px){.stgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.stgrid{grid-template-columns:1fr}}
+.sub.pp{background:#fff;border-color:var(--line)}
+.chk{flex-direction:row;align-items:flex-start;gap:12px;font:500 15px/1.4 var(--body);letter-spacing:0;text-transform:none;color:var(--ink)}
+.chk input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--navy)}
 /* galerie du livret */
 .gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px}
 .gal-nav{display:flex;gap:8px}
@@ -418,7 +434,7 @@ footer .palms{padding-bottom:30px}
       <section class="afaq"><h2>Frequently asked questions</h2><details><summary>Is a long book a problem?</summary><p>Only if it&#x27;s badly organised. With an index and clear chapters, a 40-page book is still easy to use.</p></details><details><summary>Should pages be numbered?</summary><p>Yes, as soon as the book has an index. That&#x27;s how guests find the right page in seconds.</p></details><details><summary>Should the phone version be as long?</summary><p>It can hold the same, organised in sections opened one at a time. Length matters much less on screen.</p></details></section>
     </div>
     <aside class="endcta">
-      <div><h2>Rather have it done for you?</h2><p>I create illustrated, print-ready welcome books based on your house and your area. Printable book: €249. Book + phone version: €299.</p></div>
+      <div><h2>Rather have it done for you?</h2><p>I create illustrated, print-ready welcome books based on your house and your area. Printable book: €249. Book + phone version: €299. Printing and tracked shipping: +€30.</p></div>
       <div class="btns"><a class="btn btn-gold" href="../../../en/#prix">See pricing</a><a class="btn btn-ghost" href="../../../en/#contact">Tell me about your place</a></div>
     </aside>
   </div>
