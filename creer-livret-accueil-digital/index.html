@@ -362,8 +362,6 @@ footer .palms{padding-bottom:30px}
 .ph{position:relative;width:100%;max-width:370px;border-radius:44px;padding:11px;background:#14161a;box-shadow:0 30px 60px rgba(5,12,24,.28),inset 0 0 0 2px #2b2f36}
 .ph .scr{position:relative;height:min(720px,calc(100vh - 230px));min-height:560px;border-radius:34px;overflow:hidden;background:var(--cream);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 .ph .scr .wb{height:100%}
-.wm{position:absolute;inset:0;z-index:20;pointer-events:none;background-repeat:repeat;opacity:1}
-.wm-band{position:absolute;left:0;right:0;top:50%;z-index:21;pointer-events:none;transform:rotate(-24deg);background:rgba(196,111,72,.86);color:#fff;text-align:center;font:700 13px/1 var(--body);letter-spacing:.22em;padding:9px 0}
 .dlb{background:none;border:0;color:var(--navy);font:700 14px var(--body);text-decoration:underline;cursor:pointer}
 .pvjump{display:none}
 @media (max-width:980px){.gen{grid-template-columns:1fr}.pv{position:static;order:-1}.ph .scr{height:640px}
@@ -462,7 +460,7 @@ footer .palms{padding-bottom:30px}
      "name": "C'est vraiment gratuit ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Oui : remplir le livret et voir l'aperçu en direct ne coûte rien et ne demande pas d'inscription. L'aperçu reste sur la page, avec un filigrane. La mise en ligne sans filigrane, avec lien et QR code, coûte 49 € (première année d'hébergement incluse)."
+      "text": "Oui : remplir le livret, voir l'aperçu en direct et le télécharger en photo ne coûte rien et ne demande pas d'inscription. La photo porte mes coordonnées en bas de chaque page. La mise en ligne à votre nom, avec lien et QR code, coûte 49 € (première année d'hébergement incluse)."
      }
     },
     {
@@ -583,8 +581,10 @@ Silence après 23 h"></textarea></label>
   <aside class="pv" id="apercu" aria-labelledby="h-pv">
     <h2 id="h-pv">Aperçu</h2>
     <p class="pv-tip">Touchez les onglets et la carte Wi-Fi : tout fonctionne comme sur le vrai livret.</p>
-    <div class="ph"><div class="scr" id="scr"><div id="book" class="wb"></div><div class="wm" id="wm" aria-hidden="true"></div><div class="wm-band" aria-hidden="true">APERÇU · GJ WELCOME BOOKS</div></div></div>
-    <p class="pv-tip" style="align-self:center;text-align:center">L&#x27;aperçu reste sur cette page : il ne se télécharge pas.</p>
+    <div class="ph"><div class="scr" id="scr"><div id="book" class="wb"></div></div></div>
+    <button type="button" class="btn btn-navy" id="dl">Télécharger en photo</button>
+    <p class="pv-tip" style="align-self:center;text-align:center">La photo contient les 4 pages, avec mes coordonnées en bas de chacune.</p>
+    <div class="wb-shot" id="shot" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:390px"></div>
   </aside>
  </div>
  <a class="btn btn-navy pvjump" href="#apercu">Aperçu ↑</a>
@@ -595,8 +595,8 @@ Silence après 23 h"></textarea></label>
   <div class="wrap">
     <div class="text"><h2 id="h-get">Mettre votre livret en ligne</h2><p class="muted">L&#x27;aperçu reste gratuit. Pour que vos voyageurs l&#x27;aient vraiment sur leur téléphone, je m&#x27;occupe du reste.</p></div>
     <div class="offers">
-      <article class="offer"><h3>Aperçu</h3><p class="amt">0 €</p><ul><li>Le livret complet, en direct sur cette page</li><li>Testez les 6 styles et les 3 langues</li><li>Brouillon gardé sur votre appareil</li></ul><a class="btn btn-navy" href="#apercu" style="background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">Aperçu</a></article>
-      <article class="offer main"><h3>En ligne + QR code</h3><p class="amt">49 €<small>1re année d&#x27;hébergement incluse, puis 30 €/an</small></p><ul><li>Sans filigrane, à votre nom</li><li>Hébergé par moi, avec un lien à partager</li><li>QR code prêt à imprimer pour l&#x27;entrée</li><li>Je relis tout et corrige les fautes</li><li>Modifications par e-mail pendant un an</li></ul><button type="button" class="btn btn-gold" id="want">Recevoir mon livret en ligne</button></article>
+      <article class="offer"><h3>Aperçu</h3><p class="amt">0 €</p><ul><li>Le livret complet, en direct sur cette page</li><li>Téléchargeable en photo (4 pages)</li><li>Testez les 6 styles et les 3 langues</li></ul><a class="btn btn-navy" href="#apercu" style="background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">Aperçu</a></article>
+      <article class="offer main"><h3>En ligne + QR code</h3><p class="amt">49 €<small>1re année d&#x27;hébergement incluse, puis 30 €/an</small></p><ul><li>À votre nom, sans mes coordonnées en bas des pages</li><li>Hébergé par moi, avec un lien à partager</li><li>QR code prêt à imprimer pour l&#x27;entrée</li><li>Je relis tout et corrige les fautes</li><li>Modifications par e-mail pendant un an</li></ul><button type="button" class="btn btn-gold" id="want">Recevoir mon livret en ligne</button></article>
       <article class="offer"><h3>Fait main</h3><p>Vous préférez que j&#x27;écrive et mette en page votre livret, papier et téléphone ?</p><a class="btn btn-navy" href="../#prix" onclick="document.getElementById('sur-mesure').scrollIntoView({behavior:'smooth'});return false">Voir les livrets sur mesure</a></article>
     </div>
     <div class="order" id="order" hidden>
@@ -634,7 +634,7 @@ Silence après 23 h"></textarea></label>
   </div>
 </section>
 <section id="questions" aria-labelledby="h-q" style="padding-top:0">
-  <div class="wrap"><h2 id="h-q">Questions fréquentes</h2><div class="faq"><details open><summary>C&#x27;est vraiment gratuit ?</summary><p>Oui : remplir le livret et voir l&#x27;aperçu en direct ne coûte rien et ne demande pas d&#x27;inscription. L&#x27;aperçu reste sur la page, avec un filigrane. La mise en ligne sans filigrane, avec lien et QR code, coûte 49 € (première année d&#x27;hébergement incluse).</p></details><details><summary>Mes informations sont-elles envoyées quelque part ?</summary><p>Non, tant que vous ne cliquez pas sur « Envoyer mon livret ». Le brouillon reste sur votre appareil. Quand vous l&#x27;envoyez, il arrive uniquement dans ma boîte mail.</p></details><details><summary>Comment mes voyageurs ouvrent le livret ?</summary><p>Ils scannent le QR code affiché dans le logement, ou ouvrent le lien que vous leur envoyez avant l&#x27;arrivée. Rien à installer.</p></details><details><summary>Je peux le modifier ensuite ?</summary><p>Oui. Envoyez-moi les changements par e-mail (nouveau code, nouvelle adresse) et je mets le livret à jour. C&#x27;est compris pendant un an, puis 30 €/an.</p></details><details><summary>Et si je veux aussi un livret imprimé ?</summary><p>Je fais aussi des livrets imprimables sur mesure, écrits et mis en page à la main. Les prix sont sur la page d&#x27;accueil.</p></details><details><summary>Vous pouvez le faire à ma place ?</summary><p>Oui, c&#x27;est même mon métier : je crée des livrets d&#x27;accueil sur mesure, à imprimer (199 €) ou à imprimer et sur téléphone (299 €). Vous me racontez votre maison, j&#x27;écris et je mets en page.</p></details></div></div>
+  <div class="wrap"><h2 id="h-q">Questions fréquentes</h2><div class="faq"><details open><summary>C&#x27;est vraiment gratuit ?</summary><p>Oui : remplir le livret, voir l&#x27;aperçu en direct et le télécharger en photo ne coûte rien et ne demande pas d&#x27;inscription. La photo porte mes coordonnées en bas de chaque page. La mise en ligne à votre nom, avec lien et QR code, coûte 49 € (première année d&#x27;hébergement incluse).</p></details><details><summary>Mes informations sont-elles envoyées quelque part ?</summary><p>Non, tant que vous ne cliquez pas sur « Envoyer mon livret ». Le brouillon reste sur votre appareil. Quand vous l&#x27;envoyez, il arrive uniquement dans ma boîte mail.</p></details><details><summary>Comment mes voyageurs ouvrent le livret ?</summary><p>Ils scannent le QR code affiché dans le logement, ou ouvrent le lien que vous leur envoyez avant l&#x27;arrivée. Rien à installer.</p></details><details><summary>Je peux le modifier ensuite ?</summary><p>Oui. Envoyez-moi les changements par e-mail (nouveau code, nouvelle adresse) et je mets le livret à jour. C&#x27;est compris pendant un an, puis 30 €/an.</p></details><details><summary>Et si je veux aussi un livret imprimé ?</summary><p>Je fais aussi des livrets imprimables sur mesure, écrits et mis en page à la main. Les prix sont sur la page d&#x27;accueil.</p></details><details><summary>Vous pouvez le faire à ma place ?</summary><p>Oui, c&#x27;est même mon métier : je crée des livrets d&#x27;accueil sur mesure, à imprimer (199 €) ou à imprimer et sur téléphone (299 €). Vous me racontez votre maison, j&#x27;écris et je mets en page.</p></details></div></div>
 </section>
 </main>
 <footer>
@@ -650,15 +650,10 @@ Silence après 23 h"></textarea></label>
 <script src="../assets/wb.js"></script>
 <script>
 (function(){
-  var T={"wm": "APERÇU · GJ WELCOME BOOKS", "dl": "Télécharger l'aperçu (image avec filigrane)", "dl_wait": "Préparation de l'image…", "dl_name": "apercu-livret", "o_err": "Il manque votre nom, un e-mail valide, un téléphone ou la case à cocher.", "o_done": "C'est envoyé, merci ! Je vous écris sous 48 h avec le lien, le QR code et le paiement.", "o_pay": "Régler maintenant", "o_fail": "L'envoi n'a pas marché. Écrivez-moi à ", "o_subj": "Livret digital", "o_sending": "Envoi…", "o_send": "Envoyer mon livret", "p_cat": "Catégorie", "p_name": "Nom", "p_note": "Pourquoi vous l'aimez", "p_addr": "Adresse (facultatif)", "p_del": "Retirer", "saved": "Brouillon gardé sur cet appareil"}, CATS={"resto": "Restaurant", "plage": "Plage", "courses": "Courses", "voir": "À voir", "activ": "Activité", "autre": "Autre"}, EX={"name": "Casa Limone", "place": "Ortigia · Syracuse · Sicile", "intro": "Une maison blanche à deux pas de la mer. Voici tout ce qu'il faut pour en profiter.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "12 Via del Mare, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "Le portail vert est au bout de la rue\nLa boîte à clés est à droite, code 2468\nL'appartement est au 1er étage", "keys": "Deux jeux de clés vous attendent sur la table de l'entrée.", "parking": "Place gratuite devant la maison, sinon parking Talete (5 min à pied).", "checkoutSteps": "Laisser les clés sur la table\nFermer les volets et la porte de la terrasse\nSortir les poubelles", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Le poisson du jour, simple et parfait.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "Pour nager au coucher du soleil.", "addr": ""}, {"cat": "courses", "name": "Marché d'Ortigia", "note": "Le matin, fruits, fromages et poissons.", "addr": ""}], "rules": "Pas de fête\nOn fume dehors\nSilence après 23 h", "trash": "Plastique et métal le mardi, verre au conteneur au coin de la rue, le reste chaque soir.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
+  var T={"credit": ["Livret créé avec GJ Welcome Books", "Gustave · gustave.jeannin@gmail.com", "thomem.github.io/gj-welcomebooks"], "dl": "Télécharger en photo", "dl_wait": "Préparation de la photo…", "dl_name": "mon-livret-d-accueil", "o_err": "Il manque votre nom, un e-mail valide, un téléphone ou la case à cocher.", "o_done": "C'est envoyé, merci ! Je vous écris sous 48 h avec le lien, le QR code et le paiement.", "o_pay": "Régler maintenant", "o_fail": "L'envoi n'a pas marché. Écrivez-moi à ", "o_subj": "Livret digital", "o_sending": "Envoi…", "o_send": "Envoyer mon livret", "p_cat": "Catégorie", "p_name": "Nom", "p_note": "Pourquoi vous l'aimez", "p_addr": "Adresse (facultatif)", "p_del": "Retirer", "saved": "Brouillon gardé sur cet appareil"}, CATS={"resto": "Restaurant", "plage": "Plage", "courses": "Courses", "voir": "À voir", "activ": "Activité", "autre": "Autre"}, EX={"name": "Casa Limone", "place": "Ortigia · Syracuse · Sicile", "intro": "Une maison blanche à deux pas de la mer. Voici tout ce qu'il faut pour en profiter.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "12 Via del Mare, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "Le portail vert est au bout de la rue\nLa boîte à clés est à droite, code 2468\nL'appartement est au 1er étage", "keys": "Deux jeux de clés vous attendent sur la table de l'entrée.", "parking": "Place gratuite devant la maison, sinon parking Talete (5 min à pied).", "checkoutSteps": "Laisser les clés sur la table\nFermer les volets et la porte de la terrasse\nSortir les poubelles", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Le poisson du jour, simple et parfait.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "Pour nager au coucher du soleil.", "addr": ""}, {"cat": "courses", "name": "Marché d'Ortigia", "note": "Le matin, fruits, fromages et poissons.", "addr": ""}], "rules": "Pas de fête\nOn fume dehors\nSilence après 23 h", "trash": "Plastique et métal le mardi, verre au conteneur au coin de la rue, le reste chaque soir.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
   var KEY='b991da2b-bfb3-48ed-84df-72043345ddb6', EMAIL='gustave.jeannin@gmail.com', PAY='', IMG='../img/', SK='gjwb-draft-fr';
   var f=document.getElementById('gen'), book=document.getElementById('book'), pl=document.getElementById('pl');
-  // filigrane : texte répété en diagonale, dessiné en SVG
-  var wmsvg='<svg xmlns="http://www.w3.org/2000/svg" width="300" height="190"><text x="150" y="100" transform="rotate(-24 150 95)" text-anchor="middle" font-family="Karla,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2.5" fill="rgba(23,58,94,.22)">'+T.wm+'</text></svg>';
-  document.getElementById('wm').style.backgroundImage='url("data:image/svg+xml;charset=utf-8,'+encodeURIComponent(wmsvg)+'")';
-  var scr=document.getElementById('scr');
-  scr.addEventListener('contextmenu',function(ev){ev.preventDefault()});
-  scr.addEventListener('dragstart',function(ev){ev.preventDefault()});
+  var scr=document.getElementById('scr'), CREDIT=T.credit;
   function opt(v,sel){return Object.keys(CATS).map(function(k){return '<option value="'+k+'"'+(k===sel?' selected':'')+'>'+CATS[k]+'</option>'}).join('')}
   function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function addPlace(p){
@@ -686,7 +681,7 @@ Silence après 23 h"></textarea></label>
   }
   var timer, savedEl=document.getElementById('saved');
   function update(){
-    var d=data();WB.render(d,book,{img:IMG,preview:true});
+    var d=data();WB.render(d,book,{img:IMG,preview:true,credit:CREDIT});
     clearTimeout(timer);timer=setTimeout(function(){try{localStorage.setItem(SK,JSON.stringify(d));savedEl.textContent=T.saved}catch(e){}},500);
   }
   var init=null;try{init=JSON.parse(localStorage.getItem(SK)||'null')}catch(e){}
@@ -699,6 +694,31 @@ Silence après 23 h"></textarea></label>
   update();
   var jump=document.querySelector('.pvjump');
   if('IntersectionObserver' in window)new IntersectionObserver(function(en){jump.style.visibility=en[0].isIntersecting?'hidden':'visible'}).observe(document.querySelector('.ph'));
+  // photo de l'aperçu : les 4 pages du livret côte à côte, avec mes coordonnées en bas de chacune
+  var dl=document.getElementById('dl'), shot=document.getElementById('shot');
+  function snap(){
+    var d=data(), parts=[], i=0;
+    function next(){
+      if(i>3)return done();
+      shot.innerHTML='<div class="wb"></div>';var el=shot.firstChild;
+      WB.render(d,el,{img:IMG,preview:true,credit:CREDIT});el.querySelector('.wb-tabs [data-t="'+i+'"]').click();
+      html2canvas(el,{scale:1.5,backgroundColor:'#FBF7F0',useCORS:true}).then(function(c){parts.push(c);i++;next()}).catch(fail);
+    }
+    function done(){
+      var g=40,W=parts.reduce(function(a,c){return a+c.width},0)+g*5,H=Math.max.apply(null,parts.map(function(c){return c.height}))+g*2;
+      var cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d');x.fillStyle='#E9E1D3';x.fillRect(0,0,W,H);
+      var px=g;parts.forEach(function(c){x.fillStyle='rgba(0,0,0,.08)';x.fillRect(px+6,g+8,c.width,c.height);x.drawImage(c,px,g);px+=c.width+g});
+      var a=document.createElement('a');a.download=T.dl_name+'.jpg';a.href=cv.toDataURL('image/jpeg',.85);document.body.appendChild(a);a.click();a.remove();
+      shot.innerHTML='';reset()
+    }
+    next();
+  }
+  function reset(){dl.disabled=false;dl.textContent=T.dl}
+  function fail(){shot.innerHTML='';reset()}
+  dl.onclick=function(){
+    dl.disabled=true;dl.textContent=T.dl_wait;
+    if(window.html2canvas)snap();else{var s=document.createElement('script');s.src='../assets/html2canvas.min.js';s.onload=snap;s.onerror=fail;document.head.appendChild(s)}
+  };
   // commande
   var order=document.getElementById('order'), o=document.getElementById('ord'), msg=document.getElementById('omsg'), btn=o.querySelector('[type=submit]');
   document.getElementById('want').onclick=function(){order.hidden=false;order.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){o.nom.focus()},400)};

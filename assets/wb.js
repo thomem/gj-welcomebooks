@@ -61,7 +61,7 @@
     var name = d.name || 'Casa', hosts = (d.hosts || []).filter(function (h) { return h && (h.name || h.phone); });
     var hostNames = hosts.map(function (h) { return h.name; }).filter(Boolean).join(' & ');
     var tile = (o.img || '') + 'wb/tile-' + (THEME[d.style] ? d.style : 'sicile') + '.webp';
-    var h = '';
+    var h = '', cr = o.credit ? '<div class="wb-credit">' + o.credit.map(function (x, i) { return i ? '<span>' + esc(x) + '</span>' : '<b>' + esc(x) + '</b>'; }).join('') + '</div>' : '';
     // Accueil
     h += '<section class="wb-p" data-p="0"><div class="wb-hero">' + (d.place ? '<p class="wb-k">' + esc(d.place) + '</p>' : '') +
       '<h2>' + esc(t.welcome) + '<em>' + esc(name) + '</em></h2>' + (d.intro ? '<p>' + esc(d.intro) + '</p>' : '') +
@@ -72,7 +72,7 @@
     }).join('') + '</div>';
     if (d.address) h += '<a class="wb-card" href="' + esc(mapsHref(d.address)) + '" target="_blank" rel="noopener"><p class="wb-k">' + I.pin + esc(t.address) + '</p><h3>' + esc(d.address.split(',')[0]) + '</h3><small>' + esc(d.address.split(',').slice(1).join(',').trim()) + (d.address.indexOf(',') > -1 ? ' · ' : '') + esc(t.maps) + '</small></a>';
     h += [1, 2, 3].map(function (i) { return '<button type="button" class="wb-card wb-chap" data-t="' + i + '"><span><p class="wb-k">' + esc(t.chap) + ' 0' + i + '</p><h3>' + esc(t.t[i]) + '</h3></span><span class="ch">' + I.chev + '</span></button>'; }).join('');
-    h += '</div></section>';
+    h += '</div>' + cr + '</section>';
     // Arrivée
     var steps = lines(d.checkinSteps), out = lines(d.checkoutSteps);
     h += '<section class="wb-p" data-p="1" hidden>' + hero(t.chap + ' 01', t.t[1], t.arriveLead) + '<div class="wb-body">';
@@ -82,7 +82,7 @@
     if (d.keys) h += '<div class="wb-dark"><p class="wb-k">' + esc(t.keys) + '</p><p>' + esc(d.keys) + '</p></div>';
     if (d.parking) h += '<div class="wb-card"><p class="wb-k">' + I.pin + esc(t.parking) + '</p><p style="margin-top:6px">' + esc(d.parking) + '</p></div>';
     if (out.length) h += '<p class="wb-h">' + esc(t.leave) + '</p>' + list(out);
-    h += '</div></section>';
+    h += '</div>' + cr + '</section>';
     // Adresses
     var places = (d.places || []).filter(function (p) { return p && p.name; }), cats = {};
     places.forEach(function (p) { (cats[p.cat || 'autre'] = cats[p.cat || 'autre'] || []).push(p); });
@@ -96,7 +96,7 @@
           '<a class="go" href="' + esc(mapsHref(p.addr || (p.name + ' ' + (d.place || '')))) + '" target="_blank" rel="noopener">' + esc(t.go) + '</a></div>';
       });
     });
-    h += '</div></section>';
+    h += '</div>' + cr + '</section>';
     // Infos
     var rules = lines(d.rules);
     h += '<section class="wb-p" data-p="3" hidden>' + hero(t.chap + ' 03', t.t[3], t.infoLead) + '<div class="wb-body">';
@@ -108,7 +108,7 @@
     if (d.pharmacy) em.push([t.pharmacy, d.pharmacy]);
     hosts.forEach(function (x) { if (x.phone) em.push([x.name || t.hosts, x.phone]); });
     h += em.map(function (x) { return '<a class="wb-card wb-tel" href="' + esc(telHref(/\d/.test(x[1]) ? x[1] : '')) + '"><span>' + esc(x[0]) + '</span><b>' + esc(x[1]) + '</b></a>'; }).join('');
-    h += '</div></section>';
+    h += '</div>' + cr + '</section>';
     h += '<div class="wb-zig"></div><div class="wb-end">' + esc(t.end) + (hostNames ? ' — ' + esc(hostNames) : '') + '<small>GJ Welcome Books</small></div>';
 
     var tabs = '<nav class="wb-tabs">' + [I.home, I.key, I.map, I.info].map(function (ic, i) { return '<button type="button" data-t="' + i + '">' + ic + '<span>' + esc(t.t[i]) + '</span></button>'; }).join('') + '</nav>';

@@ -362,8 +362,6 @@ footer .palms{padding-bottom:30px}
 .ph{position:relative;width:100%;max-width:370px;border-radius:44px;padding:11px;background:#14161a;box-shadow:0 30px 60px rgba(5,12,24,.28),inset 0 0 0 2px #2b2f36}
 .ph .scr{position:relative;height:min(720px,calc(100vh - 230px));min-height:560px;border-radius:34px;overflow:hidden;background:var(--cream);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 .ph .scr .wb{height:100%}
-.wm{position:absolute;inset:0;z-index:20;pointer-events:none;background-repeat:repeat;opacity:1}
-.wm-band{position:absolute;left:0;right:0;top:50%;z-index:21;pointer-events:none;transform:rotate(-24deg);background:rgba(196,111,72,.86);color:#fff;text-align:center;font:700 13px/1 var(--body);letter-spacing:.22em;padding:9px 0}
 .dlb{background:none;border:0;color:var(--navy);font:700 14px var(--body);text-decoration:underline;cursor:pointer}
 .pvjump{display:none}
 @media (max-width:980px){.gen{grid-template-columns:1fr}.pv{position:static;order:-1}.ph .scr{height:640px}
@@ -462,7 +460,7 @@ footer .palms{padding-bottom:30px}
      "name": "È davvero gratis?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sì: compilare il welcome book e vedere l'anteprima dal vivo non costa nulla e non richiede registrazione. L'anteprima resta sulla pagina, con filigrana. La versione online senza filigrana, con link e QR code, costa 49 € (primo anno di hosting incluso)."
+      "text": "Sì: compilare il welcome book, vedere l'anteprima dal vivo e scaricarlo come foto non costa nulla e non richiede registrazione. La foto riporta i miei contatti in fondo a ogni pagina. La versione online a tuo nome, con link e QR code, costa 49 € (primo anno di hosting incluso)."
      }
     },
     {
@@ -583,8 +581,10 @@ Silenzio dopo le 23"></textarea></label>
   <aside class="pv" id="apercu" aria-labelledby="h-pv">
     <h2 id="h-pv">Anteprima</h2>
     <p class="pv-tip">Tocca le schede e la carta Wi-Fi: funziona tutto come nel vero welcome book.</p>
-    <div class="ph"><div class="scr" id="scr"><div id="book" class="wb"></div><div class="wm" id="wm" aria-hidden="true"></div><div class="wm-band" aria-hidden="true">ANTEPRIMA · GJ WELCOME BOOKS</div></div></div>
-    <p class="pv-tip" style="align-self:center;text-align:center">L&#x27;anteprima resta su questa pagina: non si può scaricare.</p>
+    <div class="ph"><div class="scr" id="scr"><div id="book" class="wb"></div></div></div>
+    <button type="button" class="btn btn-navy" id="dl">Scarica come foto</button>
+    <p class="pv-tip" style="align-self:center;text-align:center">La foto contiene le 4 pagine, con i miei contatti in fondo a ciascuna.</p>
+    <div class="wb-shot" id="shot" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:390px"></div>
   </aside>
  </div>
  <a class="btn btn-navy pvjump" href="#apercu">Anteprima ↑</a>
@@ -595,8 +595,8 @@ Silenzio dopo le 23"></textarea></label>
   <div class="wrap">
     <div class="text"><h2 id="h-get">Metti online il tuo welcome book</h2><p class="muted">L&#x27;anteprima resta gratuita. Per portarlo sul telefono dei tuoi ospiti, al resto penso io.</p></div>
     <div class="offers">
-      <article class="offer"><h3>Anteprima</h3><p class="amt">0 €</p><ul><li>Il welcome book completo, dal vivo su questa pagina</li><li>Prova i 6 stili e le 3 lingue</li><li>Bozza salvata sul tuo dispositivo</li></ul><a class="btn btn-navy" href="#apercu" style="background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">Anteprima</a></article>
-      <article class="offer main"><h3>Online + QR code</h3><p class="amt">49 €<small>primo anno di hosting incluso, poi 30 €/anno</small></p><ul><li>Senza filigrana, a tuo nome</li><li>Ospitato da me, con un link da condividere</li><li>QR code pronto da stampare per l&#x27;ingresso</li><li>Rileggo e correggo tutto</li><li>Modifiche via e-mail per un anno</li></ul><button type="button" class="btn btn-gold" id="want">Ricevi il mio welcome book online</button></article>
+      <article class="offer"><h3>Anteprima</h3><p class="amt">0 €</p><ul><li>Il welcome book completo, dal vivo su questa pagina</li><li>Scaricabile come foto (4 pagine)</li><li>Prova i 6 stili e le 3 lingue</li></ul><a class="btn btn-navy" href="#apercu" style="background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">Anteprima</a></article>
+      <article class="offer main"><h3>Online + QR code</h3><p class="amt">49 €<small>primo anno di hosting incluso, poi 30 €/anno</small></p><ul><li>A tuo nome, senza i miei contatti in fondo alle pagine</li><li>Ospitato da me, con un link da condividere</li><li>QR code pronto da stampare per l&#x27;ingresso</li><li>Rileggo e correggo tutto</li><li>Modifiche via e-mail per un anno</li></ul><button type="button" class="btn btn-gold" id="want">Ricevi il mio welcome book online</button></article>
       <article class="offer"><h3>Fatto a mano</h3><p>Preferisci che scriva e impagini io il tuo welcome book, cartaceo e su smartphone?</p><a class="btn btn-navy" href="../../it/#prix" onclick="document.getElementById('sur-mesure').scrollIntoView({behavior:'smooth'});return false">Vedi i welcome book su misura</a></article>
     </div>
     <div class="order" id="order" hidden>
@@ -634,7 +634,7 @@ Silenzio dopo le 23"></textarea></label>
   </div>
 </section>
 <section id="questions" aria-labelledby="h-q" style="padding-top:0">
-  <div class="wrap"><h2 id="h-q">Domande frequenti</h2><div class="faq"><details open><summary>È davvero gratis?</summary><p>Sì: compilare il welcome book e vedere l&#x27;anteprima dal vivo non costa nulla e non richiede registrazione. L&#x27;anteprima resta sulla pagina, con filigrana. La versione online senza filigrana, con link e QR code, costa 49 € (primo anno di hosting incluso).</p></details><details><summary>I miei dati vengono inviati da qualche parte?</summary><p>No, finché non clicchi su «Invia il mio welcome book». La bozza resta sul tuo dispositivo. Quando lo invii, arriva solo nella mia casella e-mail.</p></details><details><summary>Come aprono il welcome book gli ospiti?</summary><p>Inquadrano il QR code esposto in casa, oppure aprono il link che mandi prima dell&#x27;arrivo. Niente da installare.</p></details><details><summary>Posso modificarlo dopo?</summary><p>Sì. Mandami le modifiche via e-mail (nuovo codice, nuovo indirizzo) e aggiorno il welcome book. Incluso per un anno, poi 30 €/anno.</p></details><details><summary>E se voglio anche un welcome book stampato?</summary><p>Faccio anche welcome book stampabili su misura, scritti e impaginati a mano. I prezzi sono nella pagina principale.</p></details><details><summary>Puoi farlo tu al posto mio?</summary><p>Sì, è il mio lavoro: creo welcome book su misura, da stampare (199 €) o da stampare più versione smartphone (299 €). Mi racconti la casa, io scrivo e impagino.</p></details></div></div>
+  <div class="wrap"><h2 id="h-q">Domande frequenti</h2><div class="faq"><details open><summary>È davvero gratis?</summary><p>Sì: compilare il welcome book, vedere l&#x27;anteprima dal vivo e scaricarlo come foto non costa nulla e non richiede registrazione. La foto riporta i miei contatti in fondo a ogni pagina. La versione online a tuo nome, con link e QR code, costa 49 € (primo anno di hosting incluso).</p></details><details><summary>I miei dati vengono inviati da qualche parte?</summary><p>No, finché non clicchi su «Invia il mio welcome book». La bozza resta sul tuo dispositivo. Quando lo invii, arriva solo nella mia casella e-mail.</p></details><details><summary>Come aprono il welcome book gli ospiti?</summary><p>Inquadrano il QR code esposto in casa, oppure aprono il link che mandi prima dell&#x27;arrivo. Niente da installare.</p></details><details><summary>Posso modificarlo dopo?</summary><p>Sì. Mandami le modifiche via e-mail (nuovo codice, nuovo indirizzo) e aggiorno il welcome book. Incluso per un anno, poi 30 €/anno.</p></details><details><summary>E se voglio anche un welcome book stampato?</summary><p>Faccio anche welcome book stampabili su misura, scritti e impaginati a mano. I prezzi sono nella pagina principale.</p></details><details><summary>Puoi farlo tu al posto mio?</summary><p>Sì, è il mio lavoro: creo welcome book su misura, da stampare (199 €) o da stampare più versione smartphone (299 €). Mi racconti la casa, io scrivo e impagino.</p></details></div></div>
 </section>
 </main>
 <footer>
@@ -650,15 +650,10 @@ Silenzio dopo le 23"></textarea></label>
 <script src="../../assets/wb.js"></script>
 <script>
 (function(){
-  var T={"wm": "ANTEPRIMA · GJ WELCOME BOOKS", "dl": "Scarica l'anteprima (immagine con filigrana)", "dl_wait": "Preparo l'immagine…", "dl_name": "anteprima-welcome-book", "o_err": "Mancano il nome, un'e-mail valida, il telefono o la casella da spuntare.", "o_done": "Inviato, grazie! Ti scrivo entro 48 ore con link, QR code e pagamento.", "o_pay": "Paga ora", "o_fail": "L'invio non è riuscito. Scrivimi a ", "o_subj": "Welcome book digitale", "o_sending": "Invio…", "o_send": "Invia il mio welcome book", "p_cat": "Categoria", "p_name": "Nome", "p_note": "Perché ti piace", "p_addr": "Indirizzo (facoltativo)", "p_del": "Rimuovi", "saved": "Bozza salvata su questo dispositivo"}, CATS={"resto": "Ristorante", "plage": "Spiaggia", "courses": "Spesa", "voir": "Da vedere", "activ": "Attività", "autre": "Altro"}, EX={"name": "Casa Limone", "place": "Ortigia · Siracusa · Sicilia", "intro": "Una casa bianca a due passi dal mare. Qui trovate tutto per godervela.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "Via del Mare 12, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "Il cancello verde è in fondo alla via\nLa cassetta delle chiavi è a destra, codice 2468\nL'appartamento è al primo piano", "keys": "Due mazzi di chiavi vi aspettano sul tavolo dell'ingresso.", "parking": "Posto gratuito davanti a casa, altrimenti parcheggio Talete (5 min a piedi).", "checkoutSteps": "Lasciare le chiavi sul tavolo\nChiudere le persiane e la porta del terrazzo\nPortare fuori la spazzatura", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Il pesce del giorno, semplice e perfetto.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "Per un bagno al tramonto.", "addr": ""}, {"cat": "courses", "name": "Mercato di Ortigia", "note": "La mattina: frutta, formaggi e pesce.", "addr": ""}], "rules": "Niente feste\nSi fuma fuori\nSilenzio dopo le 23", "trash": "Plastica e metalli il martedì, vetro nel cassonetto all'angolo, il resto ogni sera.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
+  var T={"credit": ["Welcome book creato con GJ Welcome Books", "Gustave · gustave.jeannin@gmail.com", "thomem.github.io/gj-welcomebooks"], "dl": "Scarica come foto", "dl_wait": "Preparo la foto…", "dl_name": "il-mio-welcome-book", "o_err": "Mancano il nome, un'e-mail valida, il telefono o la casella da spuntare.", "o_done": "Inviato, grazie! Ti scrivo entro 48 ore con link, QR code e pagamento.", "o_pay": "Paga ora", "o_fail": "L'invio non è riuscito. Scrivimi a ", "o_subj": "Welcome book digitale", "o_sending": "Invio…", "o_send": "Invia il mio welcome book", "p_cat": "Categoria", "p_name": "Nome", "p_note": "Perché ti piace", "p_addr": "Indirizzo (facoltativo)", "p_del": "Rimuovi", "saved": "Bozza salvata su questo dispositivo"}, CATS={"resto": "Ristorante", "plage": "Spiaggia", "courses": "Spesa", "voir": "Da vedere", "activ": "Attività", "autre": "Altro"}, EX={"name": "Casa Limone", "place": "Ortigia · Siracusa · Sicilia", "intro": "Una casa bianca a due passi dal mare. Qui trovate tutto per godervela.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "Via del Mare 12, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "Il cancello verde è in fondo alla via\nLa cassetta delle chiavi è a destra, codice 2468\nL'appartamento è al primo piano", "keys": "Due mazzi di chiavi vi aspettano sul tavolo dell'ingresso.", "parking": "Posto gratuito davanti a casa, altrimenti parcheggio Talete (5 min a piedi).", "checkoutSteps": "Lasciare le chiavi sul tavolo\nChiudere le persiane e la porta del terrazzo\nPortare fuori la spazzatura", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Il pesce del giorno, semplice e perfetto.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "Per un bagno al tramonto.", "addr": ""}, {"cat": "courses", "name": "Mercato di Ortigia", "note": "La mattina: frutta, formaggi e pesce.", "addr": ""}], "rules": "Niente feste\nSi fuma fuori\nSilenzio dopo le 23", "trash": "Plastica e metalli il martedì, vetro nel cassonetto all'angolo, il resto ogni sera.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
   var KEY='b991da2b-bfb3-48ed-84df-72043345ddb6', EMAIL='gustave.jeannin@gmail.com', PAY='', IMG='../../img/', SK='gjwb-draft-it';
   var f=document.getElementById('gen'), book=document.getElementById('book'), pl=document.getElementById('pl');
-  // filigrane : texte répété en diagonale, dessiné en SVG
-  var wmsvg='<svg xmlns="http://www.w3.org/2000/svg" width="300" height="190"><text x="150" y="100" transform="rotate(-24 150 95)" text-anchor="middle" font-family="Karla,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2.5" fill="rgba(23,58,94,.22)">'+T.wm+'</text></svg>';
-  document.getElementById('wm').style.backgroundImage='url("data:image/svg+xml;charset=utf-8,'+encodeURIComponent(wmsvg)+'")';
-  var scr=document.getElementById('scr');
-  scr.addEventListener('contextmenu',function(ev){ev.preventDefault()});
-  scr.addEventListener('dragstart',function(ev){ev.preventDefault()});
+  var scr=document.getElementById('scr'), CREDIT=T.credit;
   function opt(v,sel){return Object.keys(CATS).map(function(k){return '<option value="'+k+'"'+(k===sel?' selected':'')+'>'+CATS[k]+'</option>'}).join('')}
   function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function addPlace(p){
@@ -686,7 +681,7 @@ Silenzio dopo le 23"></textarea></label>
   }
   var timer, savedEl=document.getElementById('saved');
   function update(){
-    var d=data();WB.render(d,book,{img:IMG,preview:true});
+    var d=data();WB.render(d,book,{img:IMG,preview:true,credit:CREDIT});
     clearTimeout(timer);timer=setTimeout(function(){try{localStorage.setItem(SK,JSON.stringify(d));savedEl.textContent=T.saved}catch(e){}},500);
   }
   var init=null;try{init=JSON.parse(localStorage.getItem(SK)||'null')}catch(e){}
@@ -699,6 +694,31 @@ Silenzio dopo le 23"></textarea></label>
   update();
   var jump=document.querySelector('.pvjump');
   if('IntersectionObserver' in window)new IntersectionObserver(function(en){jump.style.visibility=en[0].isIntersecting?'hidden':'visible'}).observe(document.querySelector('.ph'));
+  // photo de l'aperçu : les 4 pages du livret côte à côte, avec mes coordonnées en bas de chacune
+  var dl=document.getElementById('dl'), shot=document.getElementById('shot');
+  function snap(){
+    var d=data(), parts=[], i=0;
+    function next(){
+      if(i>3)return done();
+      shot.innerHTML='<div class="wb"></div>';var el=shot.firstChild;
+      WB.render(d,el,{img:IMG,preview:true,credit:CREDIT});el.querySelector('.wb-tabs [data-t="'+i+'"]').click();
+      html2canvas(el,{scale:1.5,backgroundColor:'#FBF7F0',useCORS:true}).then(function(c){parts.push(c);i++;next()}).catch(fail);
+    }
+    function done(){
+      var g=40,W=parts.reduce(function(a,c){return a+c.width},0)+g*5,H=Math.max.apply(null,parts.map(function(c){return c.height}))+g*2;
+      var cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d');x.fillStyle='#E9E1D3';x.fillRect(0,0,W,H);
+      var px=g;parts.forEach(function(c){x.fillStyle='rgba(0,0,0,.08)';x.fillRect(px+6,g+8,c.width,c.height);x.drawImage(c,px,g);px+=c.width+g});
+      var a=document.createElement('a');a.download=T.dl_name+'.jpg';a.href=cv.toDataURL('image/jpeg',.85);document.body.appendChild(a);a.click();a.remove();
+      shot.innerHTML='';reset()
+    }
+    next();
+  }
+  function reset(){dl.disabled=false;dl.textContent=T.dl}
+  function fail(){shot.innerHTML='';reset()}
+  dl.onclick=function(){
+    dl.disabled=true;dl.textContent=T.dl_wait;
+    if(window.html2canvas)snap();else{var s=document.createElement('script');s.src='../../assets/html2canvas.min.js';s.onload=snap;s.onerror=fail;document.head.appendChild(s)}
+  };
   // commande
   var order=document.getElementById('order'), o=document.getElementById('ord'), msg=document.getElementById('omsg'), btn=o.querySelector('[type=submit]');
   document.getElementById('want').onclick=function(){order.hidden=false;order.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){o.nom.focus()},400)};

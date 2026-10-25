@@ -78,3 +78,10 @@ button.wb-card{cursor:pointer}
 .wb-qrnote{text-align:center;font-size:12.5px;color:var(--muted)}
 .wb-empty{color:var(--muted);font-style:italic}
 .wb-chap{display:flex;align-items:center;justify-content:space-between;gap:10px}.wb-chap h3{margin-bottom:0}.wb-chap .ch{color:var(--b)}
+.wb-credit{margin:4px 16px 22px;padding:14px 16px;border-radius:14px;background:var(--a);color:#fff;text-align:center;font:400 12.5px/1.5 var(--f)}
+.wb-credit b{display:block;font:500 19px/1.2 var(--d);color:var(--c);margin-bottom:4px}
+.wb-credit span{display:block;word-break:break-word}
+.wb-shot .wb{height:auto}.wb-shot .wb-scroll{overflow:visible;flex:none}.wb-shot .wb-tabs{display:none}
+.wb-shot .wb-brand{overflow:visible;text-overflow:clip;line-height:1.3}
+.wb-shot .wb-steps li::before{line-height:26px;padding-top:1px}
+.wb-tel b{white-space:normal;text-align:right}
