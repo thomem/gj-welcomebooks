@@ -1,0 +1,51 @@
+{
+ "name": "Casa Limone",
+ "place": "Ortigia · Syracuse · Sicile",
+ "intro": "Une maison blanche à deux pas de la mer. Voici tout ce qu'il faut pour en profiter.",
+ "hosts": [
+  {
+   "name": "Marco",
+   "phone": "+39 300 000 0001"
+  },
+  {
+   "name": "Giulia",
+   "phone": "+39 300 000 0002"
+  }
+ ],
+ "address": "12 Via del Mare, 96100 Siracusa",
+ "checkin": "16:00",
+ "checkout": "10:00",
+ "checkinSteps": "Le portail vert est au bout de la rue\nLa boîte à clés est à droite, code 2468\nL'appartement est au 1er étage",
+ "keys": "Deux jeux de clés vous attendent sur la table de l'entrée.",
+ "parking": "Place gratuite devant la maison, sinon parking Talete (5 min à pied).",
+ "checkoutSteps": "Laisser les clés sur la table\nFermer les volets et la porte de la terrasse\nSortir les poubelles",
+ "wifiName": "CasaLimone",
+ "wifiPass": "mare2026",
+ "places": [
+  {
+   "cat": "resto",
+   "name": "Trattoria del Porto",
+   "note": "Le poisson du jour, simple et parfait.",
+   "addr": ""
+  },
+  {
+   "cat": "plage",
+   "name": "Solarium Forte Vigliena",
+   "note": "Pour nager au coucher du soleil.",
+   "addr": ""
+  },
+  {
+   "cat": "courses",
+   "name": "Marché d'Ortigia",
+   "note": "Le matin, fruits, fromages et poissons.",
+   "addr": ""
+  }
+ ],
+ "rules": "Pas de fête\nOn fume dehors\nSilence après 23 h",
+ "trash": "Plastique et métal le mardi, verre au conteneur au coin de la rue, le reste chaque soir.",
+ "emergency": "112",
+ "doctor": "",
+ "pharmacy": "Farmacia Centrale · +39 0931 000 000",
+ "style": "sicile",
+ "lang": "fr"
+}
