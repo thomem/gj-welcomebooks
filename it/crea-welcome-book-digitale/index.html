@@ -591,7 +591,6 @@ Silenzio dopo le 23"></textarea></label>
     <button type="button" class="btn btn-navy" id="dl">Scarica come foto</button>
     <p class="pv-tip" style="align-self:center;text-align:center">La foto contiene le 4 pagine, con i miei contatti in fondo a ciascuna.</p>
     <div class="dlov" id="dlov" hidden role="dialog" aria-modal="true" aria-label="Scarica come foto"><div class="dlbox"><img alt="Scarica come foto"><p>Se il download non parte: sul telefono tieni premuto sull&#x27;immagine e poi «Salva»; sul computer, clic destro e «Salva immagine con nome».</p><div class="dlact"><a class="btn btn-gold">Salva la foto</a><button type="button" class="btn btn-navy" id="dlclose">Chiudi</button></div></div></div>
-    <div class="wb-shot" id="shot" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:390px"></div>
   </aside>
  </div>
  <a class="btn btn-navy pvjump" href="#apercu">Anteprima ↑</a>
@@ -655,6 +654,7 @@ Silenzio dopo le 23"></textarea></label>
 </footer>
 <script src="../../assets/qrcode.js"></script>
 <script src="../../assets/wb.js"></script>
+<script src="../../assets/wb-photo.js"></script>
 <script>
 (function(){
   var T={"credit": ["Welcome book creato con GJ Welcome Books", "Gustave · gustave.jeannin@gmail.com", "thomem.github.io/gj-welcomebooks"], "dl_err": "Non è stato possibile creare la foto. Riprova, oppure apri la pagina in Chrome o Safari.", "dl": "Scarica come foto", "dl_wait": "Preparo la foto…", "dl_name": "il-mio-welcome-book", "o_err": "Mancano il nome, un'e-mail valida, il telefono o la casella da spuntare.", "o_done": "Inviato, grazie! Ti scrivo entro 48 ore con link, QR code e pagamento.", "o_pay": "Paga ora", "o_fail": "L'invio non è riuscito. Scrivimi a ", "o_subj": "Welcome book digitale", "o_sending": "Invio…", "o_send": "Invia il mio welcome book", "p_cat": "Categoria", "p_name": "Nome", "p_note": "Perché ti piace", "p_addr": "Indirizzo (facoltativo)", "p_del": "Rimuovi", "saved": "Bozza salvata su questo dispositivo"}, CATS={"resto": "Ristorante", "plage": "Spiaggia", "courses": "Spesa", "voir": "Da vedere", "activ": "Attività", "autre": "Altro"}, EX={"name": "Casa Limone", "place": "Ortigia · Siracusa · Sicilia", "intro": "Una casa bianca a due passi dal mare. Qui trovate tutto per godervela.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "Via del Mare 12, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "Il cancello verde è in fondo alla via\nLa cassetta delle chiavi è a destra, codice 2468\nL'appartamento è al primo piano", "keys": "Due mazzi di chiavi vi aspettano sul tavolo dell'ingresso.", "parking": "Posto gratuito davanti a casa, altrimenti parcheggio Talete (5 min a piedi).", "checkoutSteps": "Lasciare le chiavi sul tavolo\nChiudere le persiane e la porta del terrazzo\nPortare fuori la spazzatura", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Il pesce del giorno, semplice e perfetto.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "Per un bagno al tramonto.", "addr": ""}, {"cat": "courses", "name": "Mercato di Ortigia", "note": "La mattina: frutta, formaggi e pesce.", "addr": ""}], "rules": "Niente feste\nSi fuma fuori\nSilenzio dopo le 23", "trash": "Plastica e metalli il martedì, vetro nel cassonetto all'angolo, il resto ogni sera.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
@@ -702,38 +702,22 @@ Silenzio dopo le 23"></textarea></label>
   var jump=document.querySelector('.pvjump');
   if('IntersectionObserver' in window)new IntersectionObserver(function(en){jump.style.visibility=en[0].isIntersecting?'hidden':'visible'}).observe(document.querySelector('.ph'));
   // photo de l'aperçu : les 4 pages du livret côte à côte, avec mes coordonnées en bas de chacune
-  var dl=document.getElementById('dl'), shot=document.getElementById('shot');
+  var dl=document.getElementById('dl');
   document.getElementById('dlclose').onclick=function(){document.getElementById('dlov').hidden=true;document.body.style.overflow=''};
   function snap(){
-    var d=data(), parts=[], i=0;
-    function next(){
-      if(i>3)return done();
-      shot.innerHTML='<div class="wb"></div>';var el=shot.firstChild;
-      WB.render(d,el,{img:IMG,preview:true,credit:CREDIT});el.querySelector('.wb-tabs [data-t="'+i+'"]').click();
-      html2canvas(el,{scale:1.5,backgroundColor:'#FBF7F0',useCORS:true}).then(function(c){parts.push(c);i++;next()}).catch(fail);
-    }
-    function done(){
-      var g=40,W=parts.reduce(function(a,c){return a+c.width},0)+g*5,H=Math.max.apply(null,parts.map(function(c){return c.height}))+g*2;
-      var cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d');x.fillStyle='#E9E1D3';x.fillRect(0,0,W,H);
-      var px=g;parts.forEach(function(c){x.fillStyle='rgba(0,0,0,.08)';x.fillRect(px+6,g+8,c.width,c.height);x.drawImage(c,px,g);px+=c.width+g});
-      shot.innerHTML='';
-      cv.toBlob(function(blob){
-        var url=URL.createObjectURL(blob);
-        // fenêtre avec la photo : bouton de téléchargement + appui long sur téléphone
+    var killed=false, to=setTimeout(function(){killed=true;fail()},25000);
+    WBPhoto.draw(data(),{img:IMG,credit:CREDIT}).then(function(cv){
+      if(killed)return;clearTimeout(to);
+      function show(url){
         var ov=document.getElementById('dlov');ov.querySelector('img').src=url;var a=ov.querySelector('a');a.href=url;a.download=T.dl_name+'.jpg';
-        ov.hidden=false;document.body.style.overflow='hidden';
-        try{a.click()}catch(e){}
-        reset();
-      },'image/jpeg',.85);
-    }
-    next();
+        ov.hidden=false;document.body.style.overflow='hidden';try{a.click()}catch(e){};reset();
+      }
+      if(cv.toBlob)cv.toBlob(function(bl){bl?show(URL.createObjectURL(bl)):show(cv.toDataURL('image/jpeg',.85))},'image/jpeg',.85);else show(cv.toDataURL('image/jpeg',.85));
+    }).catch(function(){if(!killed){clearTimeout(to);fail()}});
   }
   function reset(){dl.disabled=false;dl.textContent=T.dl}
-  function fail(){shot.innerHTML='';reset();alert(T.dl_err)}
-  dl.onclick=function(){
-    dl.disabled=true;dl.textContent=T.dl_wait;
-    if(window.html2canvas)snap();else{var s=document.createElement('script');s.src='../../assets/html2canvas.min.js';s.onload=snap;s.onerror=fail;document.head.appendChild(s)}
-  };
+  function fail(){reset();alert(T.dl_err)}
+  dl.onclick=function(){dl.disabled=true;dl.textContent=T.dl_wait;setTimeout(snap,30)};
   // commande
   var order=document.getElementById('order'), o=document.getElementById('ord'), msg=document.getElementById('omsg'), btn=o.querySelector('[type=submit]');
   document.getElementById('want').onclick=function(){order.hidden=false;order.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){o.nom.focus()},400)};

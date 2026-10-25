@@ -591,7 +591,6 @@ Quiet after 11 pm"></textarea></label>
     <button type="button" class="btn btn-navy" id="dl">Download as a photo</button>
     <p class="pv-tip" style="align-self:center;text-align:center">The photo shows all 4 pages, with my contact details at the bottom of each.</p>
     <div class="dlov" id="dlov" hidden role="dialog" aria-modal="true" aria-label="Download as a photo"><div class="dlbox"><img alt="Download as a photo"><p>If the download doesn&#x27;t start: on a phone, press and hold the image, then “Save”; on a computer, right-click and “Save image as”.</p><div class="dlact"><a class="btn btn-gold">Save the photo</a><button type="button" class="btn btn-navy" id="dlclose">Close</button></div></div></div>
-    <div class="wb-shot" id="shot" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:390px"></div>
   </aside>
  </div>
  <a class="btn btn-navy pvjump" href="#apercu">Preview ↑</a>
@@ -655,6 +654,7 @@ Quiet after 11 pm"></textarea></label>
 </footer>
 <script src="../../assets/qrcode.js"></script>
 <script src="../../assets/wb.js"></script>
+<script src="../../assets/wb-photo.js"></script>
 <script>
 (function(){
   var T={"credit": ["Welcome book made with GJ Welcome Books", "Gustave · gustave.jeannin@gmail.com", "thomem.github.io/gj-welcomebooks"], "dl_err": "The photo could not be created. Try again, or open the page in Chrome or Safari.", "dl": "Download as a photo", "dl_wait": "Preparing the photo…", "dl_name": "my-welcome-book", "o_err": "Your name, a valid email, a phone number or the checkbox is missing.", "o_done": "Sent, thank you! I'll email you within 48 hours with the link, the QR code and the payment.", "o_pay": "Pay now", "o_fail": "Sending failed. Email me at ", "o_subj": "Digital welcome book", "o_sending": "Sending…", "o_send": "Send my welcome book", "p_cat": "Category", "p_name": "Name", "p_note": "Why you love it", "p_addr": "Address (optional)", "p_del": "Remove", "saved": "Draft kept on this device"}, CATS={"resto": "Restaurant", "plage": "Beach", "courses": "Groceries", "voir": "Sight", "activ": "Activity", "autre": "Other"}, EX={"name": "Casa Limone", "place": "Ortigia · Syracuse · Sicily", "intro": "A white house two minutes from the sea. Here is everything you need to enjoy it.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "12 Via del Mare, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "The green gate is at the end of the street\nThe key box is on the right, code 2468\nThe flat is on the first floor", "keys": "Two sets of keys are waiting on the hall table.", "parking": "Free space in front of the house, or Talete car park (5 min walk).", "checkoutSteps": "Leave the keys on the table\nClose the shutters and the terrace door\nTake the bins out", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Catch of the day, simple and perfect.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "For a swim at sunset.", "addr": ""}, {"cat": "courses", "name": "Ortigia market", "note": "In the morning: fruit, cheese and fish.", "addr": ""}], "rules": "No parties\nSmoking outside only\nQuiet after 11 pm", "trash": "Plastic and metal on Tuesdays, glass in the bin at the corner, the rest every evening.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
@@ -702,38 +702,22 @@ Quiet after 11 pm"></textarea></label>
   var jump=document.querySelector('.pvjump');
   if('IntersectionObserver' in window)new IntersectionObserver(function(en){jump.style.visibility=en[0].isIntersecting?'hidden':'visible'}).observe(document.querySelector('.ph'));
   // photo de l'aperçu : les 4 pages du livret côte à côte, avec mes coordonnées en bas de chacune
-  var dl=document.getElementById('dl'), shot=document.getElementById('shot');
+  var dl=document.getElementById('dl');
   document.getElementById('dlclose').onclick=function(){document.getElementById('dlov').hidden=true;document.body.style.overflow=''};
   function snap(){
-    var d=data(), parts=[], i=0;
-    function next(){
-      if(i>3)return done();
-      shot.innerHTML='<div class="wb"></div>';var el=shot.firstChild;
-      WB.render(d,el,{img:IMG,preview:true,credit:CREDIT});el.querySelector('.wb-tabs [data-t="'+i+'"]').click();
-      html2canvas(el,{scale:1.5,backgroundColor:'#FBF7F0',useCORS:true}).then(function(c){parts.push(c);i++;next()}).catch(fail);
-    }
-    function done(){
-      var g=40,W=parts.reduce(function(a,c){return a+c.width},0)+g*5,H=Math.max.apply(null,parts.map(function(c){return c.height}))+g*2;
-      var cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d');x.fillStyle='#E9E1D3';x.fillRect(0,0,W,H);
-      var px=g;parts.forEach(function(c){x.fillStyle='rgba(0,0,0,.08)';x.fillRect(px+6,g+8,c.width,c.height);x.drawImage(c,px,g);px+=c.width+g});
-      shot.innerHTML='';
-      cv.toBlob(function(blob){
-        var url=URL.createObjectURL(blob);
-        // fenêtre avec la photo : bouton de téléchargement + appui long sur téléphone
+    var killed=false, to=setTimeout(function(){killed=true;fail()},25000);
+    WBPhoto.draw(data(),{img:IMG,credit:CREDIT}).then(function(cv){
+      if(killed)return;clearTimeout(to);
+      function show(url){
         var ov=document.getElementById('dlov');ov.querySelector('img').src=url;var a=ov.querySelector('a');a.href=url;a.download=T.dl_name+'.jpg';
-        ov.hidden=false;document.body.style.overflow='hidden';
-        try{a.click()}catch(e){}
-        reset();
-      },'image/jpeg',.85);
-    }
-    next();
+        ov.hidden=false;document.body.style.overflow='hidden';try{a.click()}catch(e){};reset();
+      }
+      if(cv.toBlob)cv.toBlob(function(bl){bl?show(URL.createObjectURL(bl)):show(cv.toDataURL('image/jpeg',.85))},'image/jpeg',.85);else show(cv.toDataURL('image/jpeg',.85));
+    }).catch(function(){if(!killed){clearTimeout(to);fail()}});
   }
   function reset(){dl.disabled=false;dl.textContent=T.dl}
-  function fail(){shot.innerHTML='';reset();alert(T.dl_err)}
-  dl.onclick=function(){
-    dl.disabled=true;dl.textContent=T.dl_wait;
-    if(window.html2canvas)snap();else{var s=document.createElement('script');s.src='../../assets/html2canvas.min.js';s.onload=snap;s.onerror=fail;document.head.appendChild(s)}
-  };
+  function fail(){reset();alert(T.dl_err)}
+  dl.onclick=function(){dl.disabled=true;dl.textContent=T.dl_wait;setTimeout(snap,30)};
   // commande
   var order=document.getElementById('order'), o=document.getElementById('ord'), msg=document.getElementById('omsg'), btn=o.querySelector('[type=submit]');
   document.getElementById('want').onclick=function(){order.hidden=false;order.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){o.nom.focus()},400)};

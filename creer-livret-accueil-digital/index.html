@@ -591,7 +591,6 @@ Silence après 23 h"></textarea></label>
     <button type="button" class="btn btn-navy" id="dl">Télécharger en photo</button>
     <p class="pv-tip" style="align-self:center;text-align:center">La photo contient les 4 pages, avec mes coordonnées en bas de chacune.</p>
     <div class="dlov" id="dlov" hidden role="dialog" aria-modal="true" aria-label="Télécharger en photo"><div class="dlbox"><img alt="Télécharger en photo"><p>Si le téléchargement ne démarre pas : sur téléphone, appuyez longuement sur l&#x27;image puis « Enregistrer » ; sur ordinateur, clic droit puis « Enregistrer l&#x27;image sous ».</p><div class="dlact"><a class="btn btn-gold">Enregistrer la photo</a><button type="button" class="btn btn-navy" id="dlclose">Fermer</button></div></div></div>
-    <div class="wb-shot" id="shot" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:390px"></div>
   </aside>
  </div>
  <a class="btn btn-navy pvjump" href="#apercu">Aperçu ↑</a>
@@ -655,6 +654,7 @@ Silence après 23 h"></textarea></label>
 </footer>
 <script src="../assets/qrcode.js"></script>
 <script src="../assets/wb.js"></script>
+<script src="../assets/wb-photo.js"></script>
 <script>
 (function(){
   var T={"credit": ["Livret créé avec GJ Welcome Books", "Gustave · gustave.jeannin@gmail.com", "thomem.github.io/gj-welcomebooks"], "dl_err": "La photo n'a pas pu être créée. Réessayez, ou ouvrez la page dans Chrome ou Safari.", "dl": "Télécharger en photo", "dl_wait": "Préparation de la photo…", "dl_name": "mon-livret-d-accueil", "o_err": "Il manque votre nom, un e-mail valide, un téléphone ou la case à cocher.", "o_done": "C'est envoyé, merci ! Je vous écris sous 48 h avec le lien, le QR code et le paiement.", "o_pay": "Régler maintenant", "o_fail": "L'envoi n'a pas marché. Écrivez-moi à ", "o_subj": "Livret digital", "o_sending": "Envoi…", "o_send": "Envoyer mon livret", "p_cat": "Catégorie", "p_name": "Nom", "p_note": "Pourquoi vous l'aimez", "p_addr": "Adresse (facultatif)", "p_del": "Retirer", "saved": "Brouillon gardé sur cet appareil"}, CATS={"resto": "Restaurant", "plage": "Plage", "courses": "Courses", "voir": "À voir", "activ": "Activité", "autre": "Autre"}, EX={"name": "Casa Limone", "place": "Ortigia · Syracuse · Sicile", "intro": "Une maison blanche à deux pas de la mer. Voici tout ce qu'il faut pour en profiter.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "12 Via del Mare, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "Le portail vert est au bout de la rue\nLa boîte à clés est à droite, code 2468\nL'appartement est au 1er étage", "keys": "Deux jeux de clés vous attendent sur la table de l'entrée.", "parking": "Place gratuite devant la maison, sinon parking Talete (5 min à pied).", "checkoutSteps": "Laisser les clés sur la table\nFermer les volets et la porte de la terrasse\nSortir les poubelles", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Le poisson du jour, simple et parfait.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "Pour nager au coucher du soleil.", "addr": ""}, {"cat": "courses", "name": "Marché d'Ortigia", "note": "Le matin, fruits, fromages et poissons.", "addr": ""}], "rules": "Pas de fête\nOn fume dehors\nSilence après 23 h", "trash": "Plastique et métal le mardi, verre au conteneur au coin de la rue, le reste chaque soir.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
@@ -702,38 +702,22 @@ Silence après 23 h"></textarea></label>
   var jump=document.querySelector('.pvjump');
   if('IntersectionObserver' in window)new IntersectionObserver(function(en){jump.style.visibility=en[0].isIntersecting?'hidden':'visible'}).observe(document.querySelector('.ph'));
   // photo de l'aperçu : les 4 pages du livret côte à côte, avec mes coordonnées en bas de chacune
-  var dl=document.getElementById('dl'), shot=document.getElementById('shot');
+  var dl=document.getElementById('dl');
   document.getElementById('dlclose').onclick=function(){document.getElementById('dlov').hidden=true;document.body.style.overflow=''};
   function snap(){
-    var d=data(), parts=[], i=0;
-    function next(){
-      if(i>3)return done();
-      shot.innerHTML='<div class="wb"></div>';var el=shot.firstChild;
-      WB.render(d,el,{img:IMG,preview:true,credit:CREDIT});el.querySelector('.wb-tabs [data-t="'+i+'"]').click();
-      html2canvas(el,{scale:1.5,backgroundColor:'#FBF7F0',useCORS:true}).then(function(c){parts.push(c);i++;next()}).catch(fail);
-    }
-    function done(){
-      var g=40,W=parts.reduce(function(a,c){return a+c.width},0)+g*5,H=Math.max.apply(null,parts.map(function(c){return c.height}))+g*2;
-      var cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d');x.fillStyle='#E9E1D3';x.fillRect(0,0,W,H);
-      var px=g;parts.forEach(function(c){x.fillStyle='rgba(0,0,0,.08)';x.fillRect(px+6,g+8,c.width,c.height);x.drawImage(c,px,g);px+=c.width+g});
-      shot.innerHTML='';
-      cv.toBlob(function(blob){
-        var url=URL.createObjectURL(blob);
-        // fenêtre avec la photo : bouton de téléchargement + appui long sur téléphone
+    var killed=false, to=setTimeout(function(){killed=true;fail()},25000);
+    WBPhoto.draw(data(),{img:IMG,credit:CREDIT}).then(function(cv){
+      if(killed)return;clearTimeout(to);
+      function show(url){
         var ov=document.getElementById('dlov');ov.querySelector('img').src=url;var a=ov.querySelector('a');a.href=url;a.download=T.dl_name+'.jpg';
-        ov.hidden=false;document.body.style.overflow='hidden';
-        try{a.click()}catch(e){}
-        reset();
-      },'image/jpeg',.85);
-    }
-    next();
+        ov.hidden=false;document.body.style.overflow='hidden';try{a.click()}catch(e){};reset();
+      }
+      if(cv.toBlob)cv.toBlob(function(bl){bl?show(URL.createObjectURL(bl)):show(cv.toDataURL('image/jpeg',.85))},'image/jpeg',.85);else show(cv.toDataURL('image/jpeg',.85));
+    }).catch(function(){if(!killed){clearTimeout(to);fail()}});
   }
   function reset(){dl.disabled=false;dl.textContent=T.dl}
-  function fail(){shot.innerHTML='';reset();alert(T.dl_err)}
-  dl.onclick=function(){
-    dl.disabled=true;dl.textContent=T.dl_wait;
-    if(window.html2canvas)snap();else{var s=document.createElement('script');s.src='../assets/html2canvas.min.js';s.onload=snap;s.onerror=fail;document.head.appendChild(s)}
-  };
+  function fail(){reset();alert(T.dl_err)}
+  dl.onclick=function(){dl.disabled=true;dl.textContent=T.dl_wait;setTimeout(snap,30)};
   // commande
   var order=document.getElementById('order'), o=document.getElementById('ord'), msg=document.getElementById('omsg'), btn=o.querySelector('[type=submit]');
   document.getElementById('want').onclick=function(){order.hidden=false;order.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){o.nom.focus()},400)};
