@@ -4,6 +4,9 @@ https://thomem.github.io/gj-welcomebooks/it/
 https://thomem.github.io/gj-welcomebooks/blog/
 https://thomem.github.io/gj-welcomebooks/en/blog/
 https://thomem.github.io/gj-welcomebooks/it/blog/
+https://thomem.github.io/gj-welcomebooks/creer-livret-accueil-digital/
+https://thomem.github.io/gj-welcomebooks/en/create-digital-welcome-book/
+https://thomem.github.io/gj-welcomebooks/it/crea-welcome-book-digitale/
 https://thomem.github.io/gj-welcomebooks/blog/checklist-avant-arrivee-voyageurs/
 https://thomem.github.io/gj-welcomebooks/en/blog/checklist-before-guests-arrive/
 https://thomem.github.io/gj-welcomebooks/it/blog/checklist-prima-arrivo-ospiti/
