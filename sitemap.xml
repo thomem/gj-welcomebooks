@@ -37,6 +37,30 @@
     <image:image><image:loc>https://thomem.github.io/gj-welcomebooks/img/livret-ortigia.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://thomem.github.io/gj-welcomebooks/creer-livret-accueil-digital/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomem.github.io/gj-welcomebooks/creer-livret-accueil-digital/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomem.github.io/gj-welcomebooks/en/create-digital-welcome-book/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thomem.github.io/gj-welcomebooks/it/crea-welcome-book-digitale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thomem.github.io/gj-welcomebooks/en/create-digital-welcome-book/"/>
+  </url>
+  <url>
+    <loc>https://thomem.github.io/gj-welcomebooks/en/create-digital-welcome-book/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomem.github.io/gj-welcomebooks/creer-livret-accueil-digital/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomem.github.io/gj-welcomebooks/en/create-digital-welcome-book/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thomem.github.io/gj-welcomebooks/it/crea-welcome-book-digitale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thomem.github.io/gj-welcomebooks/en/create-digital-welcome-book/"/>
+  </url>
+  <url>
+    <loc>https://thomem.github.io/gj-welcomebooks/it/crea-welcome-book-digitale/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomem.github.io/gj-welcomebooks/creer-livret-accueil-digital/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomem.github.io/gj-welcomebooks/en/create-digital-welcome-book/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thomem.github.io/gj-welcomebooks/it/crea-welcome-book-digitale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thomem.github.io/gj-welcomebooks/en/create-digital-welcome-book/"/>
+  </url>
+  <url>
     <loc>https://thomem.github.io/gj-welcomebooks/blog/</loc>
     <lastmod>2026-10-24</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://thomem.github.io/gj-welcomebooks/blog/"/>
