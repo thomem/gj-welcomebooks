@@ -400,6 +400,12 @@ footer .palms{padding-bottom:30px}
 .cm-cards img{border-radius:10px;aspect-ratio:1400/990;object-fit:cover;width:100%;box-shadow:0 10px 24px rgba(44,42,39,.14)}
 @media (max-width:900px){.cm{grid-template-columns:1fr}}
 @media (max-width:620px){.cm-cards{grid-template-columns:1fr}}
+.dlov{position:fixed;inset:0;z-index:100;background:rgba(10,20,35,.7);display:flex;align-items:center;justify-content:center;padding:16px}
+.dlov[hidden]{display:none}
+.dlbox{background:var(--cream);border-radius:20px;padding:18px;max-width:900px;width:100%;max-height:100%;display:flex;flex-direction:column;gap:12px;overflow:auto}
+.dlbox img{width:100%;height:auto;border-radius:10px;-webkit-touch-callout:default;user-select:auto}
+.dlbox p{font-size:15px;color:var(--muted);text-align:center}
+.dlact{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 @media print{.ph,.pv,.dlb{display:none!important}}
 </style>
 <link rel="stylesheet" href="../../assets/wb.css">
@@ -584,6 +590,7 @@ Quiet after 11 pm"></textarea></label>
     <div class="ph"><div class="scr" id="scr"><div id="book" class="wb"></div></div></div>
     <button type="button" class="btn btn-navy" id="dl">Download as a photo</button>
     <p class="pv-tip" style="align-self:center;text-align:center">The photo shows all 4 pages, with my contact details at the bottom of each.</p>
+    <div class="dlov" id="dlov" hidden role="dialog" aria-modal="true" aria-label="Download as a photo"><div class="dlbox"><img alt="Download as a photo"><p>If the download doesn&#x27;t start: on a phone, press and hold the image, then “Save”; on a computer, right-click and “Save image as”.</p><div class="dlact"><a class="btn btn-gold">Save the photo</a><button type="button" class="btn btn-navy" id="dlclose">Close</button></div></div></div>
     <div class="wb-shot" id="shot" aria-hidden="true" style="position:absolute;left:-9999px;top:0;width:390px"></div>
   </aside>
  </div>
@@ -650,7 +657,7 @@ Quiet after 11 pm"></textarea></label>
 <script src="../../assets/wb.js"></script>
 <script>
 (function(){
-  var T={"credit": ["Welcome book made with GJ Welcome Books", "Gustave · gustave.jeannin@gmail.com", "thomem.github.io/gj-welcomebooks"], "dl": "Download as a photo", "dl_wait": "Preparing the photo…", "dl_name": "my-welcome-book", "o_err": "Your name, a valid email, a phone number or the checkbox is missing.", "o_done": "Sent, thank you! I'll email you within 48 hours with the link, the QR code and the payment.", "o_pay": "Pay now", "o_fail": "Sending failed. Email me at ", "o_subj": "Digital welcome book", "o_sending": "Sending…", "o_send": "Send my welcome book", "p_cat": "Category", "p_name": "Name", "p_note": "Why you love it", "p_addr": "Address (optional)", "p_del": "Remove", "saved": "Draft kept on this device"}, CATS={"resto": "Restaurant", "plage": "Beach", "courses": "Groceries", "voir": "Sight", "activ": "Activity", "autre": "Other"}, EX={"name": "Casa Limone", "place": "Ortigia · Syracuse · Sicily", "intro": "A white house two minutes from the sea. Here is everything you need to enjoy it.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "12 Via del Mare, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "The green gate is at the end of the street\nThe key box is on the right, code 2468\nThe flat is on the first floor", "keys": "Two sets of keys are waiting on the hall table.", "parking": "Free space in front of the house, or Talete car park (5 min walk).", "checkoutSteps": "Leave the keys on the table\nClose the shutters and the terrace door\nTake the bins out", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Catch of the day, simple and perfect.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "For a swim at sunset.", "addr": ""}, {"cat": "courses", "name": "Ortigia market", "note": "In the morning: fruit, cheese and fish.", "addr": ""}], "rules": "No parties\nSmoking outside only\nQuiet after 11 pm", "trash": "Plastic and metal on Tuesdays, glass in the bin at the corner, the rest every evening.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
+  var T={"credit": ["Welcome book made with GJ Welcome Books", "Gustave · gustave.jeannin@gmail.com", "thomem.github.io/gj-welcomebooks"], "dl_err": "The photo could not be created. Try again, or open the page in Chrome or Safari.", "dl": "Download as a photo", "dl_wait": "Preparing the photo…", "dl_name": "my-welcome-book", "o_err": "Your name, a valid email, a phone number or the checkbox is missing.", "o_done": "Sent, thank you! I'll email you within 48 hours with the link, the QR code and the payment.", "o_pay": "Pay now", "o_fail": "Sending failed. Email me at ", "o_subj": "Digital welcome book", "o_sending": "Sending…", "o_send": "Send my welcome book", "p_cat": "Category", "p_name": "Name", "p_note": "Why you love it", "p_addr": "Address (optional)", "p_del": "Remove", "saved": "Draft kept on this device"}, CATS={"resto": "Restaurant", "plage": "Beach", "courses": "Groceries", "voir": "Sight", "activ": "Activity", "autre": "Other"}, EX={"name": "Casa Limone", "place": "Ortigia · Syracuse · Sicily", "intro": "A white house two minutes from the sea. Here is everything you need to enjoy it.", "hosts": [{"name": "Marco", "phone": "+39 300 000 0001"}, {"name": "Giulia", "phone": "+39 300 000 0002"}], "address": "12 Via del Mare, 96100 Siracusa", "checkin": "16:00", "checkout": "10:00", "checkinSteps": "The green gate is at the end of the street\nThe key box is on the right, code 2468\nThe flat is on the first floor", "keys": "Two sets of keys are waiting on the hall table.", "parking": "Free space in front of the house, or Talete car park (5 min walk).", "checkoutSteps": "Leave the keys on the table\nClose the shutters and the terrace door\nTake the bins out", "wifiName": "CasaLimone", "wifiPass": "mare2026", "places": [{"cat": "resto", "name": "Trattoria del Porto", "note": "Catch of the day, simple and perfect.", "addr": ""}, {"cat": "plage", "name": "Solarium Forte Vigliena", "note": "For a swim at sunset.", "addr": ""}, {"cat": "courses", "name": "Ortigia market", "note": "In the morning: fruit, cheese and fish.", "addr": ""}], "rules": "No parties\nSmoking outside only\nQuiet after 11 pm", "trash": "Plastic and metal on Tuesdays, glass in the bin at the corner, the rest every evening.", "emergency": "112", "doctor": "", "pharmacy": "Farmacia Centrale · +39 0931 000 000"};
   var KEY='b991da2b-bfb3-48ed-84df-72043345ddb6', EMAIL='gustave.jeannin@gmail.com', PAY='', IMG='../../img/', SK='gjwb-draft-en';
   var f=document.getElementById('gen'), book=document.getElementById('book'), pl=document.getElementById('pl');
   var scr=document.getElementById('scr'), CREDIT=T.credit;
@@ -696,6 +703,7 @@ Quiet after 11 pm"></textarea></label>
   if('IntersectionObserver' in window)new IntersectionObserver(function(en){jump.style.visibility=en[0].isIntersecting?'hidden':'visible'}).observe(document.querySelector('.ph'));
   // photo de l'aperçu : les 4 pages du livret côte à côte, avec mes coordonnées en bas de chacune
   var dl=document.getElementById('dl'), shot=document.getElementById('shot');
+  document.getElementById('dlclose').onclick=function(){document.getElementById('dlov').hidden=true;document.body.style.overflow=''};
   function snap(){
     var d=data(), parts=[], i=0;
     function next(){
@@ -708,13 +716,20 @@ Quiet after 11 pm"></textarea></label>
       var g=40,W=parts.reduce(function(a,c){return a+c.width},0)+g*5,H=Math.max.apply(null,parts.map(function(c){return c.height}))+g*2;
       var cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d');x.fillStyle='#E9E1D3';x.fillRect(0,0,W,H);
       var px=g;parts.forEach(function(c){x.fillStyle='rgba(0,0,0,.08)';x.fillRect(px+6,g+8,c.width,c.height);x.drawImage(c,px,g);px+=c.width+g});
-      var a=document.createElement('a');a.download=T.dl_name+'.jpg';a.href=cv.toDataURL('image/jpeg',.85);document.body.appendChild(a);a.click();a.remove();
-      shot.innerHTML='';reset()
+      shot.innerHTML='';
+      cv.toBlob(function(blob){
+        var url=URL.createObjectURL(blob);
+        // fenêtre avec la photo : bouton de téléchargement + appui long sur téléphone
+        var ov=document.getElementById('dlov');ov.querySelector('img').src=url;var a=ov.querySelector('a');a.href=url;a.download=T.dl_name+'.jpg';
+        ov.hidden=false;document.body.style.overflow='hidden';
+        try{a.click()}catch(e){}
+        reset();
+      },'image/jpeg',.85);
     }
     next();
   }
   function reset(){dl.disabled=false;dl.textContent=T.dl}
-  function fail(){shot.innerHTML='';reset()}
+  function fail(){shot.innerHTML='';reset();alert(T.dl_err)}
   dl.onclick=function(){
     dl.disabled=true;dl.textContent=T.dl_wait;
     if(window.html2canvas)snap();else{var s=document.createElement('script');s.src='../../assets/html2canvas.min.js';s.onload=snap;s.onerror=fail;document.head.appendChild(s)}
