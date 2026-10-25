@@ -393,6 +393,15 @@ footer .palms{padding-bottom:30px}
 .ghow h3{margin-top:6px}.ghow p{color:var(--muted);margin-top:6px}
 @media (max-width:760px){.ghow{grid-template-columns:1fr}}
 .bc{font-size:14px;color:var(--muted);padding-top:22px}.bc a{color:var(--muted)}
+.cm-top{display:block;background:var(--navy);color:var(--on-dark);border-radius:16px;padding:14px 18px;font:700 15px/1.4 var(--body);text-decoration:none}
+.cm-top:hover{background:var(--navy-deep)}
+.cm{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.cm .k{font:700 12px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.cm .lnk{font:700 15px var(--body);color:var(--navy)}
+.cm-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cm-cards img{border-radius:10px;aspect-ratio:1400/990;object-fit:cover;width:100%;box-shadow:0 10px 24px rgba(44,42,39,.14)}
+@media (max-width:900px){.cm{grid-template-columns:1fr}}
+@media (max-width:620px){.cm-cards{grid-template-columns:1fr}}
 @media print{.ph,.pv,.dlb{display:none!important}}
 </style>
 <link rel="stylesheet" href="../../assets/wb.css">
@@ -453,7 +462,7 @@ footer .palms{padding-bottom:30px}
      "name": "È davvero gratis?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sì: compilare il welcome book, vedere l'anteprima e scaricare l'immagine con filigrana non costa nulla e non richiede registrazione. È a pagamento solo la versione online senza filigrana con QR code (49 €, primo anno di hosting incluso)."
+      "text": "Sì: compilare il welcome book e vedere l'anteprima dal vivo non costa nulla e non richiede registrazione. L'anteprima resta sulla pagina, con filigrana. La versione online senza filigrana, con link e QR code, costa 49 € (primo anno di hosting incluso)."
      }
     },
     {
@@ -486,6 +495,14 @@ footer .palms{padding-bottom:30px}
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Faccio anche welcome book stampabili su misura, scritti e impaginati a mano. I prezzi sono nella pagina principale."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Puoi farlo tu al posto mio?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sì, è il mio lavoro: creo welcome book su misura, da stampare (199 €) o da stampare più versione smartphone (299 €). Mi racconti la casa, io scrivo e impagino."
      }
     }
    ]
@@ -521,6 +538,7 @@ footer .palms{padding-bottom:30px}
 <section style="padding-top:0" aria-label="Crea un welcome book digitale">
  <div class="wrap gen">
   <form id="gen" autocomplete="off" novalidate>
+    <a class="cm-top" href="#sur-mesure">Non hai tempo di compilarlo? Lo faccio io, su misura →</a>
     <div class="gen-tools"><span id="saved"></span><button type="button" id="reset">Ricomincia da zero</button></div>
     <fieldset><legend><b>1</b>La casa</legend>
       <div><span class="sr">Stile</span><div class="stl" role="radiogroup" aria-label="Stile"><label><input type="radio" name="style" value="sicile" checked><i style="--s1:#173A5E;--s2:#C46F48"></i>Sicilia</label><label><input type="radio" name="style" value="provence"><i style="--s1:#4A3C6B;--s2:#8C7BB5"></i>Provenza</label><label><input type="radio" name="style" value="lisbonne"><i style="--s1:#16306B;--s2:#1E4FA0"></i>Lisbona</label><label><input type="radio" name="style" value="amalfi"><i style="--s1:#13606A;--s2:#1C9AA1"></i>Amalfi</label><label><input type="radio" name="style" value="cyclades"><i style="--s1:#163F78;--s2:#1F5EA8"></i>Cicladi</label><label><input type="radio" name="style" value="marrakech"><i style="--s1:#173E37;--s2:#11705F"></i>Marrakech</label></div></div>
@@ -566,7 +584,7 @@ Silenzio dopo le 23"></textarea></label>
     <h2 id="h-pv">Anteprima</h2>
     <p class="pv-tip">Tocca le schede e la carta Wi-Fi: funziona tutto come nel vero welcome book.</p>
     <div class="ph"><div class="scr" id="scr"><div id="book" class="wb"></div><div class="wm" id="wm" aria-hidden="true"></div><div class="wm-band" aria-hidden="true">ANTEPRIMA · GJ WELCOME BOOKS</div></div></div>
-    <button type="button" class="dlb" id="dl">Scarica l&#x27;anteprima (immagine con filigrana)</button>
+    <p class="pv-tip" style="align-self:center;text-align:center">L&#x27;anteprima resta su questa pagina: non si può scaricare.</p>
   </aside>
  </div>
  <a class="btn btn-navy pvjump" href="#apercu">Anteprima ↑</a>
@@ -577,9 +595,9 @@ Silenzio dopo le 23"></textarea></label>
   <div class="wrap">
     <div class="text"><h2 id="h-get">Metti online il tuo welcome book</h2><p class="muted">L&#x27;anteprima resta gratuita. Per portarlo sul telefono dei tuoi ospiti, al resto penso io.</p></div>
     <div class="offers">
-      <article class="offer"><h3>Anteprima</h3><p class="amt">0 €</p><ul><li>Il welcome book completo, dal vivo su questa pagina</li><li>Immagine scaricabile, con filigrana</li><li>Bozza salvata sul tuo dispositivo</li></ul><a class="btn btn-navy" href="#apercu" style="background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">Anteprima</a></article>
+      <article class="offer"><h3>Anteprima</h3><p class="amt">0 €</p><ul><li>Il welcome book completo, dal vivo su questa pagina</li><li>Prova i 6 stili e le 3 lingue</li><li>Bozza salvata sul tuo dispositivo</li></ul><a class="btn btn-navy" href="#apercu" style="background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">Anteprima</a></article>
       <article class="offer main"><h3>Online + QR code</h3><p class="amt">49 €<small>primo anno di hosting incluso, poi 30 €/anno</small></p><ul><li>Senza filigrana, a tuo nome</li><li>Ospitato da me, con un link da condividere</li><li>QR code pronto da stampare per l&#x27;ingresso</li><li>Rileggo e correggo tutto</li><li>Modifiche via e-mail per un anno</li></ul><button type="button" class="btn btn-gold" id="want">Ricevi il mio welcome book online</button></article>
-      <article class="offer"><h3>Fatto a mano</h3><p>Vuoi anche la versione stampata, scritta e impaginata da me?</p><a class="btn btn-navy" href="../../it/#prix">Vedi i welcome book su misura</a></article>
+      <article class="offer"><h3>Fatto a mano</h3><p>Preferisci che scriva e impagini io il tuo welcome book, cartaceo e su smartphone?</p><a class="btn btn-navy" href="../../it/#prix" onclick="document.getElementById('sur-mesure').scrollIntoView({behavior:'smooth'});return false">Vedi i welcome book su misura</a></article>
     </div>
     <div class="order" id="order" hidden>
       <div class="text"><h3>I tuoi dati</h3><p class="muted">Ricevo il welcome book così come l&#x27;hai compilato. Lo rileggo, lo metto online e ti mando link, QR code e pagamento entro 48 ore.</p></div>
@@ -597,6 +615,18 @@ Silenzio dopo le 23"></textarea></label>
 </section>
 <div class="zig on-sand" aria-hidden="true"></div>
 
+<section id="sur-mesure" aria-labelledby="h-cm">
+  <div class="wrap cm">
+    <div class="text"><p class="k">Su misura</p><h2 id="h-cm">Non hai tempo? Lo faccio io per te</h2><p class="muted">Ti faccio le domande giuste, scrivo i testi, disegno la copertina e impagino tutto. Ogni welcome book è fatto a mano, per la tua casa.</p>
+      <a class="lnk" href="../../it/#livret">Vedi il libretto nel dettaglio e tutti i prezzi →</a></div>
+    <div class="cm-cards">
+      <article class="offer"><img src="../../img/livret-couverture.webp" width="1400" height="990" loading="lazy" alt="Libretto da stampare"><h3>Libretto da stampare</h3><p class="amt">199 €</p><ul><li>Testi e impaginazione su misura</li><li>Copertina e motivi disegnati per voi</li><li>Fino a 20 indirizzi</li><li>PDF pronto per la stampa, A4 o A5</li></ul><a class="btn btn-gold" href="../../it/?offre=0#contact">Voglio questo libretto</a></article>
+      <article class="offer"><img src="../../img/ecran-accueil-crop.webp" width="1400" height="990" loading="lazy" alt="Libretto + versione smartphone"><h3>Libretto + versione smartphone</h3><p class="amt">299 €</p><ul><li>Tutto il libretto da stampare</li><li>Versione smartphone, fino a 4 lingue</li><li>Mappa degli indirizzi</li><li>Link e QR code</li></ul><a class="btn btn-navy" href="../../it/?offre=1#contact">Voglio entrambi</a></article>
+    </div>
+  </div>
+</section>
+<div class="zig" aria-hidden="true"></div>
+
 <section aria-labelledby="h-how">
   <div class="wrap">
     <h2 id="h-how">Come funziona</h2>
@@ -604,7 +634,7 @@ Silenzio dopo le 23"></textarea></label>
   </div>
 </section>
 <section id="questions" aria-labelledby="h-q" style="padding-top:0">
-  <div class="wrap"><h2 id="h-q">Domande frequenti</h2><div class="faq"><details open><summary>È davvero gratis?</summary><p>Sì: compilare il welcome book, vedere l&#x27;anteprima e scaricare l&#x27;immagine con filigrana non costa nulla e non richiede registrazione. È a pagamento solo la versione online senza filigrana con QR code (49 €, primo anno di hosting incluso).</p></details><details><summary>I miei dati vengono inviati da qualche parte?</summary><p>No, finché non clicchi su «Invia il mio welcome book». La bozza resta sul tuo dispositivo. Quando lo invii, arriva solo nella mia casella e-mail.</p></details><details><summary>Come aprono il welcome book gli ospiti?</summary><p>Inquadrano il QR code esposto in casa, oppure aprono il link che mandi prima dell&#x27;arrivo. Niente da installare.</p></details><details><summary>Posso modificarlo dopo?</summary><p>Sì. Mandami le modifiche via e-mail (nuovo codice, nuovo indirizzo) e aggiorno il welcome book. Incluso per un anno, poi 30 €/anno.</p></details><details><summary>E se voglio anche un welcome book stampato?</summary><p>Faccio anche welcome book stampabili su misura, scritti e impaginati a mano. I prezzi sono nella pagina principale.</p></details></div></div>
+  <div class="wrap"><h2 id="h-q">Domande frequenti</h2><div class="faq"><details open><summary>È davvero gratis?</summary><p>Sì: compilare il welcome book e vedere l&#x27;anteprima dal vivo non costa nulla e non richiede registrazione. L&#x27;anteprima resta sulla pagina, con filigrana. La versione online senza filigrana, con link e QR code, costa 49 € (primo anno di hosting incluso).</p></details><details><summary>I miei dati vengono inviati da qualche parte?</summary><p>No, finché non clicchi su «Invia il mio welcome book». La bozza resta sul tuo dispositivo. Quando lo invii, arriva solo nella mia casella e-mail.</p></details><details><summary>Come aprono il welcome book gli ospiti?</summary><p>Inquadrano il QR code esposto in casa, oppure aprono il link che mandi prima dell&#x27;arrivo. Niente da installare.</p></details><details><summary>Posso modificarlo dopo?</summary><p>Sì. Mandami le modifiche via e-mail (nuovo codice, nuovo indirizzo) e aggiorno il welcome book. Incluso per un anno, poi 30 €/anno.</p></details><details><summary>E se voglio anche un welcome book stampato?</summary><p>Faccio anche welcome book stampabili su misura, scritti e impaginati a mano. I prezzi sono nella pagina principale.</p></details><details><summary>Puoi farlo tu al posto mio?</summary><p>Sì, è il mio lavoro: creo welcome book su misura, da stampare (199 €) o da stampare più versione smartphone (299 €). Mi racconti la casa, io scrivo e impagino.</p></details></div></div>
 </section>
 </main>
 <footer>
@@ -669,19 +699,6 @@ Silenzio dopo le 23"></textarea></label>
   update();
   var jump=document.querySelector('.pvjump');
   if('IntersectionObserver' in window)new IntersectionObserver(function(en){jump.style.visibility=en[0].isIntersecting?'hidden':'visible'}).observe(document.querySelector('.ph'));
-  // aperçu en image : le filigrane est inclus dans la capture
-  var dl=document.getElementById('dl');
-  dl.onclick=function(){
-    dl.disabled=true;dl.textContent=T.dl_wait;
-    function go(){
-      html2canvas(scr,{scale:1.5,backgroundColor:'#FBF7F0',useCORS:true}).then(function(c){
-        var x=c.getContext('2d');x.fillStyle='rgba(23,58,94,.9)';x.fillRect(0,c.height-46,c.width,46);
-        x.fillStyle='#fff';x.font='bold 17px Karla, Arial';x.textAlign='center';x.fillText(T.wm,c.width/2,c.height-17);
-        var a=document.createElement('a');a.download=T.dl_name+'.jpg';a.href=c.toDataURL('image/jpeg',.72);document.body.appendChild(a);a.click();a.remove();
-      }).catch(function(){}).finally(function(){dl.disabled=false;dl.textContent=T.dl});
-    }
-    if(window.html2canvas)go();else{var s=document.createElement('script');s.src='../../assets/html2canvas.min.js';s.onload=go;s.onerror=function(){dl.disabled=false;dl.textContent=T.dl};document.head.appendChild(s)}
-  };
   // commande
   var order=document.getElementById('order'), o=document.getElementById('ord'), msg=document.getElementById('omsg'), btn=o.querySelector('[type=submit]');
   document.getElementById('want').onclick=function(){order.hidden=false;order.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){o.nom.focus()},400)};
@@ -697,11 +714,14 @@ Silenzio dopo le 23"></textarea></label>
     if(!nom||!/^\S+@\S+\.\S+$/.test(mail)||tel.replace(/\D/g,'').length<6||!o.ok.checked){msg.textContent=T.o_err;return}
     if(o.botcheck.checked)return;
     var d=data(), subj=T.o_subj+' — '+(d.name||nom);
+    var slug=((d.name||nom).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'livret')+'-'+Math.random().toString(36).slice(2,6);
+    var base='https://thomem.github.io/gj-welcomebooks/l/';
     if(!KEY){msg.textContent=T.o_fail+EMAIL+'.';location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(recap(d)+'\n\n'+JSON.stringify(d));return}
     btn.disabled=true;btn.textContent=T.o_sending;
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
       body:JSON.stringify({access_key:KEY,subject:subj,from_name:'GJ Welcome Books',name:nom,email:mail,telephone:tel,offre:'Livret digital en ligne + QR code (49 €)',
-        message:o.message.value,recapitulatif:recap(d),donnees_livret:JSON.stringify(d),langue_page:document.documentElement.lang})})
+        message:o.message.value,recapitulatif:recap(d),
+        etape_1_creer_le_fichier:'https://github.com/'+'thomem/gj-welcomebooks'+'/new/main?filename=l/data/'+slug+'.json',etape_2_coller_ce_contenu:JSON.stringify(d,null,1),etape_3_lien_du_livret:base+'?c='+slug,etape_4_qr_code:base+'qr/?c='+slug,langue_page:document.documentElement.lang})})
     .then(function(r){return r.json()}).then(function(j){
       if(!j.success)throw 0;
       msg.textContent=T.o_done;o.reset();

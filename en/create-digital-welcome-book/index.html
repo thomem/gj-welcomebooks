@@ -393,6 +393,15 @@ footer .palms{padding-bottom:30px}
 .ghow h3{margin-top:6px}.ghow p{color:var(--muted);margin-top:6px}
 @media (max-width:760px){.ghow{grid-template-columns:1fr}}
 .bc{font-size:14px;color:var(--muted);padding-top:22px}.bc a{color:var(--muted)}
+.cm-top{display:block;background:var(--navy);color:var(--on-dark);border-radius:16px;padding:14px 18px;font:700 15px/1.4 var(--body);text-decoration:none}
+.cm-top:hover{background:var(--navy-deep)}
+.cm{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.cm .k{font:700 12px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+.cm .lnk{font:700 15px var(--body);color:var(--navy)}
+.cm-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cm-cards img{border-radius:10px;aspect-ratio:1400/990;object-fit:cover;width:100%;box-shadow:0 10px 24px rgba(44,42,39,.14)}
+@media (max-width:900px){.cm{grid-template-columns:1fr}}
+@media (max-width:620px){.cm-cards{grid-template-columns:1fr}}
 @media print{.ph,.pv,.dlb{display:none!important}}
 </style>
 <link rel="stylesheet" href="../../assets/wb.css">
@@ -453,7 +462,7 @@ footer .palms{padding-bottom:30px}
      "name": "Is it really free?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes: filling in the welcome book, seeing the preview and downloading the watermarked image cost nothing and need no sign-up. Only the watermark-free online version with a QR code is paid (€49, first year of hosting included)."
+      "text": "Yes: filling in the welcome book and seeing the live preview cost nothing and need no sign-up. The preview stays on the page, watermarked. Putting it online without a watermark, with a link and QR code, costs €49 (first year of hosting included)."
      }
     },
     {
@@ -486,6 +495,14 @@ footer .palms{padding-bottom:30px}
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "I also make custom printable welcome books, written and designed by hand. Prices are on the home page."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you make it for me?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, that's my job: I make custom welcome books, printable (€199) or printable plus phone version (€299). You tell me about your house, I write and design."
      }
     }
    ]
@@ -521,6 +538,7 @@ footer .palms{padding-bottom:30px}
 <section style="padding-top:0" aria-label="Create a digital welcome book">
  <div class="wrap gen">
   <form id="gen" autocomplete="off" novalidate>
+    <a class="cm-top" href="#sur-mesure">No time to fill it in? I&#x27;ll make it for you, custom-made →</a>
     <div class="gen-tools"><span id="saved"></span><button type="button" id="reset">Start from scratch</button></div>
     <fieldset><legend><b>1</b>The rental</legend>
       <div><span class="sr">Style</span><div class="stl" role="radiogroup" aria-label="Style"><label><input type="radio" name="style" value="sicile" checked><i style="--s1:#173A5E;--s2:#C46F48"></i>Sicily</label><label><input type="radio" name="style" value="provence"><i style="--s1:#4A3C6B;--s2:#8C7BB5"></i>Provence</label><label><input type="radio" name="style" value="lisbonne"><i style="--s1:#16306B;--s2:#1E4FA0"></i>Lisbon</label><label><input type="radio" name="style" value="amalfi"><i style="--s1:#13606A;--s2:#1C9AA1"></i>Amalfi</label><label><input type="radio" name="style" value="cyclades"><i style="--s1:#163F78;--s2:#1F5EA8"></i>Cyclades</label><label><input type="radio" name="style" value="marrakech"><i style="--s1:#173E37;--s2:#11705F"></i>Marrakech</label></div></div>
@@ -566,7 +584,7 @@ Quiet after 11 pm"></textarea></label>
     <h2 id="h-pv">Preview</h2>
     <p class="pv-tip">Tap the tabs and the Wi-Fi card: everything works like the real welcome book.</p>
     <div class="ph"><div class="scr" id="scr"><div id="book" class="wb"></div><div class="wm" id="wm" aria-hidden="true"></div><div class="wm-band" aria-hidden="true">PREVIEW · GJ WELCOME BOOKS</div></div></div>
-    <button type="button" class="dlb" id="dl">Download the preview (watermarked image)</button>
+    <p class="pv-tip" style="align-self:center;text-align:center">The preview stays on this page: it cannot be downloaded.</p>
   </aside>
  </div>
  <a class="btn btn-navy pvjump" href="#apercu">Preview ↑</a>
@@ -577,9 +595,9 @@ Quiet after 11 pm"></textarea></label>
   <div class="wrap">
     <div class="text"><h2 id="h-get">Put your welcome book online</h2><p class="muted">The preview stays free. To get it onto your guests&#x27; phones, I take care of the rest.</p></div>
     <div class="offers">
-      <article class="offer"><h3>Preview</h3><p class="amt">€0</p><ul><li>The full welcome book, live on this page</li><li>Downloadable image, watermarked</li><li>Draft kept on your device</li></ul><a class="btn btn-navy" href="#apercu" style="background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">Preview</a></article>
+      <article class="offer"><h3>Preview</h3><p class="amt">€0</p><ul><li>The full welcome book, live on this page</li><li>Try the 6 styles and 3 languages</li><li>Draft kept on your device</li></ul><a class="btn btn-navy" href="#apercu" style="background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)">Preview</a></article>
       <article class="offer main"><h3>Online + QR code</h3><p class="amt">€49<small>first year of hosting included, then €30/year</small></p><ul><li>No watermark, in your name</li><li>Hosted by me, with a link to share</li><li>Print-ready QR code for the entrance</li><li>I proofread everything</li><li>Changes by email for a year</li></ul><button type="button" class="btn btn-gold" id="want">Get my welcome book online</button></article>
-      <article class="offer"><h3>Handmade</h3><p>Would you also like the printed version, written and designed by me?</p><a class="btn btn-navy" href="../../en/#prix">See custom welcome books</a></article>
+      <article class="offer"><h3>Handmade</h3><p>Would you rather I write and design your welcome book, printed and on phone?</p><a class="btn btn-navy" href="../../en/#prix" onclick="document.getElementById('sur-mesure').scrollIntoView({behavior:'smooth'});return false">See custom welcome books</a></article>
     </div>
     <div class="order" id="order" hidden>
       <div class="text"><h3>Your details</h3><p class="muted">I receive your welcome book exactly as you filled it in. I proofread it, put it online and send you the link, the QR code and the payment link within 48 hours.</p></div>
@@ -597,6 +615,18 @@ Quiet after 11 pm"></textarea></label>
 </section>
 <div class="zig on-sand" aria-hidden="true"></div>
 
+<section id="sur-mesure" aria-labelledby="h-cm">
+  <div class="wrap cm">
+    <div class="text"><p class="k">Custom-made</p><h2 id="h-cm">No time? I&#x27;ll make it for you</h2><p class="muted">I ask you the right questions, write the texts, draw the cover and lay everything out. Every welcome book is made by hand, for your house.</p>
+      <a class="lnk" href="../../en/#livret">See the welcome book in detail and all prices →</a></div>
+    <div class="cm-cards">
+      <article class="offer"><img src="../../img/livret-couverture.webp" width="1400" height="990" loading="lazy" alt="Printable book"><h3>Printable book</h3><p class="amt">199 €</p><ul><li>Custom writing and layout</li><li>Cover and patterns drawn for you</li><li>Up to 20 addresses</li><li>Print-ready PDF, A4 or A5</li></ul><a class="btn btn-gold" href="../../en/?offre=0#contact">I want this book</a></article>
+      <article class="offer"><img src="../../img/ecran-accueil-crop.webp" width="1400" height="990" loading="lazy" alt="Book + phone version"><h3>Book + phone version</h3><p class="amt">299 €</p><ul><li>Everything in the printable book</li><li>Phone version, up to 4 languages</li><li>Map of addresses</li><li>Link and QR code</li></ul><a class="btn btn-navy" href="../../en/?offre=1#contact">I want both</a></article>
+    </div>
+  </div>
+</section>
+<div class="zig" aria-hidden="true"></div>
+
 <section aria-labelledby="h-how">
   <div class="wrap">
     <h2 id="h-how">How it works</h2>
@@ -604,7 +634,7 @@ Quiet after 11 pm"></textarea></label>
   </div>
 </section>
 <section id="questions" aria-labelledby="h-q" style="padding-top:0">
-  <div class="wrap"><h2 id="h-q">Frequently asked questions</h2><div class="faq"><details open><summary>Is it really free?</summary><p>Yes: filling in the welcome book, seeing the preview and downloading the watermarked image cost nothing and need no sign-up. Only the watermark-free online version with a QR code is paid (€49, first year of hosting included).</p></details><details><summary>Is my information sent anywhere?</summary><p>No, not until you click “Send my welcome book”. The draft stays on your device. When you send it, it only reaches my inbox.</p></details><details><summary>How do guests open the welcome book?</summary><p>They scan the QR code displayed in the rental, or open the link you send before arrival. Nothing to install.</p></details><details><summary>Can I change it later?</summary><p>Yes. Email me the changes (new code, new place) and I update it. Included for a year, then €30/year.</p></details><details><summary>What if I also want a printed welcome book?</summary><p>I also make custom printable welcome books, written and designed by hand. Prices are on the home page.</p></details></div></div>
+  <div class="wrap"><h2 id="h-q">Frequently asked questions</h2><div class="faq"><details open><summary>Is it really free?</summary><p>Yes: filling in the welcome book and seeing the live preview cost nothing and need no sign-up. The preview stays on the page, watermarked. Putting it online without a watermark, with a link and QR code, costs €49 (first year of hosting included).</p></details><details><summary>Is my information sent anywhere?</summary><p>No, not until you click “Send my welcome book”. The draft stays on your device. When you send it, it only reaches my inbox.</p></details><details><summary>How do guests open the welcome book?</summary><p>They scan the QR code displayed in the rental, or open the link you send before arrival. Nothing to install.</p></details><details><summary>Can I change it later?</summary><p>Yes. Email me the changes (new code, new place) and I update it. Included for a year, then €30/year.</p></details><details><summary>What if I also want a printed welcome book?</summary><p>I also make custom printable welcome books, written and designed by hand. Prices are on the home page.</p></details><details><summary>Can you make it for me?</summary><p>Yes, that&#x27;s my job: I make custom welcome books, printable (€199) or printable plus phone version (€299). You tell me about your house, I write and design.</p></details></div></div>
 </section>
 </main>
 <footer>
@@ -669,19 +699,6 @@ Quiet after 11 pm"></textarea></label>
   update();
   var jump=document.querySelector('.pvjump');
   if('IntersectionObserver' in window)new IntersectionObserver(function(en){jump.style.visibility=en[0].isIntersecting?'hidden':'visible'}).observe(document.querySelector('.ph'));
-  // aperçu en image : le filigrane est inclus dans la capture
-  var dl=document.getElementById('dl');
-  dl.onclick=function(){
-    dl.disabled=true;dl.textContent=T.dl_wait;
-    function go(){
-      html2canvas(scr,{scale:1.5,backgroundColor:'#FBF7F0',useCORS:true}).then(function(c){
-        var x=c.getContext('2d');x.fillStyle='rgba(23,58,94,.9)';x.fillRect(0,c.height-46,c.width,46);
-        x.fillStyle='#fff';x.font='bold 17px Karla, Arial';x.textAlign='center';x.fillText(T.wm,c.width/2,c.height-17);
-        var a=document.createElement('a');a.download=T.dl_name+'.jpg';a.href=c.toDataURL('image/jpeg',.72);document.body.appendChild(a);a.click();a.remove();
-      }).catch(function(){}).finally(function(){dl.disabled=false;dl.textContent=T.dl});
-    }
-    if(window.html2canvas)go();else{var s=document.createElement('script');s.src='../../assets/html2canvas.min.js';s.onload=go;s.onerror=function(){dl.disabled=false;dl.textContent=T.dl};document.head.appendChild(s)}
-  };
   // commande
   var order=document.getElementById('order'), o=document.getElementById('ord'), msg=document.getElementById('omsg'), btn=o.querySelector('[type=submit]');
   document.getElementById('want').onclick=function(){order.hidden=false;order.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){o.nom.focus()},400)};
@@ -697,11 +714,14 @@ Quiet after 11 pm"></textarea></label>
     if(!nom||!/^\S+@\S+\.\S+$/.test(mail)||tel.replace(/\D/g,'').length<6||!o.ok.checked){msg.textContent=T.o_err;return}
     if(o.botcheck.checked)return;
     var d=data(), subj=T.o_subj+' — '+(d.name||nom);
+    var slug=((d.name||nom).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'livret')+'-'+Math.random().toString(36).slice(2,6);
+    var base='https://thomem.github.io/gj-welcomebooks/l/';
     if(!KEY){msg.textContent=T.o_fail+EMAIL+'.';location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(recap(d)+'\n\n'+JSON.stringify(d));return}
     btn.disabled=true;btn.textContent=T.o_sending;
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
       body:JSON.stringify({access_key:KEY,subject:subj,from_name:'GJ Welcome Books',name:nom,email:mail,telephone:tel,offre:'Livret digital en ligne + QR code (49 €)',
-        message:o.message.value,recapitulatif:recap(d),donnees_livret:JSON.stringify(d),langue_page:document.documentElement.lang})})
+        message:o.message.value,recapitulatif:recap(d),
+        etape_1_creer_le_fichier:'https://github.com/'+'thomem/gj-welcomebooks'+'/new/main?filename=l/data/'+slug+'.json',etape_2_coller_ce_contenu:JSON.stringify(d,null,1),etape_3_lien_du_livret:base+'?c='+slug,etape_4_qr_code:base+'qr/?c='+slug,langue_page:document.documentElement.lang})})
     .then(function(r){return r.json()}).then(function(j){
       if(!j.success)throw 0;
       msg.textContent=T.o_done;o.reset();

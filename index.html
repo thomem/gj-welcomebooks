@@ -698,6 +698,7 @@ footer .palms{padding-bottom:30px}
   var sel=document.getElementById('f-offre');
   var sty=document.getElementById('f-style');
   document.querySelectorAll('[data-style]').forEach(function(a){a.addEventListener('click',function(){sty.value=a.dataset.style})});
+  try{var q=new URLSearchParams(location.search).get('offre');if(q!==null&&sel.options[+q])sel.selectedIndex=+q}catch(e){}
   document.querySelectorAll('[data-offre]').forEach(function(a){a.addEventListener('click',function(){sel.selectedIndex=+a.dataset.offre})});
   var strip=document.getElementById('strip');
   function step(d){var f=strip.querySelector('figure');strip.scrollBy({left:d*(f.offsetWidth+22),behavior:'smooth'})}
